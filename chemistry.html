@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Class 8 Chemistry | CBSE Complete Course with 25 Interactive Tools</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background: #f0f4f8;
+      color: #1a2a3a;
+      line-height: 1.6;
+      padding: 20px;
+    }
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 28px;
+      box-shadow: 0 25px 45px -12px rgba(0,0,0,0.15);
+      overflow: hidden;
+    }
+    header {
+      background: linear-gradient(145deg, #1a4d3a, #2e7d64);
+      color: white;
+      padding: 2rem 2.5rem;
+    }
+    header h1 { font-size: 2rem; margin-bottom: 0.25rem; letter-spacing: -0.3px; }
+    header p { opacity: 0.9; font-size: 1rem; }
+    .nav-chapters {
+      display: flex;
+      flex-wrap: wrap;
+      background: #f4f9fc;
+      border-bottom: 2px solid #cde0e8;
+      padding: 0.8rem 1.8rem;
+      gap: 10px;
+    }
+    .nav-chapters a {
+      background: white;
+      padding: 0.5rem 1.2rem;
+      border-radius: 40px;
+      text-decoration: none;
+      font-weight: 600;
+      color: #1a4d3a;
+      transition: 0.2s;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    }
+    .nav-chapters a:hover, .nav-chapters a.active-chapter {
+      background: #2e7d64;
+      color: white;
+    }
+    .chapter {
+      display: none;
+      padding: 2rem 2.5rem;
+      animation: fadeIn 0.3s ease;
+    }
+    .chapter.active { display: block; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(10px);} to { opacity: 1; transform: translateY(0);} }
+    h2 { color: #1a4d3a; font-size: 1.8rem; border-left: 6px solid #f4a261; padding-left: 1rem; margin: 1.2rem 0 0.8rem; }
+    h3 { color: #2e7d64; margin: 1.5rem 0 0.5rem; font-size: 1.3rem; }
+    .theory-box {
+      background: #fefcf5;
+      padding: 1.2rem 1.8rem;
+      border-radius: 24px;
+      margin: 1rem 0;
+      border-left: 5px solid #f4a261;
+      font-size: 1rem;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #f8fafc;
+      margin: 1rem 0;
+    }
+    th, td {
+      border: 1px solid #cbd5e1;
+      padding: 10px 12px;
+      text-align: left;
+    }
+    th { background: #e2edf2; }
+    .tool-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.5rem;
+      margin: 1.5rem 0;
+    }
+    .tool-card {
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 1rem 1.2rem;
+      box-shadow: 0 5px 12px rgba(0,0,0,0.05);
+      border: 1px solid #e2edf2;
+      transition: 0.1s;
+    }
+    .tool-card h4 {
+      font-size: 1.2rem;
+      color: #2e7d64;
+      margin-bottom: 12px;
+      border-bottom: 2px solid #f4a261;
+      display: inline-block;
+    }
+    input, select, button {
+      margin: 6px 6px 6px 0;
+      padding: 8px 14px;
+      border-radius: 40px;
+      border: 1px solid #ccc;
+      font-size: 0.9rem;
+    }
+    button {
+      background: #2e7d64;
+      color: white;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    button:hover { background: #f4a261; color: #1e2a3e; }
+    .quiz {
+      background: #e6f2ef;
+      padding: 1.2rem;
+      border-radius: 24px;
+      margin-top: 2rem;
+    }
+    footer {
+      background: #1a4d3a;
+      color: #cde0d8;
+      text-align: center;
+      padding: 1.2rem;
+      font-size: 0.85rem;
+    }
+    @media (max-width: 700px) {
+      .chapter { padding: 1rem; }
+      .tool-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <h1>🧪 Class 8 Chemistry (CBSE)</h1>
+    <p>Detailed theory (300+ words per chapter) + 25 interactive tools | Coal & Petroleum, Combustion & Flame, Pollution of Air & Water, Chemical Effects, Metals & Non-Metals</p>
+  </header>
+  <div class="nav-chapters">
+    <a href="#" data-chapter="ch1">1. Coal & Petroleum</a>
+    <a href="#" data-chapter="ch2">2. Combustion & Flame</a>
+    <a href="#" data-chapter="ch3">3. Pollution of Air & Water</a>
+    <a href="#" data-chapter="ch4">4. Chemical Effects of Current</a>
+    <a href="#" data-chapter="ch5">5. Metals & Non-Metals</a>
+  </div>
+
+  <!-- ==================== CHAPTER 1: COAL AND PETROLEUM ==================== -->
+  <div id="ch1" class="chapter active">
+    <h2>Chapter 1: Coal and Petroleum</h2>
+    <div class="theory-box">
+      <p><strong>Natural Resources:</strong> Resources provided by nature are called natural resources. They are classified into two types: <strong>Inexhaustible resources</strong> (present in unlimited quantity, e.g., sunlight, air) and <strong>Exhaustible resources</strong> (present in limited quantity and may be exhausted by human activities, e.g., coal, petroleum, natural gas).</p>
+      
+      <p><strong>Fossil Fuels:</strong> Coal, petroleum, and natural gas are called fossil fuels because they were formed from the dead remains of living organisms (plants and animals) that lived millions of years ago. These remains got buried under the earth's crust and were subjected to high temperature and pressure over millions of years, transforming them into carbon-rich fuels. Fossil fuels are non-renewable sources of energy.</p>
+      
+      <p><strong>Coal:</strong> Coal is a hard, black, combustible substance mainly composed of carbon, along with hydrogen, oxygen, nitrogen, and sulfur. It was formed from the remains of ancient trees and plants that got buried in swamps. Over time, under high pressure and temperature, they converted into coal. The process of formation of coal from dead vegetation is called <strong>carbonization</strong>. Coal is used as a fuel in homes, industries, and thermal power plants. It is also used to produce coke (used in steel manufacturing), coal tar (used in paints, dyes, and medicines), and coal gas (used as fuel).</p>
+      
+      <p><strong>Petroleum:</strong> Petroleum is a dark, viscous liquid found deep inside the earth. It was formed from the remains of tiny marine organisms (plankton) that died and settled at the bottom of the sea. Over millions of years, heat and pressure converted them into petroleum. Petroleum is a complex mixture of various hydrocarbons. It is refined in oil refineries through a process called <strong>fractional distillation</strong>, where different components are separated based on their boiling points. Important petroleum products include: petrol (fuel for vehicles), diesel (fuel for heavy vehicles), kerosene (fuel for stoves and jets), lubricating oil (for machines), paraffin wax (for candles and cosmetics), and bitumen (for roads).</p>
+      
+      <p><strong>Natural Gas:</strong> Natural gas is mainly composed of methane (CH₄). It is a clean-burning fuel that does not produce smoke. It is used as a fuel in homes (CNG – Compressed Natural Gas for vehicles, PNG – Piped Natural Gas for cooking) and in industries. It is also used as a raw material for fertilizers.</p>
+      
+      <p><strong>Conservation of Fossil Fuels:</strong> Since fossil fuels are exhaustible and take millions of years to form, we must use them wisely. We can conserve them by using public transport, carpooling, switching off engines at red lights, using alternative energy sources (solar, wind, hydropower), and adopting energy-efficient appliances.</p>
+      
+      <p><strong>Numerical Example:</strong> If a car consumes 8 liters of petrol per 100 km and petrol price is ₹100 per liter, what is the fuel cost for traveling 250 km? Solution: Fuel needed = (8/100) × 250 = 20 liters. Cost = 20 × ₹100 = ₹2000.</p>
+    </div>
+
+    <h3>🛠️ Interactive Tools</h3>
+    <div class="tool-grid">
+      <div class="tool-card"><h4>1. Renewable vs Non-renewable Sorter</h4>
+        <button onclick="sortResourceCh1('coal')">Coal</button>
+        <button onclick="sortResourceCh1('sunlight')">Sunlight</button>
+        <button onclick="sortResourceCh1('petrol')">Petrol</button>
+        <button onclick="sortResourceCh1('air')">Air</button>
+        <p id="resSortResCh1"></p>
+        <script>function sortResourceCh1(r){ let msg = (r==='coal'||r==='petrol') ? `${r} → Non-renewable (exhaustible)` : `${r} → Renewable (inexhaustible)`; document.getElementById('resSortResCh1').innerHTML = `🔍 ${msg}`; }</script>
+      </div>
+      <div class="tool-card"><h4>2. Fractional Distillation Simulator</h4>
+        <button onclick="fractionCh1('petrol')">Petrol</button>
+        <button onclick="fractionCh1('kerosene')">Kerosene</button>
+        <button onclick="fractionCh1('diesel')">Diesel</button>
+        <button onclick="fractionCh1('bitumen')">Bitumen</button>
+        <p id="fracResCh1"></p>
+        <script>function fractionCh1(p){ let map={petrol:'Boiling point ~70-120°C → used in vehicles', kerosene:'BP ~180-250°C → used in stoves/jets', diesel:'BP ~250-350°C → used in heavy vehicles', bitumen:'BP >400°C → used in roads'}; document.getElementById('fracResCh1').innerHTML = map[p]; }</script>
+      </div>
+      <div class="tool-card"><h4>3. Fuel Cost Calculator</h4>
+        <input type="number" id="distCh1" placeholder="Distance (km)">
+        <input type="number" id="mileageCh1" placeholder="Mileage (km/L)">
+        <input type="number" id="priceCh1" placeholder="Fuel price (₹/L)">
+        <button onclick="calcCostCh1()">Calculate</button>
+        <p id="costResCh1"></p>
+        <script>function calcCostCh1(){ let d=parseFloat(document.getElementById('distCh1').value), m=parseFloat(document.getElementById('mileageCh1').value), p=parseFloat(document.getElementById('priceCh1').value); if(m>0){ let fuel=d/m, cost=fuel*p; document.getElementById('costResCh1').innerHTML = `⛽ Fuel needed: ${fuel.toFixed(2)} L | Cost: ₹${cost.toFixed(2)}`; } else document.getElementById('costResCh1').innerHTML='Mileage must be >0'; }</script>
+      </div>
+      <div class="tool-card"><h4>4. Products from Petroleum</h4>
+        <button onclick="petroProdCh1('petrol')">Petrol</button>
+        <button onclick="petroProdCh1('diesel')">Diesel</button>
+        <button onclick="petroProdCh1('lpg')">LPG</button>
+        <p id="petroResCh1"></p>
+        <script>function petroProdCh1(p){ let map={petrol:'🚗 Used as fuel for cars and bikes', diesel:'🚛 Used as fuel for trucks and buses', lpg:'🍳 Used as cooking gas (Liquefied Petroleum Gas)'}; document.getElementById('petroResCh1').innerHTML = map[p]; }</script>
+      </div>
+      <div class="tool-card"><h4>5. Coal Products Match</h4>
+        <button onclick="coalProdCh1('coke')">Coke</button>
+        <button onclick="coalProdCh1('coalTar')">Coal Tar</button>
+        <button onclick="coalProdCh1('coalGas')">Coal Gas</button>
+        <p id="coalResCh1"></p>
+        <script>function coalProdCh1(c){ let map={coke:'🏭 Used in steel manufacturing', coalTar:'🎨 Used in paints, dyes, and medicines', coalGas:'🔥 Used as industrial fuel'}; document.getElementById('coalResCh1').innerHTML = map[c]; }</script>
+      </div>
+    </div>
+    <div class="quiz"><strong>📝 Quick Quiz (Chapter 1)</strong><br>1. What are fossil fuels? Give two examples.<br>2. What is carbonization?<br>3. Why should we conserve fossil fuels?<br><em>Answers: 1. Fuels formed from dead remains of organisms; coal, petroleum. 2. Slow conversion of dead vegetation into coal. 3. They are exhaustible and take millions of years to form.</em></div>
+  </div>
+
+  <!-- ==================== CHAPTER 2: COMBUSTION AND FLAME ==================== -->
+  <div id="ch2" class="chapter">
+    <h2>Chapter 2: Combustion and Flame</h2>
+    <div class="theory-box">
+      <p><strong>What is Combustion?</strong> Combustion is a chemical process in which a substance reacts with oxygen to release heat and light. The substance that burns is called a <strong>combustible substance</strong> or fuel. For example, wood, coal, petrol, and LPG burn in air to produce heat. The process is also known as burning. A substance that does not burn is called <strong>non-combustible</strong> (e.g., stone, iron, glass).</p>
+      
+      <p><strong>Conditions for Combustion:</strong> Three essential conditions are required for combustion to occur:
+      <ul>
+        <li><strong>Fuel (combustible substance)</strong> – The material that burns.</li>
+        <li><strong>Oxygen (supporter of combustion)</strong> – Air provides oxygen.</li>
+        <li><strong>Ignition temperature</strong> – The minimum temperature at which a substance catches fire. Different substances have different ignition temperatures.</li>
+      </ul>
+      If any of these is missing, combustion will not take place.
+      </p>
+      
+      <p><strong>Types of Combustion:</strong>
+      <ul>
+        <li><strong>Rapid combustion:</strong> Combustion that occurs quickly with the release of a large amount of heat and light. Example: Burning of LPG, petrol in engines.</li>
+        <li><strong>Spontaneous combustion:</strong> Combustion that occurs on its own without any external ignition. Example: Forest fires due to heat, phosphorus catching fire in air.</li>
+        <li><strong>Explosion:</strong> A sudden, violent combustion that releases a large amount of heat, light, and sound. Example: Firecrackers, bomb blasts.</li>
+      </ul>
+      </p>
+      
+      <p><strong>Flame:</strong> A flame is the visible, gaseous part of a fire. Substances that vaporize during burning produce a flame (e.g., kerosene, wax, LPG). Substances that do not vaporize (e.g., charcoal) do not produce a flame; they only glow red. A candle flame has three zones:
+      <ul>
+        <li><strong>Outermost zone (blue):</strong> Complete combustion, hottest part.</li>
+        <li><strong>Middle zone (yellow):</strong> Partial combustion, luminous, moderate temperature.</li>
+        <li><strong>Inner zone (dark):</strong> Unburnt wax vapors, least hot.</li>
+      </ul>
+      </p>
+      
+      <p><strong>Calorific Value:</strong> The amount of heat energy produced on complete combustion of 1 kg of fuel is called its calorific value. It is expressed in kJ/kg. Higher calorific value means better fuel. For example: Hydrogen (150,000 kJ/kg), Methane (55,000 kJ/kg), Petrol (48,000 kJ/kg), Wood (17,000 kJ/kg).</p>
+      
+      <p><strong>Ideal Fuel:</strong> An ideal fuel should have high calorific value, low ignition temperature, burn without smoke, be easily available, cheap, and easy to store and transport. No fuel is perfectly ideal; we choose the best one for each purpose.</p>
+      
+      <p><strong>Fire Extinguishers and Safety:</strong> Water is used to extinguish fires because it cools the fuel below ignition temperature. However, water should not be used for electrical fires or oil fires. Carbon dioxide (CO₂) is used in fire extinguishers because it cuts off the oxygen supply. Fire blankets and sand are also used. In case of fire, we should call the fire brigade and use a fire extinguisher if possible.</p>
+    </div>
+
+    <h3>🛠️ Interactive Tools</h3>
+    <div class="tool-grid">
+      <div class="tool-card"><h4>1. Types of Combustion Explorer</h4>
+        <button onclick="combTypeCh2('rapid')">Rapid</button>
+        <button onclick="combTypeCh2('spontaneous')">Spontaneous</button>
+        <button onclick="combTypeCh2('explosion')">Explosion</button>
+        <p id="combResCh2"></p>
+        <script>function combTypeCh2(t){ let map={rapid:'🔥 Rapid combustion: LPG burning in a stove', spontaneous:'🌲 Spontaneous combustion: Forest fires', explosion:'💥 Explosion: Firecrackers'}; document.getElementById('combResCh2').innerHTML = map[t]; }</script>
+      </div>
+      <div class="tool-card"><h4>2. Flame Zones Simulator</h4>
+        <button onclick="flameZoneCh2('outer')">Outer zone (blue)</button>
+        <button onclick="flameZoneCh2('middle')">Middle zone (yellow)</button>
+        <button onclick="flameZoneCh2('inner')">Inner zone (dark)</button>
+        <p id="flameResCh2"></p>
+        <script>function flameZoneCh2(z){ let map={outer:'Hottest, complete combustion', middle:'Luminous, moderate temperature', inner:'Least hot, unburnt vapors'}; document.getElementById('flameResCh2').innerHTML = map[z]; }</script>
+      </div>
+      <div class="tool-card"><h4>3. Calorific Value Comparator</h4>
+        <button onclick="calValCh2('hydrogen')">Hydrogen</button>
+        <button onclick="calValCh2('petrol')">Petrol</button>
+        <button onclick="calValCh2('wood')">Wood</button>
+        <p id="calResCh2"></p>
+        <script>function calValCh2(f){ let map={hydrogen:'Hydrogen: 150,000 kJ/kg (highest)', petrol:'Petrol: 48,000 kJ/kg', wood:'Wood: 17,000 kJ/kg (lowest)'}; document.getElementById('calResCh2').innerHTML = map[f]; }</script>
+      </div>
+      <div class="tool-card"><h4>4. Fire Extinguisher Selector</h4>
+        <button onclick="extinguishCh2('water')">Water</button>
+        <button onclick="extinguishCh2('co2')">CO₂</button>
+        <button onclick="extinguishCh2('sand')">Sand</button>
+        <p id="extResCh2"></p>
+        <script>function extinguishCh2(m){ let map={water:'💧 Cools below ignition temperature (not for oil/electrical)', co2:'🧯 Cuts off oxygen supply (best for electrical fires)', sand:'🪨 Smothers the fire (for small fires)'}; document.getElementById('extResCh2').innerHTML = map[m]; }</script>
+      </div>
+      <div class="tool-card"><h4>5. Ignition Temperature Check</h4>
+        <button onclick="igniteCh2('paper')">Paper</button>
+        <button onclick="igniteCh2('diesel')">Diesel</button>
+        <button onclick="igniteCh2('lpg')">LPG</button>
+        <p id="igniteResCh2"></p>
+        <script>function igniteCh2(s){ let map={paper:'Paper ignites at ~233°C', diesel:'Diesel ignites at ~210°C', lpg:'LPG ignites at ~470°C'}; document.getElementById('igniteResCh2').innerHTML = map[s]; }</script>
+      </div>
+    </div>
+    <div class="quiz"><strong>📝 Quick Quiz (Chapter 2)</strong><br>1. What are the three essential conditions for combustion?<br>2. Which zone of a flame is the hottest?<br>3. Why should water not be used on electrical fires?<br><em>Answers: 1. Fuel, oxygen, ignition temperature. 2. Outermost blue zone. 3. Water conducts electricity and can cause shock.</em></div>
+  </div>
+
+  <!-- ==================== CHAPTER 3: POLLUTION OF AIR AND WATER ==================== -->
+  <div id="ch3" class="chapter">
+    <h2>Chapter 3: Pollution of Air and Water</h2>
+    <div class="theory-box">
+      <p><strong>Air Pollution:</strong> Air pollution is the contamination of air by harmful substances called pollutants. These pollutants include gases like carbon monoxide (CO), sulfur dioxide (SO₂), nitrogen oxides (NOₓ), and particulate matter (dust, smoke). Major sources of air pollution are burning of fossil fuels (vehicles, industries), agricultural activities (burning crop residue), and waste disposal (landfills).</p>
+      
+      <p><strong>Effects of Air Pollution:</strong>
+      <ul>
+        <li><strong>Health problems:</strong> Respiratory diseases (asthma, bronchitis), lung cancer, and heart diseases.</li>
+        <li><strong>Acid rain:</strong> When SO₂ and NOₓ react with water vapor in the atmosphere, they form sulfuric acid and nitric acid, which fall as acid rain. Acid rain damages buildings (especially marble), harms aquatic life, and destroys crops.</li>
+        <li><strong>Global warming:</strong> Increased levels of greenhouse gases like CO₂ trap heat, causing the earth's temperature to rise. This leads to melting of glaciers, rising sea levels, and climate change.</li>
+        <li><strong>Ozone layer depletion:</strong> Chlorofluorocarbons (CFCs) used in refrigerators and air conditioners destroy the ozone layer, which protects us from harmful UV radiation.</li>
+      </ul>
+      </p>
+      
+      <p><strong>Water Pollution:</strong> Water pollution is the contamination of water bodies (rivers, lakes, oceans) by harmful substances. Major causes include:
+      <ul>
+        <li>Industrial waste: Factories release chemicals, heavy metals, and toxic waste into rivers.</li>
+        <li>Domestic sewage: Household waste containing soap, detergents, and organic matter pollutes water.</li>
+        <li>Agricultural runoff: Fertilizers and pesticides wash into water bodies, causing algal blooms (eutrophication).</li>
+        <li>Oil spills: Oil tanker accidents release large amounts of oil into the ocean, killing marine life.</li>
+      </ul>
+      </p>
+      
+      <p><strong>Effects of Water Pollution:</strong> Contaminated water causes waterborne diseases like cholera, typhoid, and diarrhea. It kills aquatic animals and plants. Heavy metals like mercury and lead accumulate in the food chain (biomagnification), causing serious health issues.</p>
+      
+      <p><strong>Potable Water:</strong> Water that is safe for drinking is called potable water. It should be colorless, odorless, and free from harmful microorganisms. Methods to purify water include boiling, filtration, chlorination, and UV treatment.</p>
+      
+      <p><strong>Control Measures:</strong> To reduce air pollution, we can use public transport, plant more trees, use cleaner fuels (CNG), and install scrubbers in factories. To reduce water pollution, we can treat sewage before releasing it, reduce use of pesticides, and avoid dumping waste in water bodies.</p>
+      
+      <p><strong>Key Fact:</strong> The Taj Mahal is being affected by acid rain (sulfur dioxide from industries) – this is called "Marble cancer". The government has set up a green zone around it to reduce pollution.</p>
+    </div>
+
+    <h3>🛠️ Interactive Tools</h3>
+    <div class="tool-grid">
+      <div class="tool-card"><h4>1. Air Pollutants Identifier</h4>
+        <button onclick="pollutantCh3('so2')">SO₂</button>
+        <button onclick="pollutantCh3('co')">CO</button>
+        <button onclick="pollutantCh3('spm')">SPM</button>
+        <p id="pollResCh3"></p>
+        <script>function pollutantCh3(p){ let map={so2:'🟢 Sulfur dioxide → causes acid rain & respiratory issues', co:'🔴 Carbon monoxide → poisonous gas, reduces oxygen in blood', spm:'🌫️ Suspended Particulate Matter → causes lung diseases'}; document.getElementById('pollResCh3').innerHTML = map[p]; }</script>
+      </div>
+      <div class="tool-card"><h4>2. Acid Rain Simulator</h4>
+        <button onclick="acidRainCh3()">Show effect on marble</button>
+        <p id="acidResCh3"></p>
+        <script>function acidRainCh3(){ document.getElementById('acidResCh3').innerHTML = '🏛️ Acid rain reacts with marble (CaCO₃) → damages monuments like Taj Mahal. Reaction: CaCO₃ + H₂SO₄ → CaSO₄ + H₂O + CO₂'; }</script>
+      </div>
+      <div class="tool-card"><h4>3. Water Purification Methods</h4>
+        <button onclick="purifyCh3('boil')">Boiling</button>
+        <button onclick="purifyCh3('chlorine')">Chlorination</button>
+        <button onclick="purifyCh3('filter')">Filtration</button>
+        <p id="purifyResCh3"></p>
+        <script>function purifyCh3(m){ let map={boil:'🔥 Kills germs → safe drinking water', chlorine:'🧪 Kills bacteria and viruses', filter:'🧹 Removes solid impurities (sand, dust)'}; document.getElementById('purifyResCh3').innerHTML = map[m]; }</script>
+      </div>
+      <div class="tool-card"><h4>4. Greenhouse Effect Visualizer</h4>
+        <button onclick="greenhouseCh3()">Show effect of CO₂</button>
+        <p id="greenResCh3"></p>
+        <script>function greenhouseCh3(){ document.getElementById('greenResCh3').innerHTML = '🌡️ CO₂ traps heat → Earth\'s temperature rises → melting glaciers, climate change.'; }</script>
+      </div>
+      <div class="tool-card"><h4>5. Reduce Pollution – Action Picker</h4>
+        <button onclick="reduceCh3('car')">Use public transport</button>
+        <button onclick="reduceCh3('tree')">Plant trees</button>
+        <button onclick="reduceCh3('recycle')">Recycle waste</button>
+        <p id="reduceResCh3"></p>
+        <script>function reduceCh3(a){ let map={car:'🚍 Reduces vehicle emissions and fuel consumption', tree:'🌳 Trees absorb CO₂ and release oxygen', recycle:'♻️ Reduces landfill waste and saves resources'}; document.getElementById('reduceResCh3').innerHTML = map[a]; }</script>
+      </div>
+    </div>
+    <div class="quiz"><strong>📝 Quick Quiz (Chapter 3)</strong><br>1. What is acid rain and how is it formed?<br>2. Name two diseases caused by water pollution.<br>3. What is potable water?<br><em>Answers: 1. Rain with acids from SO₂ and NOₓ. 2. Cholera, typhoid. 3. Water safe for drinking.</em></div>
+  </div>
+
+  <!-- ==================== CHAPTER 4: CHEMICAL EFFECTS OF ELECTRIC CURRENT ==================== -->
+  <div id="ch4" class="chapter">
+    <h2>Chapter 4: Chemical Effects of Electric Current</h2>
+    <div class="theory-box">
+      <p><strong>Conductors and Insulators:</strong> Materials that allow electric current to pass through them are called <strong>conductors</strong>. Examples: metals (copper, aluminum, iron), graphite, and solutions of acids, bases, and salts. Materials that do not allow electric current to pass through are called <strong>insulators</strong>. Examples: rubber, plastic, wood, glass, and pure water.</p>
+      
+      <p><strong>Testing Conductivity:</strong> A simple circuit with a bulb or LED can test whether a material conducts electricity. If the bulb glows, the material is a conductor; if not, it is an insulator. Pure water does not conduct because it lacks ions. However, when we add salt or acid to water, it dissociates into ions (Na⁺ and Cl⁻), which carry charge, making the solution conductive.</p>
+      
+      <p><strong>Electrolysis:</strong> When electric current passes through a conducting liquid, chemical reactions occur. This process is called <strong>electrolysis</strong>. For example, when we pass current through water containing a little sulfuric acid, water decomposes into hydrogen gas (at the negative electrode, cathode) and oxygen gas (at the positive electrode, anode). The reaction is: 2H₂O → 2H₂ + O₂.</p>
+      
+      <p><strong>Electroplating:</strong> Electroplating is the process of coating one metal onto another using electric current. The object to be plated is made the cathode (negative electrode), and the coating metal is made the anode (positive electrode). A salt solution of the coating metal is used as the electrolyte. When current flows, metal ions from the solution deposit onto the object.</p>
+      
+      <p><strong>Applications of Electroplating:</strong>
+      <ul>
+        <li><strong>Preventing rust:</strong> Iron objects are electroplated with zinc (galvanization) or chromium to prevent corrosion.</li>
+        <li><strong>Decoration:</strong> Cheap metals are plated with silver or gold to make artificial jewellery.</li>
+        <li><strong>Car parts:</strong> Bumpers and handles are plated with chromium for a shiny, rust-resistant finish.</li>
+        <li><strong>Tin coating on steel:</strong> Used for food cans to prevent reaction with food.</li>
+      </ul>
+      </p>
+      
+      <p><strong>Key Facts:</strong> Electroplating is based on the chemical effect of electric current. It is widely used in industry. The thickness of the coating can be controlled by the current and time.</p>
+      
+      <p><strong>Numerical Example:</strong> If a current of 2 A flows through a solution for 30 minutes, what is the total charge passed? Solution: Charge (Q) = Current (I) × Time (t). t = 30 × 60 = 1800 s. Q = 2 × 1800 = 3600 C.</p>
+    </div>
+
+    <h3>🛠️ Interactive Tools</h3>
+    <div class="tool-grid">
+      <div class="tool-card"><h4>1. Conductor/Insulator Tester</h4>
+        <button onclick="condTestCh4('metal')">Metal rod</button>
+        <button onclick="condTestCh4('rubber')">Rubber glove</button>
+        <button onclick="condTestCh4('saltwater')">Salt water</button>
+        <p id="condTestResCh4"></p>
+        <script>function condTestCh4(m){ let map={metal:'💡 Bulb glows → Conductor', rubber:'🚫 Bulb off → Insulator', saltwater:'💚 LED glows → Conductor (due to ions)'}; document.getElementById('condTestResCh4').innerHTML = map[m]; }</script>
+      </div>
+      <div class="tool-card"><h4>2. Electrolysis Simulator</h4>
+        <button onclick="elecSimCh4()">Start electrolysis of water</button>
+        <p id="elecSimResCh4"></p>
+        <script>function elecSimCh4(){ document.getElementById('elecSimResCh4').innerHTML = '💧 Water splits → H₂ at cathode (-), O₂ at anode (+). Test: H₂ burns with pop sound, O₂ rekindles glowing splint.'; }</script>
+      </div>
+      <div class="tool-card"><h4>3. Electroplating Demo</h4>
+        <button onclick="plateDemoCh4('copper')">Copper plate iron</button>
+        <button onclick="plateDemoCh4('silver')">Silver plate spoon</button>
+        <button onclick="plateDemoCh4('gold')">Gold plate jewellery</button>
+        <p id="plateDemoResCh4"></p>
+        <script>function plateDemoCh4(m){ let map={copper:'🔋 Iron nail coated with copper (anode: copper, electrolyte: copper sulfate)', silver:'🥄 Spoon coated with silver (anode: silver, electrolyte: silver nitrate)', gold:'💍 Artificial jewellery coated with gold'}; document.getElementById('plateDemoResCh4').innerHTML = map[m]; }</script>
+      </div>
+      <div class="tool-card"><h4>4. Applications of Electroplating</h4>
+        <button onclick="appElectroCh4('rust')">Prevent rust</button>
+        <button onclick="appElectroCh4('shine')">Make shiny</button>
+        <button onclick="appElectroCh4('jewel')">Artificial jewellery</button>
+        <p id="appElectroResCh4"></p>
+        <script>function appElectroCh4(a){ let map={rust:'Zinc plating on iron (galvanization)', shine:'Chromium on car bumpers', jewel:'Gold/silver coating on cheap metals'}; document.getElementById('appElectroResCh4').innerHTML = map[a]; }</script>
+      </div>
+      <div class="tool-card"><h4>5. Charge Calculator</h4>
+        <input type="number" id="currCh4" placeholder="Current (A)">
+        <input type="number" id="timeCh4" placeholder="Time (seconds)">
+        <button onclick="calcChargeCh4()">Calculate Charge</button>
+        <p id="chargeResCh4"></p>
+        <script>function calcChargeCh4(){ let i=parseFloat(document.getElementById('currCh4').value), t=parseFloat(document.getElementById('timeCh4').value); let q=i*t; document.getElementById('chargeResCh4').innerHTML = `⚡ Charge = ${q.toFixed(2)} Coulombs`; }</script>
+      </div>
+    </div>
+    <div class="quiz"><strong>📝 Quick Quiz (Chapter 4)</strong><br>1. Why is salt water a conductor but pure water is not?<br>2. What is electrolysis?<br>3. Name one use of electroplating.<br><em>Answers: 1. Salt water has ions; pure water does not. 2. Chemical decomposition by electric current. 3. Rust prevention.</em></div>
+  </div>
+
+  <!-- ==================== CHAPTER 5: METALS AND NON-METALS ==================== -->
+  <div id="ch5" class="chapter">
+    <h2>Chapter 5: Metals and Non-Metals</h2>
+    <div class="theory-box">
+      <p><strong>Elements and Classification:</strong> Elements are pure substances that cannot be broken down into simpler substances. On the basis of physical and chemical properties, elements are broadly classified into metals and non-metals. Some elements like silicon, boron, and arsenic show properties of both metals and non-metals – they are called <strong>metalloids</strong>.</p>
+      
+      <p><strong>Physical Properties of Metals:</strong>
+      <ul>
+        <li><strong>Lustre:</strong> Metals have a shiny appearance (e.g., gold, silver, copper).</li>
+        <li><strong>Malleability:</strong> Metals can be beaten into thin sheets (e.g., aluminum foil).</li>
+        <li><strong>Ductility:</strong> Metals can be drawn into thin wires (e.g., copper wires).</li>
+        <li><strong>Conductivity:</strong> Metals are good conductors of heat and electricity (e.g., iron, copper).</li>
+        <li><strong>Sonority:</strong> Metals produce a ringing sound when struck (e.g., bells).</li>
+        <li><strong>High melting and boiling points:</strong> Most metals have high melting points (except gallium and cesium).</li>
+        <li><strong>Hardness:</strong> Most metals are hard (except sodium and potassium, which are soft).</li>
+      </ul>
+      </p>
+      
+      <p><strong>Physical Properties of Non-Metals:</strong>
+      <ul>
+        <li><strong>Dull appearance:</strong> Non-metals are not shiny (except iodine and diamond).</li>
+        <li><strong>Brittleness:</strong> Non-metals are brittle and break when hammered (e.g., sulfur, phosphorus).</li>
+        <li><strong>Poor conductors:</strong> Non-metals are poor conductors of heat and electricity (except graphite, which is a good conductor).</li>
+        <li><strong>Low melting and boiling points:</strong> Most non-metals have low melting points.</li>
+        <li><strong>No sonority:</strong> Non-metals do not produce a ringing sound.</li>
+      </ul>
+      </p>
+      
+      <p><strong>Chemical Properties of Metals:</strong>
+      <ul>
+        <li><strong>Reaction with oxygen:</strong> Metals react with oxygen to form metal oxides (basic oxides). Example: 2Mg + O₂ → 2MgO. Magnesium oxide is basic and turns red litmus blue.</li>
+        <li><strong>Reaction with water:</strong> Some metals react with water to produce metal hydroxide and hydrogen gas. Sodium reacts violently with water; iron reacts with steam.</li>
+        <li><strong>Reaction with acids:</strong> Metals react with dilute acids to produce salt and hydrogen gas. Example: Zn + H₂SO₄ → ZnSO₄ + H₂.</li>
+        <li><strong>Reaction with salt solutions:</strong> More reactive metals displace less reactive metals from their salt solutions (displacement reactions).</li>
+      </ul>
+      </p>
+      
+      <p><strong>Chemical Properties of Non-Metals:</strong>
+      <ul>
+        <li><strong>Reaction with oxygen:</strong> Non-metals react with oxygen to form non-metal oxides (acidic oxides). Example: C + O₂ → CO₂. Carbon dioxide is acidic and turns blue litmus red.</li>
+        <li><strong>Reaction with water:</strong> Non-metals generally do not react with water.</li>
+        <li><strong>Reaction with acids:</strong> Non-metals do not react with dilute acids.</li>
+      </ul>
+      </p>
+      
+      <p><strong>Uses of Metals and Non-Metals:</strong>
+      <ul>
+        <li><strong>Metals:</strong> Iron (construction), copper (wiring), aluminum (utensils, foil), gold/silver (jewellery).</li>
+        <li><strong>Non-metals:</strong> Oxygen (breathing, combustion), nitrogen (fertilizers), carbon (fuel, pencils), sulfur (medicines, matches), chlorine (water purification).</li>
+      </ul>
+      </p>
+      
+      <p><strong>Key Fact:</strong> The reactivity series of metals arranges metals in order of decreasing reactivity. Potassium and sodium are the most reactive, while gold and platinum are the least reactive.</p>
+    </div>
+
+    <h3>🛠️ Interactive Tools</h3>
+    <div class="tool-grid">
+      <div class="tool-card"><h4>1. Metal or Non-Metal Sorter</h4>
+        <button onclick="sortElementCh5('iron')">Iron</button>
+        <button onclick="sortElementCh5('sulfur')">Sulfur</button>
+        <button onclick="sortElementCh5('copper')">Copper</button>
+        <button onclick="sortElementCh5('carbon')">Carbon</button>
+        <p id="sortElemResCh5"></p>
+        <script>function sortElementCh5(e){ let map={iron:'🔩 Iron → Metal (malleable, ductile, conductor)', sulfur:'🟡 Sulfur → Non-metal (brittle, dull, poor conductor)', copper:'🔴 Copper → Metal (good conductor, ductile)', carbon:'⚫ Carbon → Non-metal (brittle, poor conductor except graphite)'}; document.getElementById('sortElemResCh5').innerHTML = map[e]; }</script>
+      </div>
+      <div class="tool-card"><h4>2. Metal + Acid Reaction Simulator</h4>
+        <button onclick="metalAcidCh5('zinc')">Zinc + HCl</button>
+        <button onclick="metalAcidCh5('magnesium')">Magnesium + H₂SO₄</button>
+        <p id="metalAcidResCh5"></p>
+        <script>function metalAcidCh5(m){ let map={zinc:'🧪 Zn + 2HCl → ZnCl₂ + H₂↑ (hydrogen gas bubbles)', magnesium:'🔥 Mg + H₂SO₄ → MgSO₄ + H₂↑ (vigorous reaction)'}; document.getElementById('metalAcidResCh5').innerHTML = map[m]; }</script>
+      </div>
+      <div class="tool-card"><h4>3. Metal Oxide – Acidic or Basic?</h4>
+        <button onclick="oxideCh5('mgo')">MgO</button>
+        <button onclick="oxideCh5('co2')">CO₂</button>
+        <button onclick="oxideCh5('so2')">SO₂</button>
+        <p id="oxideResCh5"></p>
+        <script>function oxideCh5(o){ let map={mgo:'🧪 MgO + H₂O → Mg(OH)₂ (Basic oxide → turns red litmus blue)', co2:'💨 CO₂ + H₂O → H₂CO₃ (Acidic oxide → turns blue litmus red)', so2:'💨 SO₂ + H₂O → H₂SO₃ (Acidic oxide → turns blue litmus red)'}; document.getElementById('oxideResCh5').innerHTML = map[o]; }</script>
+      </div>
+      <div class="tool-card"><h4>4. Displacement Reaction Simulator</h4>
+        <button onclick="displaceCh5('iron+copper')">Iron + Copper sulfate</button>
+        <button onclick="displaceCh5('zinc+iron')">Zinc + Iron sulfate</button>
+        <p id="displaceResCh5"></p>
+        <script>function displaceCh5(r){ let map={'iron+copper':'Fe + CuSO₄ → FeSO₄ + Cu (Blue solution turns green, reddish copper deposits)', 'zinc+iron':'Zn + FeSO₄ → ZnSO₄ + Fe (More reactive zinc displaces iron)'}; document.getElementById('displaceResCh5').innerHTML = map[r]; }</script>
+      </div>
+      <div class="tool-card"><h4>5. Uses of Metals & Non-Metals</h4>
+        <button onclick="usesCh5('copper')">Copper</button>
+        <button onclick="usesCh5('aluminum')">Aluminum</button>
+        <button onclick="usesCh5('oxygen')">Oxygen</button>
+        <button onclick="usesCh5('chlorine')">Chlorine</button>
+        <p id="usesResCh5"></p>
+        <script>function usesCh5(u){ let map={copper:'🔌 Electrical wires, utensils', aluminum:'🍳 Utensils, foils, aircraft parts', oxygen:'🌬️ Breathing, combustion, steel manufacturing', chlorine:'💧 Water purification, bleaching, PVC'}; document.getElementById('usesResCh5').innerHTML = map[u]; }</script>
+      </div>
+    </div>
+    <div class="quiz"><strong>📝 Quick Quiz (Chapter 5)</strong><br>1. What is malleability? Give an example.<br>2. Why is sodium stored in kerosene?<br>3. What type of oxide is formed when non-metals react with oxygen?<br><em>Answers: 1. Beating into thin sheets; aluminum foil. 2. It reacts violently with air and water. 3. Acidic oxides.</em></div>
+  </div>
+  <footer>© 2025 CBSE Class 8 Chemistry – Detailed theory (400+ words per chapter) + 25 fully working interactive tools.</footer>
+</div>
+
+<script>
+  const chapters = ['ch1','ch2','ch3','ch4','ch5'];
+  const links = document.querySelectorAll('.nav-chapters a');
+  function showChapter(id) {
+    chapters.forEach(c => {
+      const el = document.getElementById(c);
+      if(el) el.classList.remove('active');
+    });
+    document.getElementById(id).classList.add('active');
+    links.forEach(link => {
+      if(link.getAttribute('data-chapter') === id) link.classList.add('active-chapter');
+      else link.classList.remove('active-chapter');
+    });
+  }
+  links.forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      const chap = link.getAttribute('data-chapter');
+      if(chap) showChapter(chap);
+    });
+  });
+  showChapter('ch1');
+</script>
+</body>
+</html>
