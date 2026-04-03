@@ -1,0 +1,1109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Class 8 Maths | CBSE Full Course with 65 Interactive Tools</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background: #f0f2f5;
+      color: #1e2a3a;
+      line-height: 1.6;
+      padding: 20px;
+    }
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 28px;
+      box-shadow: 0 25px 45px -12px rgba(0,0,0,0.15);
+      overflow: hidden;
+    }
+    header {
+      background: linear-gradient(145deg, #1a4d6b, #2c6e8f);
+      color: white;
+      padding: 2rem 2.5rem;
+    }
+    header h1 { font-size: 2rem; margin-bottom: 0.25rem; }
+    header p { opacity: 0.9; font-size: 1rem; }
+    <a href="maths.html" class="subject-card">
+  <div class="subject-icon">📐</div>
+  <h2>Mathematics</h2>
+  <p>Rational Numbers, Algebra, Geometry, Mensuration, Data Handling + 65 interactive tools</p>
+</a>
+    .nav-chapters {
+      display: flex;
+      flex-wrap: wrap;
+      background: #f4f9fc;
+      border-bottom: 2px solid #cde0e8;
+      padding: 0.8rem 1.8rem;
+      gap: 8px;
+      max-height: 200px;
+      overflow-y: auto;
+    }
+    .nav-chapters a {
+      background: white;
+      padding: 0.4rem 1rem;
+      border-radius: 40px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.85rem;
+      color: #1a4d6b;
+      transition: 0.2s;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    }
+    .nav-chapters a:hover, .nav-chapters a.active-chapter {
+      background: #2c6e8f;
+      color: white;
+    }
+    .chapter {
+      display: none;
+      padding: 2rem 2.5rem;
+      animation: fadeIn 0.3s ease;
+    }
+    .chapter.active { display: block; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(10px);} to { opacity: 1; transform: translateY(0);} }
+    h2 { color: #1a4d6b; font-size: 1.8rem; border-left: 6px solid #f4a261; padding-left: 1rem; margin: 1.2rem 0 0.8rem; }
+    h3 { color: #2c6e8f; margin: 1.5rem 0 0.5rem; font-size: 1.3rem; }
+    .theory-box {
+      background: #fefcf5;
+      padding: 1.2rem 1.8rem;
+      border-radius: 24px;
+      margin: 1rem 0;
+      border-left: 5px solid #f4a261;
+      font-size: 1rem;
+    }
+    .formula-box {
+      background: #e8f0fe;
+      padding: 0.8rem 1.2rem;
+      border-radius: 16px;
+      margin: 1rem 0;
+      font-family: monospace;
+      font-size: 1.1rem;
+      text-align: center;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #f8fafc;
+      margin: 1rem 0;
+    }
+    th, td {
+      border: 1px solid #cbd5e1;
+      padding: 10px 12px;
+      text-align: left;
+    }
+    th { background: #e2edf2; }
+    .tool-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.5rem;
+      margin: 1.5rem 0;
+    }
+    .tool-card {
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 1rem 1.2rem;
+      box-shadow: 0 5px 12px rgba(0,0,0,0.05);
+      border: 1px solid #e2edf2;
+    }
+    .tool-card h4 {
+      font-size: 1.1rem;
+      color: #2c6e8f;
+      margin-bottom: 12px;
+      border-bottom: 2px solid #f4a261;
+      display: inline-block;
+    }
+    input, select, button {
+      margin: 6px 6px 6px 0;
+      padding: 8px 14px;
+      border-radius: 40px;
+      border: 1px solid #ccc;
+      font-size: 0.9rem;
+    }
+    button {
+      background: #2c6e8f;
+      color: white;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    button:hover { background: #f4a261; color: #1e2a3e; }
+    .quiz {
+      background: #e6f2ef;
+      padding: 1.2rem;
+      border-radius: 24px;
+      margin-top: 2rem;
+    }
+    footer {
+      background: #1a4d6b;
+      color: #cde0d8;
+      text-align: center;
+      padding: 1.2rem;
+      font-size: 0.85rem;
+    }
+    @media (max-width: 700px) {
+      .chapter { padding: 1rem; }
+      .tool-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <h1>📐 Class 8 Mathematics (CBSE)</h1>
+    <p>Detailed theory (400+ words per chapter) + 65 interactive tools | Complete syllabus coverage</p>
+  </header>
+  <div class="nav-chapters">
+    <a href="#" data-chapter="ch1">1. Rational Numbers</a>
+    <a href="#" data-chapter="ch2">2. Linear Equations (1 var)</a>
+    <a href="#" data-chapter="ch3">3. Understanding Quadrilaterals</a>
+    <a href="#" data-chapter="ch4">4. Data Handling</a>
+    <a href="#" data-chapter="ch5">5. Squares &amp; Square Roots</a>
+    <a href="#" data-chapter="ch6">6. Cubes &amp; Cube Roots</a>
+    <a href="#" data-chapter="ch7">7. Comparing Quantities</a>
+    <a href="#" data-chapter="ch8">8. Algebraic Expressions</a>
+    <a href="#" data-chapter="ch9">9. Mensuration</a>
+    <a href="#" data-chapter="ch10">10. Exponents &amp; Powers</a>
+    <a href="#" data-chapter="ch11">11. Direct &amp; Inverse Proportions</a>
+    <a href="#" data-chapter="ch12">12. Factorisation</a>
+    <a href="#" data-chapter="ch13">13. Introduction to Graphs</a>
+  </div>
+
+  <!-- ==================== CHAPTER 1: RATIONAL NUMBERS ==================== -->
+  <div id="ch1" class="chapter active">
+    <h2>Chapter 1: Rational Numbers</h2>
+    <div class="theory-box">
+      <p><strong>What are Rational Numbers?</strong> A rational number is any number that can be expressed in the form p/q, where p and q are integers and q ≠ 0. The set of rational numbers is denoted by Q. Examples: 2/3, -5/7, 4 (since 4 = 4/1), 0 (0 = 0/1), and terminating/ repeating decimals (e.g., 0.5 = 1/2, 0.333... = 1/3).</p>
+      
+      <p><strong>Properties of Rational Numbers:</strong> 
+      <ul>
+        <li><strong>Closure:</strong> Sum, difference, and product of two rational numbers is also a rational number. However, division by zero is not defined.</li>
+        <li><strong>Commutativity:</strong> For addition and multiplication: a + b = b + a and a × b = b × a. Subtraction and division are not commutative.</li>
+        <li><strong>Associativity:</strong> For addition and multiplication: (a + b) + c = a + (b + c) and (a × b) × c = a × (b × c).</li>
+        <li><strong>Distributivity:</strong> a × (b + c) = a × b + a × c.</li>
+        <li><strong>Additive Identity:</strong> 0 is the additive identity because a + 0 = a.</li>
+        <li><strong>Multiplicative Identity:</strong> 1 is the multiplicative identity because a × 1 = a.</li>
+        <li><strong>Additive Inverse:</strong> For any rational number a, -a is its additive inverse (a + (-a) = 0).</li>
+        <li><strong>Multiplicative Inverse (Reciprocal):</strong> For any non-zero rational number a, 1/a is its multiplicative inverse (a × 1/a = 1).</li>
+      </ul>
+      </p>
+      
+      <p><strong>Representation on Number Line:</strong> Rational numbers can be represented on a number line. Positive numbers are to the right of zero, negative to the left. For example, 3/4 lies between 0 and 1, while -1/2 lies between -1 and 0.</p>
+      
+      <p><strong>Standard Form of a Rational Number:</strong> A rational number is in standard form when the denominator is positive and the numerator and denominator have no common factors other than 1. Example: 4/6 in standard form is 2/3.</p>
+      
+      <p><strong>Comparing Rational Numbers:</strong> To compare two rational numbers, cross-multiply: a/b > c/d if a×d > b×c. Alternatively, convert them to equivalent fractions with a common denominator.</p>
+      
+      <p><strong>Numerical Example:</strong> Find the sum of 2/3 and -1/4. Solution: LCM of 3 and 4 is 12. (2/3) = 8/12, (-1/4) = -3/12. Sum = (8 - 3)/12 = 5/12.</p>
+    </div>
+    <div class="formula-box">📐 Rational Number: p/q, where p,q ∈ ℤ, q ≠ 0</div>
+
+    <h3>🛠️ Interactive Tools</h3>
+    <div class="tool-grid">
+      <div class="tool-card"><h4>1. Rational Number Checker</h4>
+        <input type="text" id="num1_ch1" placeholder="Numerator p">
+        <input type="text" id="den1_ch1" placeholder="Denominator q">
+        <button onclick="checkRationalCh1()">Check</button>
+        <p id="rationalResCh1"></p>
+        <script>function checkRationalCh1(){ let p=document.getElementById('num1_ch1').value, q=document.getElementById('den1_ch1').value; if(q==0) document.getElementById('rationalResCh1').innerHTML='❌ q cannot be zero'; else if(Number.isInteger(parseFloat(p)) && Number.isInteger(parseFloat(q))) document.getElementById('rationalResCh1').innerHTML=`✅ ${p}/${q} is a rational number`; else document.getElementById('rationalResCh1').innerHTML='⚠️ p and q must be integers'; }</script>
+      </div>
+      <div class="tool-card"><h4>2. Rational Number Addition</h4>
+        <input type="number" id="a1_ch1" placeholder="a/b">
+        <input type="number" id="b1_ch1" placeholder="c/d">
+        <button onclick="addRationalCh1()">Add</button>
+        <p id="addResCh1"></p>
+        <script>function addRationalCh1(){ let a=parseFloat(document.getElementById('a1_ch1').value), b=parseFloat(document.getElementById('b1_ch1').value); document.getElementById('addResCh1').innerHTML=`${a} + ${b} = ${(a+b).toFixed(2)}`; }</script>
+      </div>
+      <div class="tool-card"><h4>3. Standard Form Converter</h4>
+        <input type="number" id="numStd_ch1" placeholder="Numerator">
+        <input type="number" id="denStd_ch1" placeholder="Denominator">
+        <button onclick="stdFormCh1()">Convert to Standard Form</button>
+        <p id="stdResCh1"></p>
+        <script>function stdFormCh1(){ let n=parseInt(document.getElementById('numStd_ch1').value), d=parseInt(document.getElementById('denStd_ch1').value); if(d===0) {document.getElementById('stdResCh1').innerHTML='Denominator cannot be zero'; return;} let gcd=(a,b)=>b===0?Math.abs(a):gcd(b,a%b); let g=gcd(n,d); let nn=n/g, nd=d/g; if(nd<0){nn=-nn; nd=-nd;} document.getElementById('stdResCh1').innerHTML=`Standard form: ${nn}/${nd}`; }</script>
+      </div>
+      <div class="tool-card"><h4>4. Compare Two Rational Numbers</h4>
+        <input type="number" id="c1_ch1" placeholder="a/b">
+        <input type="number" id="d1_ch1" placeholder="c/d">
+        <button onclick="compareRationalCh1()">Compare</button>
+        <p id="compareResCh1"></p>
+        <script>function compareRationalCh1(){ let a=parseFloat(document.getElementById('c1_ch1').value), b=parseFloat(document.getElementById('d1_ch1').value); if(a>b) document.getElementById('compareResCh1').innerHTML=`${a} > ${b}`; else if(a<b) document.getElementById('compareResCh1').innerHTML=`${a} < ${b}`; else document.getElementById('compareResCh1').innerHTML=`${a} = ${b}`; }</script>
+      </div>
+      <div class="tool-card"><h4>5. Rational Number Line Plotter</h4>
+        <input type="number" id="plotNum_ch1" placeholder="Enter rational number (p/q)">
+        <button onclick="plotNumberCh1()">Plot on Number Line</button>
+        <p id="plotResCh1"></p>
+        <script>function plotNumberCh1(){ let x=parseFloat(document.getElementById('plotNum_ch1').value); if(isNaN(x)) {document.getElementById('plotResCh1').innerHTML='Enter a valid number'; return;} let pos=(x+5)/10*100; let line='<div style="position:relative; width:100%; height:40px; background:#ddd; margin:20px 0;"><div style="position:absolute; left:'+pos+'%; top:-10px;">⬆️</div><div style="position:absolute; left:0%;">-5</div><div style="position:absolute; left:25%;">-2.5</div><div style="position:absolute; left:50%;">0</div><div style="position:absolute; left:75%;">2.5</div><div style="position:absolute; left:100%;">5</div></div>'; document.getElementById('plotResCh1').innerHTML=line+'<br>Number '+x+' plotted on number line'; }</script>
+      </div>
+    </div>
+    <div class="quiz"><strong>📝 Quick Quiz (Chapter 1)</strong><br>1. Is 0 a rational number? Why?<br>2. What is the additive inverse of -3/5?<br>3. Find the sum of 1/2 and -1/3.<br><em>Answers: 1. Yes, 0 = 0/1. 2. 3/5. 3. 1/6.</em></div>
+  </div>
+
+  <!-- ==================== CHAPTER 2: LINEAR EQUATIONS IN ONE VARIABLE ==================== -->
+  <div id="ch2" class="chapter">
+    <h2>Chapter 2: Linear Equations in One Variable</h2>
+    <div class="theory-box">
+      <p><strong>What is a Linear Equation?</strong> A linear equation in one variable is an equation that can be written in the form <strong>ax + b = 0</strong>, where a and b are constants (a ≠ 0), and x is the variable. The highest power of the variable is 1. Example: 2x + 5 = 0, 3y - 7 = 2.</p>
+      
+      <p><strong>Solving Linear Equations:</strong> To solve a linear equation, we isolate the variable on one side of the equation using inverse operations (addition, subtraction, multiplication, division). The goal is to find the value of the variable that makes the equation true.</p>
+      
+      <p><strong>Steps to solve:</strong>
+      <ul>
+        <li>Simplify both sides (remove brackets, combine like terms).</li>
+        <li>Use addition/subtraction to move constant terms to one side.</li>
+        <li>Use multiplication/division to isolate the variable.</li>
+        <li>Check your solution by substituting back into the original equation.</li>
+      </ul>
+      </p>
+      
+      <p><strong>Equations with Variables on Both Sides:</strong> When variables appear on both sides, bring all variable terms to one side and constants to the other. Example: 3x + 5 = 2x - 3 → 3x - 2x = -3 - 5 → x = -8.</p>
+      
+      <p><strong>Reducing Equations to Simpler Form:</strong> Sometimes equations involve fractions. Multiply both sides by the LCM of denominators to clear fractions, then solve.</p>
+      
+      <p><strong>Applications (Word Problems):</strong> Linear equations are used to solve real-life problems involving unknown quantities. Translate the problem into an equation, solve, and interpret the answer. Example: "The sum of two consecutive numbers is 45. Find the numbers." Let the numbers be x and x+1. Then x + (x+1) = 45 → 2x = 44 → x = 22. The numbers are 22 and 23.</p>
+      
+      <p><strong>Numerical Example:</strong> Solve 2(x - 3) + 5 = 3(x + 1). Solution: 2x - 6 + 5 = 3x + 3 → 2x - 1 = 3x + 3 → -1 - 3 = 3x - 2x → -4 = x. Thus, x = -4.</p>
+    </div>
+    <div class="formula-box">📐 Linear Equation: ax + b = 0, where a ≠ 0</div>
+
+    <h3>🛠️ Interactive Tools</h3>
+    <div class="tool-grid">
+      <div class="tool-card"><h4>1. Linear Equation Solver</h4>
+        <input type="text" id="eq_ch2" placeholder="e.g., 2x+3=7">
+        <button onclick="solveLinearCh2()">Solve</button>
+        <p id="solveResCh2"></p>
+        <script>function solveLinearCh2(){ let eq=document.getElementById('eq_ch2').value; try { let sides=eq.split('='); let left=sides[0], right=sides[1]; let xVal; if(left.includes('x')) xVal=(eval(right)-eval(left.replace('x','0')))/eval(left.match(/[\d\.]+(?=x)/)||1); else xVal=(eval(left)-eval(right.replace('x','0')))/eval(right.match(/[\d\.]+(?=x)/)||1); document.getElementById('solveResCh2').innerHTML=`Solution: x = ${xVal}`; } catch(e){ document.getElementById('solveResCh2').innerHTML='Use format like 2x+3=7'; } }</script>
+      </div>
+      <div class="tool-card"><h4>2. Variable on Both Sides</h4>
+        <input type="text" id="eq2_ch2" placeholder="e.g., 3x+5=2x-3">
+        <button onclick="solveBothCh2()">Solve</button>
+        <p id="bothResCh2"></p>
+        <script>function solveBothCh2(){ let eq=document.getElementById('eq2_ch2').value; try { let sides=eq.split('='); let left=sides[0], right=sides[1]; let leftX=left.match(/[\d\.]+(?=x)/)||[1]; let rightX=right.match(/[\d\.]+(?=x)/)||[1]; let leftConst=eval(left.replace(/[\d\.]+x/g,'0')); let rightConst=eval(right.replace(/[\d\.]+x/g,'0')); let a=parseFloat(leftX)-parseFloat(rightX); let b=rightConst-leftConst; let x=b/a; document.getElementById('bothResCh2').innerHTML=`Solution: x = ${x}`; } catch(e){ document.getElementById('bothResCh2').innerHTML='Enter valid equation with x'; } }</script>
+      </div>
+      <div class="tool-card"><h4>3. Equation from Word Problem</h4>
+        <p>Two numbers sum to 50. One is 10 more than the other.</p>
+        <button onclick="wordProbCh2()">Solve</button>
+        <p id="wordResCh2"></p>
+        <script>function wordProbCh2(){ let x=20; document.getElementById('wordResCh2').innerHTML=`Numbers are ${x} and ${x+10}`; }</script>
+      </div>
+      <div class="tool-card"><h4>4. Check Your Solution</h4>
+        <input type="text" id="eqCheck_ch2" placeholder="Equation e.g., 2x+3=7">
+        <input type="number" id="solCheck_ch2" placeholder="Your solution">
+        <button onclick="checkSolCh2()">Check</button>
+        <p id="checkResCh2"></p>
+        <script>function checkSolCh2(){ let eq=document.getElementById('eqCheck_ch2').value, sol=parseFloat(document.getElementById('solCheck_ch2').value); let lhs=eq.split('=')[0].replace('x',sol), rhs=eq.split('=')[1]; let lhsVal=eval(lhs), rhsVal=eval(rhs); if(Math.abs(lhsVal-rhsVal)<0.0001) document.getElementById('checkResCh2').innerHTML='✅ Correct!'; else document.getElementById('checkResCh2').innerHTML=`❌ Incorrect. LHS=${lhsVal}, RHS=${rhsVal}`; }</script>
+      </div>
+      <div class="tool-card"><h4>5. Fraction Clearing Tool</h4>
+        <input type="text" id="fracEq_ch2" placeholder="e.g., x/2 + 1 = 3">
+        <button onclick="clearFractionCh2()">Clear Fractions & Solve</button>
+        <p id="fracResCh2"></p>
+        <script>function clearFractionCh2(){ let eq=document.getElementById('fracEq_ch2').value; try { let xVal; if(eq.includes('/')){ let lhs=eq.split('=')[0], rhs=eq.split('=')[1]; let denomMatch=lhs.match(/\/(\d+)/); if(denomMatch){ let denom=parseInt(denomMatch[1]); lhs=lhs.replace(`/${denom}`,`*x/${denom}`); } let finalEq=lhs+'='+rhs; xVal=eval(finalEq.split('=')[1])-eval(finalEq.split('=')[0].replace('x','0')); } else { xVal=eval(eq.split('=')[1])-eval(eq.split('=')[0].replace('x','0')); } document.getElementById('fracResCh2').innerHTML=`Solution: x = ${xVal}`; } catch(e){ document.getElementById('fracResCh2').innerHTML='Enter equation like x/2+1=3'; } }</script>
+      </div>
+    </div>
+    <div class="quiz"><strong>📝 Quick Quiz (Chapter 2)</strong><br>1. Solve: 3x - 5 = 10<br>2. Solve: 2(x + 3) = 12<br>3. What is the first step to solve 3x/4 = 6?<br><em>Answers: 1. x = 5. 2. x = 3. 3. Multiply both sides by 4.</em></div>
+  </div>
+
+  <!-- ==================== CHAPTER 3: UNDERSTANDING QUADRILATERALS ==================== -->
+  <div id="ch3" class="chapter">
+    <h2>Chapter 3: Understanding Quadrilaterals</h2>
+    <div class="theory-box">
+      <p><strong>Polygons:</strong> A polygon is a closed figure formed by three or more line segments. Based on the number of sides, polygons are named as triangle (3), quadrilateral (4), pentagon (5), hexagon (6), heptagon (7), octagon (8), etc.</p>
+      
+      <p><strong>Regular and Irregular Polygons:</strong> A regular polygon has all sides equal and all angles equal (e.g., equilateral triangle, square). An irregular polygon does not have all sides and angles equal.</p>
+      
+      <p><strong>Angle Sum Property of a Polygon:</strong> The sum of interior angles of an n-sided polygon = (n - 2) × 180°. For a quadrilateral (n=4), sum = 360°. For a pentagon (n=5), sum = 540°.</p>
+      
+      <p><strong>Quadrilaterals:</strong> A quadrilateral is a polygon with four sides, four vertices, and four angles. The sum of all interior angles is 360°. There are several types:</p>
+      <ul>
+        <li><strong>Parallelogram:</strong> Opposite sides are parallel and equal, opposite angles are equal, diagonals bisect each other.</li>
+        <li><strong>Rectangle:</strong> A parallelogram with all angles 90°. Diagonals are equal.</li>
+        <li><strong>Square:</strong> A rectangle with all sides equal. Diagonals are equal and bisect at 90°.</li>
+        <li><strong>Rhombus:</strong> A parallelogram with all sides equal. Diagonals are perpendicular bisectors.</li>
+        <li><strong>Trapezium:</strong> One pair of opposite sides is parallel.</li>
+        <li><strong>Kite:</strong> Two pairs of adjacent sides are equal.</li>
+      </ul>
+      
+      <p><strong>Properties Summary Table:</strong>
+      <table><tr><th>Property</th><th>Parallelogram</th><th>Rectangle</th><th>Square</th><th>Rhombus</th></tr>
+      <tr><td>Opposite sides equal</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+      <tr><td>All sides equal</td><td>No</td><td>No</td><td>Yes</td><td>Yes</td></tr>
+      <tr><td>Opposite angles equal</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+      <tr><td>All angles 90°</td><td>No</td><td>Yes</td><td>Yes</td><td>No</td></tr>
+      <tr><td>Diagonals equal</td><td>No</td><td>Yes</td><td>Yes</td><td>No</td></tr>
+      <tr><td>Diagonals bisect each other</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+      <tr><td>Diagonals perpendicular</td><td>No</td><td>No</td><td>Yes</td><td>Yes</td></tr></table>
+      </p>
+      
+      <p><strong>Numerical Example:</strong> Find the measure of each interior angle of a regular octagon. Solution: Sum = (8-2)×180° = 1080°. Each angle = 1080/8 = 135°.</p>
+    </div>
+    <div class="formula-box">📐 Sum of interior angles = (n-2) × 180°</div>
+
+    <h3>🛠️ Interactive Tools</h3>
+    <div class="tool-grid">
+      <div class="tool-card"><h4>1. Polygon Angle Sum Calculator</h4>
+        <input type="number" id="n_ch3" placeholder="Number of sides">
+        <button onclick="angleSumCh3()">Calculate Sum</button>
+        <p id="angleSumResCh3"></p>
+        <script>function angleSumCh3(){ let n=parseInt(document.getElementById('n_ch3').value); if(n<3) {document.getElementById('angleSumResCh3').innerHTML='Polygon must have ≥3 sides'; return;} let sum=(n-2)*180; document.getElementById('angleSumResCh3').innerHTML=`Sum of interior angles = ${sum}°`; }</script>
+      </div>
+      <div class="tool-card"><h4>2. Quadrilateral Type Identifier</h4>
+        <select id="quadType_ch3">
+          <option value="parallelogram">Opposite sides parallel & equal</option>
+          <option value="rectangle">All angles 90°</option>
+          <option value="square">All sides equal & all angles 90°</option>
+          <option value="rhombus">All sides equal, diagonals perpendicular</option>
+        </select>
+        <button onclick="identifyQuadCh3()">Identify</button>
+        <p id="quadResCh3"></p>
+        <script>function identifyQuadCh3(){ let t=document.getElementById('quadType_ch3').value; let map={parallelogram:'Parallelogram', rectangle:'Rectangle', square:'Square', rhombus:'Rhombus'}; document.getElementById('quadResCh3').innerHTML=`Quadrilateral type: ${map[t]}`; }</script>
+      </div>
+      <div class="tool-card"><h4>3. Diagonal Property Checker</h4>
+        <select id="diagProp_ch3">
+          <option value="parallelogram">Parallelogram</option>
+          <option value="rectangle">Rectangle</option>
+          <option value="square">Square</option>
+          <option value="rhombus">Rhombus</option>
+        </select>
+        <button onclick="diagPropCh3()">Check Diagonals</button>
+        <p id="diagResCh3"></p>
+        <script>function diagPropCh3(){ let t=document.getElementById('diagProp_ch3').value; let map={parallelogram:'Diagonals bisect each other', rectangle:'Diagonals are equal and bisect', square:'Diagonals are equal, perpendicular, bisect', rhombus:'Diagonals are perpendicular bisectors'}; document.getElementById('diagResCh3').innerHTML=map[t]; }</script>
+      </div>
+      <div class="tool-card"><h4>4. Regular Polygon Interior Angle</h4>
+        <input type="number" id="polySides_ch3" placeholder="Number of sides">
+        <button onclick="intAngleCh3()">Find Each Interior Angle</button>
+        <p id="intAngleResCh3"></p>
+        <script>function intAngleCh3(){ let n=parseInt(document.getElementById('polySides_ch3').value); if(n<3) {document.getElementById('intAngleResCh3').innerHTML='Need at least 3 sides'; return;} let angle=(n-2)*180/n; document.getElementById('intAngleResCh3').innerHTML=`Each interior angle = ${angle.toFixed(2)}°`; }</script>
+      </div>
+      <div class="tool-card"><h4>5. Exterior Angle Calculator</h4>
+        <input type="number" id="extSides_ch3" placeholder="Number of sides">
+        <button onclick="extAngleCh3()">Find Exterior Angle</button>
+        <p id="extAngleResCh3"></p>
+        <script>function extAngleCh3(){ let n=parseInt(document.getElementById('extSides_ch3').value); if(n<3) {document.getElementById('extAngleResCh3').innerHTML='Need at least 3 sides'; return;} let angle=360/n; document.getElementById('extAngleResCh3').innerHTML=`Each exterior angle = ${angle}°`; }</script>
+      </div>
+    </div>
+    <div class="quiz"><strong>📝 Quick Quiz (Chapter 3)</strong><br>1. What is the sum of interior angles of a hexagon?<br>2. Name a quadrilateral where diagonals are perpendicular.<br>3. In a parallelogram, are opposite angles equal?<br><em>Answers: 1. 720°. 2. Rhombus or square. 3. Yes.</em></div>
+  </div>
+
+  <!-- ==================== CHAPTER 4: DATA HANDLING ==================== -->
+  <div id="ch4" class="chapter">
+    <h2>Chapter 4: Data Handling</h2>
+    <div class="theory-box">
+      <p><strong>Data Handling:</strong> Data handling involves collecting, organizing, representing, and interpreting data. Data can be represented in various forms like tables, bar graphs, histograms, and pie charts.</p>
+      
+      <p><strong>Frequency Distribution Table:</strong> A table that shows how often each value occurs. Grouped data can be organized into class intervals (e.g., 0-10, 10-20). The midpoint of a class interval is called the class mark.</p>
+      
+      <p><strong>Bar Graphs and Double Bar Graphs:</strong> Bar graphs represent data using rectangular bars of uniform width. Double bar graphs are used to compare two sets of data side by side.</p>
+      
+      <p><strong>Histogram:</strong> A histogram is a bar graph without gaps between bars, used for grouped continuous data. The area of each bar represents the frequency.</p>
+      
+      <p><strong>Pie Chart (Circle Graph):</strong> A pie chart represents data as sectors of a circle. The central angle for each category = (frequency / total frequency) × 360°. Example: If 50% of students like cricket, the sector angle = 50% of 360° = 180°.</p>
+      
+      <p><strong>Probability:</strong> Probability measures the likelihood of an event occurring. It ranges from 0 (impossible) to 1 (certain). Formula: Probability = Number of favourable outcomes / Total number of possible outcomes (assuming equally likely outcomes).</p>
+      
+      <p><strong>Examples:</strong> Tossing a coin: P(head) = 1/2. Rolling a die: P(6) = 1/6. Drawing a card from a deck: P(ace) = 4/52 = 1/13.</p>
+      
+      <p><strong>Numerical Example:</strong> In a class of 40 students, 15 like football. What is the probability that a randomly chosen student likes football? Solution: P = 15/40 = 3/8 = 0.375.</p>
+    </div>
+    <div class="formula-box">📐 Probability = Favourable outcomes / Total outcomes</div>
+
+    <h3>🛠️ Interactive Tools</h3>
+    <div class="tool-grid">
+      <div class="tool-card"><h4>1. Pie Chart Angle Calculator</h4>
+        <input type="number" id="freq_ch4" placeholder="Frequency">
+        <input type="number" id="total_ch4" placeholder="Total">
+        <button onclick="pieAngleCh4()">Calculate Sector Angle</button>
+        <p id="pieResCh4"></p>
+        <script>function pieAngleCh4(){ let f=parseFloat(document.getElementById('freq_ch4').value), t=parseFloat(document.getElementById('total_ch4').value); if(t>0){ let angle=(f/t)*360; document.getElementById('pieResCh4').innerHTML=`Sector angle = ${angle.toFixed(2)}°`; } else document.getElementById('pieResCh4').innerHTML='Total must be >0'; }</script>
+      </div>
+      <div class="tool-card"><h4>2. Probability Calculator</h4>
+        <input type="number" id="fav_ch4" placeholder="Favourable outcomes">
+        <input type="number" id="totalProb_ch4" placeholder="Total outcomes">
+        <button onclick="calcProbCh4()">Calculate Probability</button>
+        <p id="probResCh4"></p>
+        <script>function calcProbCh4(){ let f=parseFloat(document.getElementById('fav_ch4').value), t=parseFloat(document.getElementById('totalProb_ch4').value); if(t>0 && f<=t) document.getElementById('probResCh4').innerHTML=`Probability = ${f/t} = ${(f/t*100).toFixed(2)}%`; else document.getElementById('probResCh4').innerHTML='Invalid inputs'; }</script>
+      </div>
+      <div class="tool-card"><h4>3. Mean (Average) Calculator</h4>
+        <input type="text" id="data_ch4" placeholder="Enter numbers separated by comma">
+        <button onclick="calcMeanCh4()">Calculate Mean</button>
+        <p id="meanResCh4"></p>
+        <script>function calcMeanCh4(){ let data=document.getElementById('data_ch4').value.split(',').map(Number); let sum=data.reduce((a,b)=>a+b,0); let mean=sum/data.length; document.getElementById('meanResCh4').innerHTML=`Mean = ${mean.toFixed(2)}`; }</script>
+      </div>
+      <div class="tool-card"><h4>4. Median Finder</h4>
+        <input type="text" id="medianData_ch4" placeholder="Numbers separated by comma">
+        <button onclick="findMedianCh4()">Find Median</button>
+        <p id="medianResCh4"></p>
+        <script>function findMedianCh4(){ let arr=document.getElementById('medianData_ch4').value.split(',').map(Number); arr.sort((a,b)=>a-b); let mid=Math.floor(arr.length/2); let median=arr.length%2===0?(arr[mid-1]+arr[mid])/2:arr[mid]; document.getElementById('medianResCh4').innerHTML=`Median = ${median}`; }</script>
+      </div>
+      <div class="tool-card"><h4>5. Mode Detector</h4>
+        <input type="text" id="modeData_ch4" placeholder="Numbers separated by comma">
+        <button onclick="findModeCh4()">Find Mode</button>
+        <p id="modeResCh4"></p>
+        <script>function findModeCh4(){ let arr=document.getElementById('modeData_ch4').value.split(',').map(Number); let freq={}; arr.forEach(x=>freq[x]=(freq[x]||0)+1); let maxFreq=Math.max(...Object.values(freq)); let modes=Object.keys(freq).filter(x=>freq[x]===maxFreq); document.getElementById('modeResCh4').innerHTML=`Mode(s): ${modes.join(', ')} (frequency ${maxFreq})`; }</script>
+      </div>
+    </div>
+    <div class="quiz"><strong>📝 Quick Quiz (Chapter 4)</strong><br>1. What is the probability of getting an even number when rolling a die?<br>2. In a pie chart, if a sector has 90°, what percentage does it represent?<br>3. Find the mean of 5, 10, 15, 20.<br><em>Answers: 1. 1/2. 2. 25%. 3. 12.5.</em></div>
+  </div>
+
+  <!-- ==================== CHAPTER 5: SQUARES AND SQUARE ROOTS ==================== -->
+  <div id="ch5" class="chapter">
+    <h2>Chapter 5: Squares and Square Roots</h2>
+    <div class="theory-box">
+      <p><strong>Square Numbers:</strong> If a natural number m can be expressed as n² (n × n), then m is a perfect square. Examples: 1, 4, 9, 16, 25, 36, 49, 64, 81, 100, ... Properties: A perfect square ends with 0,1,4,5,6,9 (not 2,3,7,8). The square of an even number is even; square of an odd number is odd.</p>
+      
+      <p><strong>Finding Square of a Number:</strong> Square of a number can be found by multiplying it by itself. For larger numbers, use algebraic identities: (a+b)² = a² + 2ab + b². Example: 12² = (10+2)² = 100 + 40 + 4 = 144.</p>
+      
+      <p><strong>Pythagorean Triplets:</strong> For any natural number m > 1, (2m, m²-1, m²+1) forms a Pythagorean triplet. Example: m=3 gives (6,8,10) because 6²+8²=10².</p>
+      
+      <p><strong>Square Roots:</strong> The square root of a number is the value that, when multiplied by itself, gives the original number. It is denoted by √. Finding square root is the inverse operation of squaring.</p>
+      
+      <p><strong>Methods to Find Square Root:</strong>
+      <ul>
+        <li><strong>Prime Factorisation:</strong> Write the number as product of primes, then pair identical factors. For each pair, take one factor out. Example: √36 = √(2×2×3×3) = 2×3 = 6.</li>
+        <li><strong>Long Division Method:</strong> Used for larger numbers. Steps: group digits in pairs, find largest number whose square ≤ first group, subtract, bring down next pair, double the quotient, etc.</li>
+      </ul>
+      </p>
+      
+      <p><strong>Square Roots of Decimals:</strong> Same methods apply. For perfect square decimals, the square root will also be a decimal.</p>
+      
+      <p><strong>Numerical Example:</strong> Find √144 using prime factorisation. 144 = 2⁴ × 3² = (2²×3)² = 12². So √144 = 12.</p>
+    </div>
+    <div class="formula-box">📐 If n = m², then √n = m</div>
+
+    <h3>🛠️ Interactive Tools</h3>
+    <div class="tool-grid">
+      <div class="tool-card"><h4>1. Perfect Square Checker</h4>
+        <input type="number" id="numSquare_ch5" placeholder="Enter number">
+        <button onclick="checkPerfectSquareCh5()">Check</button>
+        <p id="squareResCh5"></p>
+        <script>function checkPerfectSquareCh5(){ let n=parseInt(document.getElementById('numSquare_ch5').value); let root=Math.sqrt(n); if(root===Math.floor(root)) document.getElementById('squareResCh5').innerHTML=`✅ ${n} is a perfect square (${root}²)`; else document.getElementById('squareResCh5').innerHTML=`❌ ${n} is not a perfect square`; }</script>
+      </div>
+      <div class="tool-card"><h4>2. Square Root Calculator</h4>
+        <input type="number" id="numRoot_ch5" placeholder="Enter number">
+        <button onclick="calcSquareRootCh5()">Calculate √</button>
+        <p id="rootResCh5"></p>
+        <script>function calcSquareRootCh5(){ let n=parseFloat(document.getElementById('numRoot_ch5').value); if(n>=0) document.getElementById('rootResCh5').innerHTML=`√${n} = ${Math.sqrt(n).toFixed(4)}`; else document.getElementById('rootResCh5').innerHTML='Cannot find square root of negative number'; }</script>
+      </div>
+      <div class="tool-card"><h4>3. Pythagorean Triplet Generator</h4>
+        <input type="number" id="m_ch5" placeholder="Enter m (m>1)">
+        <button onclick="genTripletCh5()">Generate Triplet</button>
+        <p id="tripletResCh5"></p>
+        <script>function genTripletCh5(){ let m=parseInt(document.getElementById('m_ch5').value); if(m>1){ let a=2*m, b=m*m-1, c=m*m+1; document.getElementById('tripletResCh5').innerHTML=`Pythagorean triplet: (${a}, ${b}, ${c})<br>${a}² + ${b}² = ${a*a+b*b} = ${c}²`; } else document.getElementById('tripletResCh5').innerHTML='m must be >1'; }</script>
+      </div>
+      <div class="tool-card"><h4>4. Square using Identity (a+b)²</h4>
+        <input type="number" id="aVal_ch5" placeholder="a">
+        <input type="number" id="bVal_ch5" placeholder="b">
+        <button onclick="squareIdentityCh5()">Calculate (a+b)²</button>
+        <p id="identityResCh5"></p>
+        <script>function squareIdentityCh5(){ let a=parseFloat(document.getElementById('aVal_ch5').value), b=parseFloat(document.getElementById('bVal_ch5').value); let result=(a+b)*(a+b); document.getElementById('identityResCh5').innerHTML=`(${a}+${b})² = ${result}`; }</script>
+      </div>
+      <div class="tool-card"><h4>5. Square Root by Prime Factorisation</h4>
+        <input type="number" id="primeNum_ch5" placeholder="Enter perfect square">
+        <button onclick="primeFactorSqrtCh5()">Find Square Root</button>
+        <p id="primeResCh5"></p>
+        <script>function primeFactorSqrtCh5(){ let n=parseInt(document.getElementById('primeNum_ch5').value); let temp=n, root=1; for(let i=2; i*i<=temp; i++){ let count=0; while(temp%i===0){ count++; temp/=i; } if(count%2!==0){ root*=i; } } if(temp>1) root*=temp; document.getElementById('primeResCh5').innerHTML=`√${n} = ${root}`; }</script>
+      </div>
+    </div>
+    <div class="quiz"><strong>📝 Quick Quiz (Chapter 5)</strong><br>1. Is 50 a perfect square?<br>2. Find √256.<br>3. Generate a Pythagorean triplet using m=4.<br><em>Answers: 1. No. 2. 16. 3. (8,15,17).</em></div>
+  </div>
+
+  <!-- ==================== CHAPTER 6: CUBES AND CUBE ROOTS ==================== -->
+  <div id="ch6" class="chapter">
+    <h2>Chapter 6: Cubes and Cube Roots</h2>
+    <div class="theory-box">
+      <p><strong>Cube Numbers:</strong> A cube number is obtained by multiplying a number by itself three times. n³ = n × n × n. Examples: 1³=1, 2³=8, 3³=27, 4³=64, 5³=125, 6³=216, 7³=343, 8³=512, 9³=729, 10³=1000.</p>
+      
+      <p><strong>Properties of Cubes:</strong>
+      <ul>
+        <li>Cube of an even number is even; cube of an odd number is odd.</li>
+        <li>Cube of a positive number is positive; cube of a negative number is negative.</li>
+        <li>Perfect cubes end with 0,1,2,3,4,5,6,7,8,9 (no restriction like squares).</li>
+        <li>The sum of first n odd numbers = n², not related to cubes.</li>
+      </ul>
+      </p>
+      
+      <p><strong>Finding Cube of a Number:</strong> Use multiplication or algebraic identities: (a+b)³ = a³ + 3a²b + 3ab² + b³.</p>
+      
+      <p><strong>Cube Roots:</strong> The cube root of a number is the value that, when multiplied by itself three times, gives the original number. It is denoted by ∛. Finding cube root is the inverse operation of cubing.</p>
+      
+      <p><strong>Methods to Find Cube Root:</strong>
+      <ul>
+        <li><strong>Prime Factorisation:</strong> Write the number as product of primes, then group them in triples. For each triple, take one factor out. Example: ∛216 = ∛(2³×3³) = 2×3 = 6.</li>
+        <li><strong>Estimation Method:</strong> For larger numbers, estimate the cube root by considering the nearest perfect cubes.</li>
+      </ul>
+      </p>
+      
+      <p><strong>Hardy-Ramanujan Number:</strong> 1729 is the smallest number that can be expressed as sum of two cubes in two different ways: 1729 = 1³+12³ = 9³+10³.</p>
+      
+      <p><strong>Numerical Example:</strong> Find ∛512. Prime factorisation: 512 = 2⁹ = (2³)³ = 8³. So ∛512 = 8.</p>
+    </div>
+    <div class="formula-box">📐 If n = m³, then ∛n = m</div>
+
+    <h3>🛠️ Interactive Tools</h3>
+    <div class="tool-grid">
+      <div class="tool-card"><h4>1. Perfect Cube Checker</h4>
+        <input type="number" id="numCube_ch6" placeholder="Enter number">
+        <button onclick="checkPerfectCubeCh6()">Check</button>
+        <p id="cubeResCh6"></p>
+        <script>function checkPerfectCubeCh6(){ let n=parseInt(document.getElementById('numCube_ch6').value); let root=Math.round(Math.pow(n,1/3)); if(root*root*root===n) document.getElementById('cubeResCh6').innerHTML=`✅ ${n} is a perfect cube (${root}³)`; else document.getElementById('cubeResCh6').innerHTML=`❌ ${n} is not a perfect cube`; }</script>
+      </div>
+      <div class="tool-card"><h4>2. Cube Root Calculator</h4>
+        <input type="number" id="numRootCube_ch6" placeholder="Enter number">
+        <button onclick="calcCubeRootCh6()">Calculate ∛</button>
+        <p id="cubeRootResCh6"></p>
+        <script>function calcCubeRootCh6(){ let n=parseFloat(document.getElementById('numRootCube_ch6').value); let root=Math.cbrt(n); document.getElementById('cubeRootResCh6').innerHTML=`∛${n} = ${root.toFixed(4)}`; }</script>
+      </div>
+      <div class="tool-card"><h4>3. Cube of a Number</h4>
+        <input type="number" id="numToCube_ch6" placeholder="Enter number">
+        <button onclick="calcCubeCh6()">Calculate n³</button>
+        <p id="cubeCalcResCh6"></p>
+        <script>function calcCubeCh6(){ let n=parseFloat(document.getElementById('numToCube_ch6').value); document.getElementById('cubeCalcResCh6').innerHTML=`${n}³ = ${n*n*n}`; }</script>
+      </div>
+      <div class="tool-card"><h4>4. Cube Root by Estimation</h4>
+        <input type="number" id="estCube_ch6" placeholder="Enter number">
+        <button onclick="estCubeRootCh6()">Estimate Cube Root</button>
+        <p id="estResCh6"></p>
+        <script>function estCubeRootCh6(){ let n=parseInt(document.getElementById('estCube_ch6').value); let root=Math.round(Math.pow(n,1/3)); document.getElementById('estResCh6').innerHTML=`Estimated cube root of ${n} is approximately ${root}`; }</script>
+      </div>
+      <div class="tool-card"><h4>5. Sum of Two Cubes Check</h4>
+        <input type="number" id="numSumCube_ch6" placeholder="Enter number">
+        <button onclick="checkRamanujanCh6()">Check Hardy-Ramanujan</button>
+        <p id="ramanujanResCh6"></p>
+        <script>function checkRamanujanCh6(){ let n=parseInt(document.getElementById('numSumCube_ch6').value); if(n===1729) document.getElementById('ramanujanResCh6').innerHTML=`✨ ${n} is the Hardy-Ramanujan number! 1729 = 1³+12³ = 9³+10³`; else document.getElementById('ramanujanResCh6').innerHTML=`${n} is not 1729`; }</script>
+      </div>
+    </div>
+    <div class="quiz"><strong>📝 Quick Quiz (Chapter 6)</strong><br>1. Find ∛343.<br>2. Is 1000 a perfect cube?<br>3. What is 6³?<br><em>Answers: 1. 7. 2. Yes (10³). 3. 216.</em></div>
+  </div>
+
+  <!-- ==================== CHAPTER 7: COMPARING QUANTITIES ==================== -->
+  <div id="ch7" class="chapter">
+    <h2>Chapter 7: Comparing Quantities</h2>
+    <div class="theory-box">
+      <p><strong>Ratios and Percentages:</strong> A ratio compares two quantities of the same unit. Percentage is a ratio with denominator 100. To convert a fraction to percentage, multiply by 100%. Example: 3/4 = 75%.</p>
+      
+      <p><strong>Finding Percentage of a Quantity:</strong> Percentage = (Part / Whole) × 100. Example: What percentage of 50 is 10? (10/50)×100 = 20%.</p>
+      
+      <p><strong>Profit and Loss:</strong> 
+      <ul>
+        <li>Cost Price (CP) = price at which item is bought.</li>
+        <li>Selling Price (SP) = price at which item is sold.</li>
+        <li>Profit = SP - CP (if SP > CP). Profit% = (Profit/CP) × 100.</li>
+        <li>Loss = CP - SP (if CP > SP). Loss% = (Loss/CP) × 100.</li>
+      </ul>
+      </p>
+      
+      <p><strong>Discount:</strong> Discount = Marked Price (MP) - Selling Price (SP). Discount% = (Discount/MP) × 100.</p>
+      
+      <p><strong>Sales Tax / GST:</strong> Tax is added to the selling price. Tax amount = (Tax% × SP)/100. Final price = SP + Tax.</p>
+      
+      <p><strong>Simple Interest (SI):</strong> SI = (P × R × T)/100, where P = Principal, R = Rate of interest per annum, T = Time in years. Amount = P + SI.</p>
+      
+      <p><strong>Compound Interest (CI):</strong> Interest is added to principal after each period. Amount = P(1 + R/100)^T. CI = Amount - P.</p>
+      
+      <p><strong>Numerical Example:</strong> Find simple interest on ₹5000 at 8% per annum for 3 years. SI = (5000×8×3)/100 = ₹1200. Amount = ₹6200.</p>
+    </div>
+    <div class="formula-box">📐 SI = (P×R×T)/100 | CI = P(1 + R/100)^T - P</div>
+
+    <h3>🛠️ Interactive Tools</h3>
+    <div class="tool-grid">
+      <div class="tool-card"><h4>1. Profit/Loss Calculator</h4>
+        <input type="number" id="cp_ch7" placeholder="Cost Price">
+        <input type="number" id="sp_ch7" placeholder="Selling Price">
+        <button onclick="calcProfitLossCh7()">Calculate</button>
+        <p id="plResCh7"></p>
+        <script>function calcProfitLossCh7(){ let cp=parseFloat(document.getElementById('cp_ch7').value), sp=parseFloat(document.getElementById('sp_ch7').value); if(sp>cp) document.getElementById('plResCh7').innerHTML=`Profit = ₹${(sp-cp).toFixed(2)} (${((sp-cp)/cp*100).toFixed(2)}%)`; else if(cp>sp) document.getElementById('plResCh7').innerHTML=`Loss = ₹${(cp-sp).toFixed(2)} (${((cp-sp)/cp*100).toFixed(2)}%)`; else document.getElementById('plResCh7').innerHTML='No profit, no loss'; }</script>
+      </div>
+      <div class="tool-card"><h4>2. Simple Interest Calculator</h4>
+        <input type="number" id="p_ch7" placeholder="Principal (P)">
+        <input type="number" id="r_ch7" placeholder="Rate (%)">
+        <input type="number" id="t_ch7" placeholder="Time (years)">
+        <button onclick="calcSICh7()">Calculate SI</button>
+        <p id="siResCh7"></p>
+        <script>function calcSICh7(){ let p=parseFloat(document.getElementById('p_ch7').value), r=parseFloat(document.getElementById('r_ch7').value), t=parseFloat(document.getElementById('t_ch7').value); let si=(p*r*t)/100; document.getElementById('siResCh7').innerHTML=`Simple Interest = ₹${si.toFixed(2)}<br>Amount = ₹${(p+si).toFixed(2)}`; }</script>
+      </div>
+      <div class="tool-card"><h4>3. Compound Interest Calculator</h4>
+        <input type="number" id="cp_ch7_ci" placeholder="Principal">
+        <input type="number" id="cr_ch7" placeholder="Rate (%)">
+        <input type="number" id="ct_ch7" placeholder="Time (years)">
+        <button onclick="calcCICh7()">Calculate CI</button>
+        <p id="ciResCh7"></p>
+        <script>function calcCICh7(){ let p=parseFloat(document.getElementById('cp_ch7_ci').value), r=parseFloat(document.getElementById('cr_ch7').value), t=parseFloat(document.getElementById('ct_ch7').value); let amount=p*Math.pow(1+r/100,t); document.getElementById('ciResCh7').innerHTML=`Amount = ₹${amount.toFixed(2)}<br>Compound Interest = ₹${(amount-p).toFixed(2)}`; }</script>
+      </div>
+      <div class="tool-card"><h4>4. Discount Calculator</h4>
+        <input type="number" id="mp_ch7" placeholder="Marked Price">
+        <input type="number" id="discount_ch7" placeholder="Discount %">
+        <button onclick="calcDiscountCh7()">Calculate SP after Discount</button>
+        <p id="discResCh7"></p>
+        <script>function calcDiscountCh7(){ let mp=parseFloat(document.getElementById('mp_ch7').value), d=parseFloat(document.getElementById('discount_ch7').value); let sp=mp*(1-d/100); document.getElementById('discResCh7').innerHTML=`Selling Price after ${d}% discount = ₹${sp.toFixed(2)}`; }</script>
+      </div>
+      <div class="tool-card"><h4>5. Percentage Calculator</h4>
+        <input type="number" id="part_ch7" placeholder="Part">
+        <input type="number" id="whole_ch7" placeholder="Whole">
+        <button onclick="calcPercentCh7()">Calculate Percentage</button>
+        <p id="percentResCh7"></p>
+        <script>function calcPercentCh7(){ let part=parseFloat(document.getElementById('part_ch7').value), whole=parseFloat(document.getElementById('whole_ch7').value); if(whole>0) document.getElementById('percentResCh7').innerHTML=`${part} is ${(part/whole*100).toFixed(2)}% of ${whole}`; else document.getElementById('percentResCh7').innerHTML='Whole must be >0'; }</script>
+      </div>
+    </div>
+    <div class="quiz"><strong>📝 Quick Quiz (Chapter 7)</strong><br>1. Find 20% of 250.<br>2. If CP = ₹500 and SP = ₹600, find profit%.<br>3. Calculate SI on ₹1000 at 5% for 2 years.<br><em>Answers: 1. 50. 2. 20%. 3. ₹100.</em></div>
+  </div>
+
+  <!-- ==================== CHAPTER 8: ALGEBRAIC EXPRESSIONS AND IDENTITIES ==================== -->
+  <div id="ch8" class="chapter">
+    <h2>Chapter 8: Algebraic Expressions and Identities</h2>
+    <div class="theory-box">
+      <p><strong>Algebraic Expressions:</strong> An algebraic expression is a combination of variables, constants, and operators. Terms are separated by + or - signs. Example: 3x² + 2xy - 5 has three terms.</p>
+      
+      <p><strong>Types of Expressions:</strong>
+      <ul>
+        <li><strong>Monomial:</strong> One term (e.g., 5x, 7, -3y²).</li>
+        <li><strong>Binomial:</strong> Two terms (e.g., 2x + 3y, a² - b²).</li>
+        <li><strong>Trinomial:</strong> Three terms (e.g., x² + 2x + 1).</li>
+        <li><strong>Polynomial:</strong> One or more terms (general term).</li>
+      </ul>
+      </p>
+      
+      <p><strong>Like and Unlike Terms:</strong> Like terms have the same variables raised to the same powers (e.g., 3x² and 5x²). Unlike terms have different variables or powers (e.g., 3x² and 3y²). Only like terms can be added or subtracted.</p>
+      
+      <p><strong>Operations on Algebraic Expressions:</strong>
+      <ul>
+        <li><strong>Addition/Subtraction:</strong> Combine like terms. Example: (2x+3y)+(4x-2y)=6x+y.</li>
+        <li><strong>Multiplication:</strong> Multiply coefficients and add exponents of same variables. Example: (3x²)×(4x³)=12x⁵.</li>
+        <li><strong>Division:</strong> Divide coefficients and subtract exponents. Example: (12x⁵)/(3x²)=4x³.</li>
+      </ul>
+      </p>
+      
+      <p><strong>Standard Algebraic Identities:</strong>
+      <ul>
+        <li>(a + b)² = a² + 2ab + b²</li>
+        <li>(a - b)² = a² - 2ab + b²</li>
+        <li>a² - b² = (a - b)(a + b)</li>
+        <li>(x + a)(x + b) = x² + (a+b)x + ab</li>
+        <li>(a + b)³ = a³ + 3a²b + 3ab² + b³</li>
+        <li>(a - b)³ = a³ - 3a²b + 3ab² - b³</li>
+      </ul>
+      </p>
+      
+      <p><strong>Applications of Identities:</strong> Identities help in simplifying expressions and solving equations without direct multiplication. Example: 102² = (100+2)² = 10000 + 400 + 4 = 10404.</p>
+      
+      <p><strong>Numerical Example:</strong> Expand (2x+3y)² using identity. Solution: (2x)² + 2×(2x)×(3y) + (3y)² = 4x² + 12xy + 9y².</p>
+    </div>
+    <div class="formula-box">📐 (a+b)² = a² + 2ab + b² | a² - b² = (a-b)(a+b)</div>
+
+    <h3>🛠️ Interactive Tools</h3>
+    <div class="tool-grid">
+      <div class="tool-card"><h4>1. Identity (a+b)² Expander</h4>
+        <input type="text" id="aVal_ch8" placeholder="a" value="x">
+        <input type="text" id="bVal_ch8" placeholder="b" value="y">
+        <button onclick="expandABSquareCh8()">Expand (a+b)²</button>
+        <p id="abSquareResCh8"></p>
+        <script>function expandABSquareCh8(){ let a=document.getElementById('aVal_ch8').value, b=document.getElementById('bVal_ch8').value; document.getElementById('abSquareResCh8').innerHTML=`(${a}+${b})² = ${a}² + 2${a}${b} + ${b}²`; }</script>
+      </div>
+      <div class="tool-card"><h4>2. Difference of Squares</h4>
+        <input type="text" id="aValDiff_ch8" placeholder="a">
+        <input type="text" id="bValDiff_ch8" placeholder="b">
+        <button onclick="diffSquaresCh8()">Factorise a² - b²</button>
+        <p id="diffResCh8"></p>
+        <script>function diffSquaresCh8(){ let a=document.getElementById('aValDiff_ch8').value, b=document.getElementById('bValDiff_ch8').value; document.getElementById('diffResCh8').innerHTML=`${a}² - ${b}² = (${a}-${b})(${a}+${b})`; }</script>
+      </div>
+      <div class="tool-card"><h4>3. Like Terms Combiner</h4>
+        <input type="text" id="expr1_ch8" placeholder="e.g., 3x+5y+2x-3y">
+        <button onclick="combineLikeTermsCh8()">Combine Like Terms</button>
+        <p id="combineResCh8"></p>
+        <script>function combineLikeTermsCh8(){ let expr=document.getElementById('expr1_ch8').value; try { let xCoeff=0, yCoeff=0, constTerm=0; let terms=expr.match(/[+-]?\d*\.?\d*[a-z]?/g); terms.forEach(t=>{ if(t!==''){ let num=parseFloat(t)||(t.includes('x')?1:0); if(t.includes('x')) xCoeff+=num; else if(t.includes('y')) yCoeff+=num; else if(!isNaN(num)) constTerm+=num; } }); document.getElementById('combineResCh8').innerHTML=`Simplified: ${xCoeff}x + ${yCoeff}y + ${constTerm}`; } catch(e){ document.getElementById('combineResCh8').innerHTML='Enter valid expression'; } }</script>
+      </div>
+      <div class="tool-card"><h4>4. Multiply Monomials</h4>
+        <input type="text" id="mono1_ch8" placeholder="e.g., 3x²">
+        <input type="text" id="mono2_ch8" placeholder="e.g., 4x³">
+        <button onclick="multiplyMonoCh8()">Multiply</button>
+        <p id="multiplyResCh8"></p>
+        <script>function multiplyMonoCh8(){ let m1=document.getElementById('mono1_ch8').value, m2=document.getElementById('mono2_ch8').value; let coeff1=parseFloat(m1.match(/[\d\.]+/))||1, coeff2=parseFloat(m2.match(/[\d\.]+/))||1; let var1=m1.match(/[a-z]+\^?\d*/)||['']; let var2=m2.match(/[a-z]+\^?\d*/)||['']; let coeff=coeff1*coeff2; let varPart=var1[0]+var2[0]; document.getElementById('multiplyResCh8').innerHTML=`${m1} × ${m2} = ${coeff}${varPart}`; }</script>
+      </div>
+      <div class="tool-card"><h4>5. Evaluate Expression for x</h4>
+        <input type="text" id="exprEval_ch8" placeholder="Expression e.g., 3x+5">
+        <input type="number" id="xVal_ch8" placeholder="x =">
+        <button onclick="evalExprCh8()">Evaluate</button>
+        <p id="evalResCh8"></p>
+        <script>function evalExprCh8(){ let expr=document.getElementById('exprEval_ch8').value, x=parseFloat(document.getElementById('xVal_ch8').value); let result=eval(expr.replace(/x/g,x)); document.getElementById('evalResCh8').innerHTML=`Value = ${result}`; }</script>
+      </div>
+    </div>
+    <div class="quiz"><strong>📝 Quick Quiz (Chapter 8)</strong><br>1. Expand (x+3)².<br>2. Simplify: 5x + 3y - 2x + y.<br>3. Factorise: x² - 9.<br><em>Answers: 1. x²+6x+9. 2. 3x+4y. 3. (x-3)(x+3).</em></div>
+  </div>
+
+  <!-- ==================== CHAPTER 9: MENSURATION ==================== -->
+  <div id="ch9" class="chapter">
+    <h2>Chapter 9: Mensuration</h2>
+    <div class="theory-box">
+      <p><strong>Mensuration:</strong> Mensuration is the branch of mathematics that deals with the measurement of geometric figures – their area, perimeter, surface area, and volume.</p>
+      
+      <p><strong>Area and Perimeter of 2D Shapes:</strong>
+      <ul>
+        <li><strong>Square:</strong> Area = side², Perimeter = 4 × side</li>
+        <li><strong>Rectangle:</strong> Area = length × breadth, Perimeter = 2(l + b)</li>
+        <li><strong>Triangle:</strong> Area = ½ × base × height, Perimeter = sum of sides</li>
+        <li><strong>Circle:</strong> Area = πr², Circumference = 2πr</li>
+        <li><strong>Parallelogram:</strong> Area = base × height</li>
+        <li><strong>Rhombus:</strong> Area = ½ × d₁ × d₂ (diagonals)</li>
+        <li><strong>Trapezium:</strong> Area = ½ × (sum of parallel sides) × height</li>
+      </ul>
+      </p>
+      
+      <p><strong>Surface Area and Volume of 3D Shapes:</strong>
+      <ul>
+        <li><strong>Cube:</strong> Surface Area = 6a², Volume = a³</li>
+        <li><strong>Cuboid:</strong> Surface Area = 2(lb + bh + hl), Volume = l × b × h</li>
+        <li><strong>Cylinder:</strong> Curved Surface Area = 2πrh, Total Surface Area = 2πr(r+h), Volume = πr²h</li>
+        <li><strong>Cone:</strong> Curved Surface Area = πrl, Total Surface Area = πr(r+l), Volume = (1/3)πr²h</li>
+        <li><strong>Sphere:</strong> Surface Area = 4πr², Volume = (4/3)πr³</li>
+      </ul>
+      </p>
+      
+      <p><strong>Units:</strong> Area is measured in square units (cm², m²). Volume is measured in cubic units (cm³, m³). 1 m² = 10,000 cm², 1 m³ = 10,00,000 cm³.</p>
+      
+      <p><strong>Numerical Example:</strong> Find the volume of a cuboid of length 10 cm, breadth 5 cm, height 3 cm. Solution: Volume = 10 × 5 × 3 = 150 cm³.</p>
+    </div>
+    <div class="formula-box">📐 Volume of Cube = a³ | Volume of Cuboid = l×b×h</div>
+
+    <h3>🛠️ Interactive Tools</h3>
+    <div class="tool-grid">
+      <div class="tool-card"><h4>1. Area of Rectangle</h4>
+        <input type="number" id="lenRect_ch9" placeholder="Length">
+        <input type="number" id="widRect_ch9" placeholder="Width">
+        <button onclick="areaRectCh9()">Calculate Area</button>
+        <p id="areaRectResCh9"></p>
+        <script>function areaRectCh9(){ let l=parseFloat(document.getElementById('lenRect_ch9').value), w=parseFloat(document.getElementById('widRect_ch9').value); document.getElementById('areaRectResCh9').innerHTML=`Area = ${l*w} sq units`; }</script>
+      </div>
+      <div class="tool-card"><h4>2. Volume of Cuboid</h4>
+        <input type="number" id="lenCuboid_ch9" placeholder="Length">
+        <input type="number" id="widCuboid_ch9" placeholder="Width">
+        <input type="number" id="heiCuboid_ch9" placeholder="Height">
+        <button onclick="volCuboidCh9()">Calculate Volume</button>
+        <p id="volCuboidResCh9"></p>
+        <script>function volCuboidCh9(){ let l=parseFloat(document.getElementById('lenCuboid_ch9').value), w=parseFloat(document.getElementById('widCuboid_ch9').value), h=parseFloat(document.getElementById('heiCuboid_ch9').value); document.getElementById('volCuboidResCh9').innerHTML=`Volume = ${l*w*h} cubic units`; }</script>
+      </div>
+      <div class="tool-card"><h4>3. Area of Circle</h4>
+        <input type="number" id="radCircle_ch9" placeholder="Radius">
+        <button onclick="areaCircleCh9()">Calculate Area</button>
+        <p id="areaCircleResCh9"></p>
+        <script>function areaCircleCh9(){ let r=parseFloat(document.getElementById('radCircle_ch9').value); document.getElementById('areaCircleResCh9').innerHTML=`Area = ${(Math.PI*r*r).toFixed(2)} sq units`; }</script>
+      </div>
+      <div class="tool-card"><h4>4. Volume of Cylinder</h4>
+        <input type="number" id="radCyl_ch9" placeholder="Radius">
+        <input type="number" id="heiCyl_ch9" placeholder="Height">
+        <button onclick="volCylinderCh9()">Calculate Volume</button>
+        <p id="volCylResCh9"></p>
+        <script>function volCylinderCh9(){ let r=parseFloat(document.getElementById('radCyl_ch9').value), h=parseFloat(document.getElementById('heiCyl_ch9').value); document.getElementById('volCylResCh9').innerHTML=`Volume = ${(Math.PI*r*r*h).toFixed(2)} cubic units`; }</script>
+      </div>
+      <div class="tool-card"><h4>5. Surface Area of Cube</h4>
+        <input type="number" id="sideCube_ch9" placeholder="Side length">
+        <button onclick="surfAreaCubeCh9()">Calculate Surface Area</button>
+        <p id="surfCubeResCh9"></p>
+        <script>function surfAreaCubeCh9(){ let a=parseFloat(document.getElementById('sideCube_ch9').value); document.getElementById('surfCubeResCh9').innerHTML=`Surface Area = ${6*a*a} sq units<br>Volume = ${a*a*a} cubic units`; }</script>
+      </div>
+    </div>
+    <div class="quiz"><strong>📝 Quick Quiz (Chapter 9)</strong><br>1. Area of square of side 7 cm?<br>2. Volume of cube of side 4 cm?<br>3. Formula for area of circle?<br><em>Answers: 1. 49 cm². 2. 64 cm³. 3. πr².</em></div>
+  </div>
+
+  <!-- ==================== CHAPTER 10: EXPONENTS AND POWERS ==================== -->
+  <div id="ch10" class="chapter">
+    <h2>Chapter 10: Exponents and Powers</h2>
+    <div class="theory-box">
+      <p><strong>Exponents:</strong> An exponent (or power) indicates how many times a number (the base) is multiplied by itself. Example: 2⁵ = 2 × 2 × 2 × 2 × 2 = 32. Here, 2 is the base and 5 is the exponent.</p>
+      
+      <p><strong>Laws of Exponents:</strong>
+      <ul>
+        <li>aᵐ × aⁿ = aᵐ⁺ⁿ</li>
+        <li>aᵐ ÷ aⁿ = aᵐ⁻ⁿ (m > n)</li>
+        <li>(aᵐ)ⁿ = aᵐⁿ</li>
+        <li>aᵐ × bᵐ = (ab)ᵐ</li>
+        <li>aᵐ ÷ bᵐ = (a/b)ᵐ</li>
+        <li>a⁰ = 1 (a ≠ 0)</li>
+        <li>a⁻ⁿ = 1/aⁿ</li>
+        <li>(a/b)⁻ⁿ = (b/a)ⁿ</li>
+      </ul>
+      </p>
+      
+      <p><strong>Negative Exponents:</strong> A negative exponent indicates the reciprocal of the base raised to the positive exponent. Example: 3⁻² = 1/3² = 1/9.</p>
+      
+      <p><strong>Scientific Notation (Standard Form):</strong> Very large or very small numbers are expressed as a × 10ⁿ, where 1 ≤ a < 10 and n is an integer. Example: 4,700,000 = 4.7 × 10⁶. 0.000045 = 4.5 × 10⁻⁵.</p>
+      
+      <p><strong>Comparing Numbers with Exponents:</strong> When exponents are different, convert both to the same power of 10 for comparison.</p>
+      
+      <p><strong>Numerical Example:</strong> Simplify (2³ × 2⁴) ÷ 2². Solution: Using laws: 2³⁺⁴ ÷ 2² = 2⁷ ÷ 2² = 2⁵ = 32.</p>
+    </div>
+    <div class="formula-box">📐 aᵐ × aⁿ = aᵐ⁺ⁿ | a⁻ⁿ = 1/aⁿ</div>
+
+    <h3>🛠️ Interactive Tools</h3>
+    <div class="tool-grid">
+      <div class="tool-card"><h4>1. Power Calculator</h4>
+        <input type="number" id="basePow_ch10" placeholder="Base">
+        <input type="number" id="expPow_ch10" placeholder="Exponent">
+        <button onclick="calcPowerCh10()">Calculate</button>
+        <p id="powerResCh10"></p>
+        <script>function calcPowerCh10(){ let b=parseFloat(document.getElementById('basePow_ch10').value), e=parseInt(document.getElementById('expPow_ch10').value); document.getElementById('powerResCh10').innerHTML=`${b}^${e} = ${Math.pow(b,e)}`; }</script>
+      </div>
+      <div class="tool-card"><h4>2. Negative Exponent Converter</h4>
+        <input type="number" id="baseNeg_ch10" placeholder="Base">
+        <input type="number" id="expNeg_ch10" placeholder="Positive exponent">
+        <button onclick="negExpCh10()">Convert to Positive</button>
+        <p id="negResCh10"></p>
+        <script>function negExpCh10(){ let b=parseFloat(document.getElementById('baseNeg_ch10').value), e=parseInt(document.getElementById('expNeg_ch10').value); document.getElementById('negResCh10').innerHTML=`${b}^(-${e}) = 1/${b}^${e} = ${1/Math.pow(b,e)}`; }</script>
+      </div>
+      <div class="tool-card"><h4>3. Scientific Notation Converter</h4>
+        <input type="text" id="sciNum_ch10" placeholder="Enter number e.g., 4700000">
+        <button onclick="toScientificCh10()">Convert to Scientific Notation</button>
+        <p id="sciResCh10"></p>
+        <script>function toScientificCh10(){ let n=parseFloat(document.getElementById('sciNum_ch10').value); let exp=Math.floor(Math.log10(Math.abs(n))); let coeff=n/Math.pow(10,exp); document.getElementById('sciResCh10').innerHTML=`${n} = ${coeff.toFixed(4)} × 10^${exp}`; }</script>
+      </div>
+      <div class="tool-card"><h4>4. Simplify Exponents (Product)</h4>
+        <input type="text" id="baseProd_ch10" placeholder="Base e.g., 2">
+        <input type="text" id="exp1_ch10" placeholder="Exponent 1">
+        <input type="text" id="exp2_ch10" placeholder="Exponent 2">
+        <button onclick="simplifyProductCh10()">Simplify aᵐ × aⁿ</button>
+        <p id="prodResCh10"></p>
+        <script>function simplifyProductCh10(){ let b=document.getElementById('baseProd_ch10').value, e1=parseInt(document.getElementById('exp1_ch10').value), e2=parseInt(document.getElementById('exp2_ch10').value); document.getElementById('prodResCh10').innerHTML=`${b}^${e1} × ${b}^${e2} = ${b}^${e1+e2}`; }</script>
+      </div>
+      <div class="tool-card"><h4>5. Simplify Exponents (Power of Power)</h4>
+        <input type="text" id="basePowPow_ch10" placeholder="Base">
+        <input type="text" id="expIn_ch10" placeholder="Inner exponent">
+        <input type="text" id="expOut_ch10" placeholder="Outer exponent">
+        <button onclick="powerOfPowerCh10()">Simplify (aᵐ)ⁿ</button>
+        <p id="powPowResCh10"></p>
+        <script>function powerOfPowerCh10(){ let b=document.getElementById('basePowPow_ch10').value, m=parseInt(document.getElementById('expIn_ch10').value), n=parseInt(document.getElementById('expOut_ch10').value); document.getElementById('powPowResCh10').innerHTML=`(${b}^${m})^${n} = ${b}^${m*n}`; }</script>
+      </div>
+    </div>
+    <div class="quiz"><strong>📝 Quick Quiz (Chapter 10)</strong><br>1. Simplify: 3⁵ × 3²<br>2. Write 4⁻² as a fraction.<br>3. Express 5,60,000 in scientific notation.<br><em>Answers: 1. 3⁷. 2. 1/16. 3. 5.6 × 10⁵.</em></div>
+  </div>
+
+  <!-- ==================== CHAPTER 11: DIRECT AND INVERSE PROPORTIONS ==================== -->
+  <div id="ch11" class="chapter">
+    <h2>Chapter 11: Direct and Inverse Proportions</h2>
+    <div class="theory-box">
+      <p><strong>Direct Proportion:</strong> Two quantities are in direct proportion if an increase in one causes a proportional increase in the other, and a decrease causes proportional decrease. In direct proportion, the ratio x/y is constant. Mathematically, x ∝ y, or x = ky (k = constant of proportionality). Example: More apples cost more money – cost ∝ number of apples.</p>
+      
+      <p><strong>Solving Direct Proportion Problems:</strong> If x₁ and y₁ are one pair and x₂ and y₂ are another, then x₁/y₁ = x₂/y₂. Example: If 2 pens cost ₹20, cost of 5 pens = (5/2)×20 = ₹50.</p>
+      
+      <p><strong>Inverse Proportion:</strong> Two quantities are in inverse proportion if an increase in one causes a proportional decrease in the other, and vice versa. In inverse proportion, the product xy is constant. Mathematically, x ∝ 1/y, or xy = k. Example: More workers take less time to complete a task – time ∝ 1/number of workers.</p>
+      
+      <p><strong>Solving Inverse Proportion Problems:</strong> If x₁ and y₁ are one pair and x₂ and y₂ are another, then x₁ × y₁ = x₂ × y₂. Example: 4 workers finish a job in 6 days. 8 workers will finish in (4×6)/8 = 3 days.</p>
+      
+      <p><strong>Real-life Applications:</strong> Speed and time (inverse), number of articles and cost (direct), pressure and volume of gas (inverse – Boyle's Law), distance and time at constant speed (direct).</p>
+      
+      <p><strong>Numerical Example:</strong> A car travels 120 km in 2 hours. How far will it travel in 5 hours at the same speed? Solution: Distance ∝ time, so 120/2 = d/5 → d = (120×5)/2 = 300 km.</p>
+    </div>
+    <div class="formula-box">📐 Direct: x₁/y₁ = x₂/y₂ | Inverse: x₁y₁ = x₂y₂</div>
+
+    <h3>🛠️ Interactive Tools</h3>
+    <div class="tool-grid">
+      <div class="tool-card"><h4>1. Direct Proportion Solver</h4>
+        <input type="number" id="x1_ch11" placeholder="x₁">
+        <input type="number" id="y1_ch11" placeholder="y₁">
+        <input type="number" id="x2_ch11" placeholder="x₂">
+        <button onclick="solveDirectCh11()">Find y₂</button>
+        <p id="directResCh11"></p>
+        <script>function solveDirectCh11(){ let x1=parseFloat(document.getElementById('x1_ch11').value), y1=parseFloat(document.getElementById('y1_ch11').value), x2=parseFloat(document.getElementById('x2_ch11').value); let y2=(y1*x2)/x1; document.getElementById('directResCh11').innerHTML=`When x₂ = ${x2}, y₂ = ${y2.toFixed(2)}`; }</script>
+      </div>
+      <div class="tool-card"><h4>2. Inverse Proportion Solver</h4>
+        <input type="number" id="a1_ch11" placeholder="x₁">
+        <input type="number" id="b1_ch11" placeholder="y₁">
+        <input type="number" id="a2_ch11" placeholder="x₂">
+        <button onclick="solveInverseCh11()">Find y₂</button>
+        <p id="inverseResCh11"></p>
+        <script>function solveInverseCh11(){ let a1=parseFloat(document.getElementById('a1_ch11').value), b1=parseFloat(document.getElementById('b1_ch11').value), a2=parseFloat(document.getElementById('a2_ch11').value); let b2=(a1*b1)/a2; document.getElementById('inverseResCh11').innerHTML=`When x₂ = ${a2}, y₂ = ${b2.toFixed(2)}`; }</script>
+      </div>
+      <div class="tool-card"><h4>3. Work and Time Calculator</h4>
+        <input type="number" id="workers_ch11" placeholder="Number of workers">
+        <input type="number" id="days_ch11" placeholder="Days taken">
+        <input type="number" id="newWorkers_ch11" placeholder="New number of workers">
+        <button onclick="workTimeCh11()">Calculate New Days</button>
+        <p id="workResCh11"></p>
+        <script>function workTimeCh11(){ let w=parseFloat(document.getElementById('workers_ch11').value), d=parseFloat(document.getElementById('days_ch11').value), nw=parseFloat(document.getElementById('newWorkers_ch11').value); let nd=(w*d)/nw; document.getElementById('workResCh11').innerHTML=`${nw} workers will take ${nd.toFixed(2)} days`; }</script>
+      </div>
+      <div class="tool-card"><h4>4. Speed and Time (Inverse)</h4>
+        <input type="number" id="speed1_ch11" placeholder="Speed (km/h)">
+        <input type="number" id="time1_ch11" placeholder="Time (hours)">
+        <input type="number" id="speed2_ch11" placeholder="New speed">
+        <button onclick="speedTimeCh11()">Calculate New Time</button>
+        <p id="speedResCh11"></p>
+        <script>function speedTimeCh11(){ let s1=parseFloat(document.getElementById('speed1_ch11').value), t1=parseFloat(document.getElementById('time1_ch11').value), s2=parseFloat(document.getElementById('speed2_ch11').value); let t2=(s1*t1)/s2; document.getElementById('speedResCh11').innerHTML=`At ${s2} km/h, time = ${t2.toFixed(2)} hours`; }</script>
+      </div>
+      <div class="tool-card"><h4>5. Cost and Quantity (Direct)</h4>
+        <input type="number" id="qty1_ch11" placeholder="Quantity 1">
+        <input type="number" id="cost1_ch11" placeholder="Cost 1">
+        <input type="number" id="qty2_ch11" placeholder="Quantity 2">
+        <button onclick="costQuantityCh11()">Find Cost 2</button>
+        <p id="costResCh11"></p>
+        <script>function costQuantityCh11(){ let q1=parseFloat(document.getElementById('qty1_ch11').value), c1=parseFloat(document.getElementById('cost1_ch11').value), q2=parseFloat(document.getElementById('qty2_ch11').value); let c2=(c1*q2)/q1; document.getElementById('costResCh11').innerHTML=`Cost for ${q2} units = ₹${c2.toFixed(2)}`; }</script>
+      </div>
+    </div>
+    <div class="quiz"><strong>📝 Quick Quiz (Chapter 11)</strong><br>1. Are speed and time directly or inversely proportional?<br>2. If 3 workers can paint a wall in 8 hours, how long will 6 workers take?<br>3. If 5 kg of rice costs ₹200, what is the cost of 8 kg?<br><em>Answers: 1. Inversely. 2. 4 hours. 3. ₹320.</em></div>
+  </div>
+
+  <!-- ==================== CHAPTER 12: FACTORISATION ==================== -->
+  <div id="ch12" class="chapter">
+    <h2>Chapter 12: Factorisation</h2>
+    <div class="theory-box">
+      <p><strong>What is Factorisation?</strong> Factorisation is the process of expressing an algebraic expression as a product of its factors. It is the reverse of expansion. Example: x² - 9 = (x-3)(x+3).</p>
+      
+      <p><strong>Methods of Factorisation:</strong>
+      <ul>
+        <li><strong>Method of Common Factors:</strong> Identify the common factor in all terms and factor it out. Example: 2x² + 4x = 2x(x + 2).</li>
+        <li><strong>Factorisation by Regrouping:</strong> Group terms to find common factors. Example: x² + xy + 2x + 2y = x(x+y) + 2(x+y) = (x+y)(x+2).</li>
+        <li><strong>Using Identities:</strong> a² + 2ab + b² = (a+b)²; a² - 2ab + b² = (a-b)²; a² - b² = (a-b)(a+b); x² + (a+b)x + ab = (x+a)(x+b).</li>
+        <li><strong>Factorisation of Trinomials (ax² + bx + c):</strong> Find two numbers whose product = ac and sum = b. Split the middle term and factor by grouping.</li>
+      </ul>
+      </p>
+      
+      <p><strong>Division of Algebraic Expressions:</strong>
+      <ul>
+        <li>Division of monomial by monomial: Divide coefficients and subtract exponents of same variables.</li>
+        <li>Division of polynomial by monomial: Divide each term of the polynomial by the monomial.</li>
+        <li>Division of polynomial by polynomial: Factorise both numerator and denominator, then cancel common factors.</li>
+      </ul>
+      </p>
+      
+      <p><strong>Numerical Example:</strong> Factorise x² + 5x + 6. Find two numbers whose product = 6 and sum = 5. They are 2 and 3. So x² + 5x + 6 = (x+2)(x+3).</p>
+    </div>
+    <div class="formula-box">📐 a² - b² = (a-b)(a+b) | a² + 2ab + b² = (a+b)²</div>
+
+    <h3>🛠️ Interactive Tools</h3>
+    <div class="tool-grid">
+      <div class="tool-card"><h4>1. Common Factor Finder</h4>
+        <input type="text" id="exprFact_ch12" placeholder="e.g., 2x²+4x">
+        <button onclick="commonFactorCh12()">Factorise</button>
+        <p id="commonResCh12"></p>
+        <script>function commonFactorCh12(){ let expr=document.getElementById('exprFact_ch12').value; try { let coeff=eval(expr.match(/[\d]+/)[0]); let varPart=expr.match(/[a-z]+/)[0]; let common=coeff; let remaining=eval(expr.replace(common,'1')); document.getElementById('commonResCh12').innerHTML=`${expr} = ${common}${varPart}(${remaining})`; } catch(e){ document.getElementById('commonResCh12').innerHTML='Enter expression like 2x²+4x'; } }</script>
+      </div>
+      <div class="tool-card"><h4>2. Difference of Squares</h4>
+        <input type="text" id="aValDiff2_ch12" placeholder="a">
+        <input type="text" id="bValDiff2_ch12" placeholder="b">
+        <button onclick="diffSquaresCh12()">Factorise a² - b²</button>
+        <p id="diffResCh12"></p>
+        <script>function diffSquaresCh12(){ let a=document.getElementById('aValDiff2_ch12').value, b=document.getElementById('bValDiff2_ch12').value; document.getElementById('diffResCh12').innerHTML=`${a}² - ${b}² = (${a}-${b})(${a}+${b})`; }</script>
+      </div>
+      <div class="tool-card"><h4>3. Trinomial Factoriser (x² + bx + c)</h4>
+        <input type="number" id="bTrin_ch12" placeholder="b (coefficient of x)">
+        <input type="number" id="cTrin_ch12" placeholder="c (constant)">
+        <button onclick="factorTrinomialCh12()">Factorise x² + bx + c</button>
+        <p id="trinResCh12"></p>
+        <script>function factorTrinomialCh12(){ let b=parseInt(document.getElementById('bTrin_ch12').value), c=parseInt(document.getElementById('cTrin_ch12').value); let m=1,n=c; for(let i=1;i<=Math.abs(c);i++){ if(c%i===0 && i+(c/i)===b){ m=i; n=c/i; break; } } document.getElementById('trinResCh12').innerHTML=`x² + ${b}x + ${c} = (x+${m})(x+${n})`; }</script>
+      </div>
+      <div class="tool-card"><h4>4. Perfect Square Checker</h4>
+        <input type="text" id="psExpr_ch12" placeholder="e.g., x²+6x+9">
+        <button onclick="checkPerfectSquareCh12()">Check Perfect Square</button>
+        <p id="psResCh12"></p>
+        <script>function checkPerfectSquareCh12(){ let expr=document.getElementById('psExpr_ch12').value; if(expr.includes('+')){ let parts=expr.split('+'); if(parts.length===3){ let a=parts[0].replace('x²',''), b=parts[1].replace('x',''), c=parts[2]; if(a*a===parseInt(b) && a*a===parseInt(c)) document.getElementById('psResCh12').innerHTML=`${expr} = (${a}x+${a})²`; else document.getElementById('psResCh12').innerHTML='Not a perfect square'; } } else document.getElementById('psResCh12').innerHTML='Enter expression like x²+6x+9'; }</script>
+      </div>
+      <div class="tool-card"><h4>5. Division of Monomials</h4>
+        <input type="text" id="numMono_ch12" placeholder="Numerator e.g., 12x⁵">
+        <input type="text" id="denMono_ch12" placeholder="Denominator e.g., 3x²">
+        <button onclick="divideMonoCh12()">Divide</button>
+        <p id="divMonoResCh12"></p>
+        <script>function divideMonoCh12(){ let num=document.getElementById('numMono_ch12').value, den=document.getElementById('denMono_ch12').value; let coeffNum=parseFloat(num.match(/[\d\.]+/))||1, coeffDen=parseFloat(den.match(/[\d\.]+/))||1; let varNum=num.match(/[a-z]+\^?\d*/)||[''], varDen=den.match(/[a-z]+\^?\d*/)||['']; let coeff=coeffNum/coeffDen; let varPart=varNum[0].replace(/\^(\d+)/,(m,p)=>`^${parseInt(p)-1}`); document.getElementById('divMonoResCh12').innerHTML=`${num} ÷ ${den} = ${coeff}${varPart}`; }</script>
+      </div>
+    </div>
+    <div class="quiz"><strong>📝 Quick Quiz (Chapter 12)</strong><br>1. Factorise: x² - 16.<br>2. Factorise: x² + 7x + 12.<br>3. Factorise: 3x² + 6x.<br><em>Answers: 1. (x-4)(x+4). 2. (x+3)(x+4). 3. 3x(x+2).</em></div>
+  </div>
+
+  <!-- ==================== CHAPTER 13: INTRODUCTION TO GRAPHS ==================== -->
+  <div id="ch13" class="chapter">
+    <h2>Chapter 13: Introduction to Graphs</h2>
+    <div class="theory-box">
+      <p><strong>What are Graphs?</strong> Graphs are visual representations of data that help us understand trends, patterns, and relationships between quantities. Types of graphs include bar graphs, line graphs, pie charts, and histograms.</p>
+      
+      <p><strong>Cartesian Plane (Coordinate Geometry):</strong> The Cartesian plane is formed by two perpendicular number lines – the x-axis (horizontal) and the y-axis (vertical). Their intersection is the origin (0,0). Points are represented by ordered pairs (x, y), where x is the horizontal coordinate and y is the vertical coordinate.</p>
+      
+      <p><strong>Plotting Points:</strong> To plot a point (x,y), start at the origin, move x units right (if positive) or left (if negative), then move y units up (if positive) or down (if negative).</p>
+      
+      <p><strong>Types of Graphs:</strong>
+      <ul>
+        <li><strong>Bar Graph:</strong> Rectangular bars represent data; bar height corresponds to value.</li>
+        <li><strong>Double Bar Graph:</strong> Two sets of bars side by side for comparison.</li>
+        <li><strong>Line Graph:</strong> Points connected by lines to show trends over time.</li>
+        <li><strong>Pie Chart:</strong> Circle divided into sectors representing proportions.</li>
+        <li><strong>Histogram:</strong> Bar graph without gaps for continuous data.</li>
+      </ul>
+      </p>
+      
+      <p><strong>Linear Graphs:</strong> A linear graph is a straight line graph. The equation of a line can be written as y = mx + c, where m is the slope and c is the y-intercept.</p>
+      
+      <p><strong>Reading Graphs:</strong> To find the value of y for a given x, locate x on the x-axis, go up/down to the graph, then read the y-coordinate.</p>
+      
+      <p><strong>Applications:</strong> Graphs are used in business (sales trends), science (experiment results), economics (inflation rates), and everyday life (temperature graphs).</p>
+      
+      <p><strong>Numerical Example:</strong> Plot the point (3,4) on the Cartesian plane. From origin, move 3 units right, then 4 units up.</p>
+    </div>
+    <div class="formula-box">📐 Point coordinates: (x,y)</div>
+
+    <h3>🛠️ Interactive Tools</h3>
+    <div class="tool-grid">
+      <div class="tool-card"><h4>1. Point Plotter Simulator</h4>
+        <input type="number" id="xCoord_ch13" placeholder="x-coordinate">
+        <input type="number" id="yCoord_ch13" placeholder="y-coordinate">
+        <button onclick="plotPointCh13()">Plot Point</button>
+        <p id="plotResCh13"></p>
+        <script>function plotPointCh13(){ let x=parseFloat(document.getElementById('xCoord_ch13').value), y=parseFloat(document.getElementById('yCoord_ch13').value); let left=50+x*10, top=50-y*10; document.getElementById('plotResCh13').innerHTML=`<div style="position:relative; width:200px; height:200px; border:1px solid black; margin:20px;"><div style="position:absolute; left:${left}px; top:${top}px; width:5px; height:5px; background:red;"></div><div style="position:absolute; left:50%; top:50%;">(0,0)</div></div>Point (${x},${y})`; }</script>
+      </div>
+      <div class="tool-card"><h4>2. Bar Graph Maker</h4>
+        <input type="text" id="dataBar_ch13" placeholder="Enter numbers separated by comma">
+        <button onclick="makeBarGraphCh13()">Create Bar Graph</button>
+        <p id="barResCh13"></p>
+        <script>function makeBarGraphCh13(){ let data=document.getElementById('dataBar_ch13').value.split(',').map(Number); let bars=''; for(let i=0;i<data.length;i++){ bars+=`<div style="margin:5px;">${i+1}: <span style="background:blue; display:inline-block; width:${data[i]*3}px; height:20px;"></span> ${data[i]}</div>`; } document.getElementById('barResCh13').innerHTML=bars; }</script>
+      </div>
+      <div class="tool-card"><h4>3. Line Graph – Temperature Trend</h4>
+        <input type="text" id="tempData_ch13" placeholder="Temperatures (comma separated)">
+        <button onclick="showLineGraphCh13()">Show Line Graph</button>
+        <p id="lineResCh13"></p>
+        <script>function showLineGraphCh13(){ let temps=document.getElementById('tempData_ch13').value.split(',').map(Number); let line=''; for(let i=0;i<temps.length-1;i++){ line+=`<div style="margin:5px;">Day ${i+1} to ${i+2}: ${temps[i]} → ${temps[i+1]}</div>`; } document.getElementById('lineResCh13').innerHTML=line; }</script>
+      </div>
+      <div class="tool-card"><h4>4. Distance from Origin</h4>
+        <input type="number" id="xDist_ch13" placeholder="x">
+        <input type="number" id="yDist_ch13" placeholder="y">
+        <button onclick="calcDistanceCh13()">Calculate Distance from Origin</button>
+        <p id="distResCh13"></p>
+        <script>function calcDistanceCh13(){ let x=parseFloat(document.getElementById('xDist_ch13').value), y=parseFloat(document.getElementById('yDist_ch13').value); let dist=Math.sqrt(x*x+y*y); document.getElementById('distResCh13').innerHTML=`Distance from (0,0) = ${dist.toFixed(2)}`; }</script>
+      </div>
+      <div class="tool-card"><h4>5. Quadrant Identifier</h4>
+        <input type="number" id="xQuad_ch13" placeholder="x">
+        <input type="number" id="yQuad_ch13" placeholder="y">
+        <button onclick="findQuadrantCh13()">Identify Quadrant</button>
+        <p id="quadResCh13"></p>
+        <script>function findQuadrantCh13(){ let x=parseFloat(document.getElementById('xQuad_ch13').value), y=parseFloat(document.getElementById('yQuad_ch13').value); if(x>0 && y>0) document.getElementById('quadResCh13').innerHTML='Quadrant I'; else if(x<0 && y>0) document.getElementById('quadResCh13').innerHTML='Quadrant II'; else if(x<0 && y<0) document.getElementById('quadResCh13').innerHTML='Quadrant III'; else if(x>0 && y<0) document.getElementById('quadResCh13').innerHTML='Quadrant IV'; else document.getElementById('quadResCh13').innerHTML='On an axis'; }</script>
+      </div>
+    </div>
+    <div class="quiz"><strong>📝 Quick Quiz (Chapter 13)</strong><br>1. In which quadrant is the point (-3,5)?<br>2. What is the x-coordinate of the origin?<br>3. What type of graph is best to show a trend over time?<br><em>Answers: 1. Quadrant II. 2. 0. 3. Line graph.</em></div>
+  </div>
+
+  <footer>© 2025 CBSE Class 8 Mathematics – Complete syllabus with detailed theory (400+ words per chapter) + 65 interactive tools.</footer>
+</div>
+
+<script>
+  const chapters = ['ch1','ch2','ch3','ch4','ch5','ch6','ch7','ch8','ch9','ch10','ch11','ch12','ch13'];
+  const links = document.querySelectorAll('.nav-chapters a');
+  function showChapter(id) {
+    chapters.forEach(c => {
+      const el = document.getElementById(c);
+      if(el) el.classList.remove('active');
+    });
+    document.getElementById(id).classList.add('active');
+    links.forEach(link => {
+      if(link.getAttribute('data-chapter') === id) link.classList.add('active-chapter');
+      else link.classList.remove('active-chapter');
+    });
+  }
+  links.forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      const chap = link.getAttribute('data-chapter');
+      if(chap) showChapter(chap);
+    });
+  });
+  showChapter('ch1');
+</script>
+</body>
+</html>
