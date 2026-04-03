@@ -3,26 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Class 8 Physics - CBSE Full Course with Interactive Tools</title>
+  <title>Class 8 Physics - CBSE Full Course (Detailed Theory + 25 Tools)</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
       background: #eef2f7;
       color: #1a2a3a;
-      line-height: 1.6;
+      line-height: 1.7;
       padding: 20px;
     }
     .container {
       max-width: 1400px;
       margin: 0 auto;
       background: white;
-      border-radius: 28px;
-      box-shadow: 0 25px 40px -12px rgba(0,0,0,0.2);
+      border-radius: 32px;
+      box-shadow: 0 25px 45px -12px rgba(0,0,0,0.2);
       overflow: hidden;
     }
     header {
@@ -30,8 +26,8 @@
       color: white;
       padding: 2rem 2.5rem;
     }
-    header h1 { font-size: 2.2rem; letter-spacing: -0.5px; }
-    header p { opacity: 0.9; margin-top: 8px; }
+    header h1 { font-size: 2.2rem; margin-bottom: 0.25rem; }
+    header p { opacity: 0.9; font-size: 1rem; }
     .nav-chapters {
       display: flex;
       flex-wrap: wrap;
@@ -61,14 +57,15 @@
     }
     .chapter.active { display: block; }
     @keyframes fadeIn { from { opacity: 0; transform: translateY(10px);} to { opacity: 1; transform: translateY(0);} }
-    h2 { color: #0a2f44; font-size: 1.8rem; border-left: 6px solid #f4a261; padding-left: 1rem; margin: 1.2rem 0 1rem; }
-    h3 { color: #1e6f5c; margin: 1.2rem 0 0.5rem; font-size: 1.3rem; }
+    h2 { color: #0a2f44; font-size: 1.8rem; border-left: 6px solid #f4a261; padding-left: 1rem; margin: 1.2rem 0 0.8rem; }
+    h3 { color: #1e6f5c; margin: 1.5rem 0 0.5rem; font-size: 1.3rem; }
     .theory-box {
       background: #fefcf5;
-      padding: 1rem 1.5rem;
-      border-radius: 20px;
+      padding: 1.2rem 1.8rem;
+      border-radius: 24px;
       margin: 1rem 0;
       border-left: 5px solid #f4a261;
+      font-size: 1rem;
     }
     table {
       width: 100%;
@@ -84,7 +81,7 @@
     th { background: #e2edf7; }
     .tool-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
       gap: 1.5rem;
       margin: 1.5rem 0;
     }
@@ -94,7 +91,6 @@
       padding: 1rem 1.2rem;
       box-shadow: 0 5px 12px rgba(0,0,0,0.05);
       border: 1px solid #e2edf2;
-      transition: 0.1s;
     }
     .tool-card h4 {
       font-size: 1.2rem;
@@ -142,7 +138,7 @@
 <div class="container">
   <header>
     <h1>📖 Class 8 Physics (CBSE)</h1>
-    <p>Complete syllabus • Detailed theory • 25 interactive tools • Numerical solvers • Quiz</p>
+    <p>Detailed theory • 300-400+ words per chapter • 25 interactive tools • Numerical solvers • Quiz</p>
   </header>
   <div class="nav-chapters">
     <a href="#" data-chapter="ch1">1. Force & Pressure</a>
@@ -152,15 +148,30 @@
     <a href="#" data-chapter="ch5">5. Natural Phenomena</a>
   </div>
 
-  <!-- ==================== CHAPTER 1: FORCE & PRESSURE ==================== -->
+  <!-- ==================== CHAPTER 1: FORCE & PRESSURE (Detailed) ==================== -->
   <div id="ch1" class="chapter active">
     <h2>Chapter 1: Force and Pressure</h2>
     <div class="theory-box">
-      <p><strong>Force</strong> is a push or pull that can change the state of rest or motion of an object. Its SI unit is <strong>Newton (N)</strong>.</p>
-      <p><strong>Effects of force:</strong> move a stationary object, stop a moving object, change speed/direction, change shape.</p>
-      <p><strong>Types of forces:</strong> Contact (muscular, friction, normal) and Non-contact (gravitational, magnetic, electrostatic).</p>
-      <p><strong>Pressure</strong> = Force / Area. Smaller area → more pressure (e.g., sharp knife). <strong>Atmospheric pressure</strong> is due to air weight; helps in drinking straw, rubber sucker.</p>
-      <p><strong>Numerical example:</strong> A force of 100 N acts on an area of 0.5 m². Pressure = 100/0.5 = 200 Pa.</p>
+      <p><strong>What is Force?</strong> A force is a push or pull that can change the state of rest or motion of an object. It can also change the shape of an object. For example, when you kick a football, it moves from rest (force changes state). When you apply brakes on a bicycle, it stops (force changes motion). When you squeeze a sponge, its shape changes. The SI unit of force is <strong>Newton (N)</strong>.</p>
+      
+      <p><strong>Effects of Force:</strong> 
+      <ul>
+        <li>A force can move a stationary object (e.g., pushing a table).</li>
+        <li>A force can stop a moving object (e.g., catching a ball).</li>
+        <li>A force can change the speed or direction of a moving object (e.g., a batsman hitting a ball).</li>
+        <li>A force can change the shape of an object (e.g., pressing clay).</li>
+      </ul>
+      </p>
+      
+      <p><strong>Types of Forces:</strong> Forces are classified into two categories: <strong>Contact forces</strong> (require physical contact) and <strong>Non-contact forces</strong> (act without contact). Contact forces include muscular force (e.g., lifting a bag), friction (e.g., rubbing hands), and normal force (e.g., a book on a table). Non-contact forces include gravitational force (pulls objects towards Earth), magnetic force (attraction/repulsion between magnets), and electrostatic force (attraction between charged objects).</p>
+      
+      <p><strong>Pressure:</strong> Pressure is defined as force per unit area. <strong>Pressure = Force / Area</strong>. The SI unit of pressure is <strong>Pascal (Pa)</strong>. For the same force, if the area is smaller, the pressure is larger. This is why a sharp knife cuts better than a blunt one – the sharp edge has a very small area, so it exerts high pressure. Similarly, a nail has a pointed tip to increase pressure. School bags have wide straps to reduce pressure on the shoulders (larger area, less pressure).</p>
+      
+      <p><strong>Atmospheric Pressure:</strong> The earth is surrounded by a layer of air called the atmosphere. The weight of this air exerts pressure on all objects on earth, called atmospheric pressure. It is about 1.01 × 10⁵ Pa at sea level. Atmospheric pressure is responsible for many everyday phenomena: drinking through a straw (when you suck, you reduce pressure inside the straw, and atmospheric pressure pushes the liquid up), a rubber sucker sticking to a wall (pressing the sucker pushes air out, and atmospheric pressure holds it), and filling a syringe with medicine.</p>
+      
+      <p><strong>Numerical Example:</strong> A force of 200 N is applied on an area of 0.2 m². Calculate pressure. Solution: P = F/A = 200 / 0.2 = 1000 Pa.</p>
+      
+      <p><strong>Key Facts:</strong> Force is a vector quantity (has direction). Pressure in fluids increases with depth. Atmospheric pressure decreases with altitude.</p>
     </div>
 
     <h3>🛠️ Interactive Tools</h3>
@@ -186,7 +197,7 @@
         <p id="atmResCh1"></p>
         <script>function demoStrawCh1(){document.getElementById('atmResCh1').innerHTML='🌬️ Atmospheric pressure pushes liquid upward!';} function demoSuckerCh1(){document.getElementById('atmResCh1').innerHTML='🪠 Air pressure holds sucker against wall.';}</script>
       </div>
-      <div class="tool-card"><h4>4. Area vs Pressure</h4>
+      <div class="tool-card"><h4>4. Area vs Pressure Visualizer</h4>
         <button onclick="areaPressureCh1('knife')">Sharp knife</button>
         <button onclick="areaPressureCh1('blunt')">Blunt knife</button>
         <p id="areaResCh1"></p>
@@ -202,16 +213,29 @@
     <div class="quiz"><strong>📝 Quick Quiz (Chapter 1)</strong><br>1. Why are school bags provided with wide straps?<br>2. Name one non-contact force.<br>3. If 200 N force acts on 2 m² area, pressure = ?<br><em>Answers: 1. To reduce pressure on shoulders. 2. Gravitational force. 3. 100 Pa.</em></div>
   </div>
 
-  <!-- ==================== CHAPTER 2: FRICTION ==================== -->
+  <!-- ==================== CHAPTER 2: FRICTION (Detailed) ==================== -->
   <div id="ch2" class="chapter">
     <h2>Chapter 2: Friction</h2>
     <div class="theory-box">
-      <p><strong>Friction</strong> is the force that opposes relative motion between two surfaces. It is caused by surface irregularities.</p>
-      <p><strong>Types:</strong> Static (largest), Sliding (medium), Rolling (smallest). Ball bearings convert sliding into rolling friction.</p>
-      <p><strong>Ways to reduce friction:</strong> Lubricants (oil, grease), polishing, wheels, streamlining. <strong>Increase friction:</strong> Treads on shoes/tyres, sand on ice.</p>
-      <p><strong>Fluid friction (drag):</strong> streamlined shapes reduce drag (fish, aeroplanes).</p>
-      <p><strong>Example:</strong> A box of 50 kg requires 300 N to slide on rough floor, but only 100 N on ice – less friction.</p>
+      <p><strong>What is Friction?</strong> Friction is the force that opposes the relative motion between two surfaces in contact. It always acts in the direction opposite to the motion. For example, when you slide a book on a table, the book stops after some distance because of friction. Friction is caused by the irregularities (bumps) on the surfaces that interlock with each other.</p>
+      
+      <p><strong>Types of Friction:</strong>
+      <ul>
+        <li><strong>Static friction:</strong> The friction that prevents an object from starting to move. It is the largest among the three types. Example: A heavy box on the floor does not move until you push it hard enough.</li>
+        <li><strong>Sliding friction:</strong> The friction that opposes the motion of an object when it is sliding over a surface. It is smaller than static friction. Example: Sliding a book across a table.</li>
+        <li><strong>Rolling friction:</strong> The friction that opposes rolling motion. It is the smallest. Example: Wheels of a bicycle. Ball bearings are used in machines to convert sliding friction into rolling friction, reducing wear and tear.</li>
+      </ul>
+      </p>
+      
+      <p><strong>Increasing and Reducing Friction:</strong> Friction is sometimes desirable and sometimes undesirable. We increase friction when we need grip: treads on shoes and tyres, brake pads, sand on icy roads, and grooved soles. We reduce friction when we want smooth movement: using lubricants (oil, grease, graphite), polishing surfaces, using wheels or ball bearings, and streamlining shapes to reduce fluid friction (drag).</p>
+      
+      <p><strong>Fluid Friction (Drag):</strong> Fluids (liquids and gases) also exert friction on objects moving through them. This is called drag. Streamlined shapes (like fish, birds, aeroplanes, and racing cars) are designed to reduce drag, allowing faster movement with less energy.</p>
+      
+      <p><strong>Advantages and Disadvantages of Friction:</strong> Advantages: We can walk without slipping, write with a pen, hold objects, and stop vehicles. Disadvantages: Friction causes wear and tear of machine parts, generates heat (wastes energy), and reduces efficiency. That's why machines need regular lubrication.</p>
+      
+      <p><strong>Numerical Example:</strong> A box requires 150 N to slide on a rough surface but only 50 N on ice. The friction force is higher on rough surfaces.</p>
     </div>
+
     <h3>🛠️ Interactive Tools</h3>
     <div class="tool-grid">
       <div class="tool-card"><h4>1. Friction Type Explorer</h4>
@@ -239,15 +263,28 @@
     <div class="quiz"><strong>📝 Quiz (Chapter 2)</strong><br>1. Which friction is the largest?<br>2. How do lubricants help?<br>3. Give an example of increasing friction.<br><em>Answers: Static friction; reduce wear & tear; treads on tyres.</em></div>
   </div>
 
-  <!-- ==================== CHAPTER 3: SOUND ==================== -->
+  <!-- ==================== CHAPTER 3: SOUND (Detailed) ==================== -->
   <div id="ch3" class="chapter">
     <h2>Chapter 3: Sound</h2>
     <div class="theory-box">
-      <p>Sound is produced by <strong>vibrations</strong>. It needs a medium (solid, liquid, gas) – cannot travel in vacuum. Speed of sound is highest in solids.</p>
-      <p><strong>Characteristics:</strong> Amplitude (loudness), Frequency (pitch) – human audible range 20 Hz to 20,000 Hz. Ultrasound >20 kHz, Infrasound <20 Hz.</p>
-      <p><strong>Human ear:</strong> Pinna collects → ear canal → eardrum vibrates → middle ear bones amplify → inner ear converts to electrical signals → brain.</p>
-      <p>Noise pollution causes health issues. Music is pleasant, regular vibrations.</p>
+      <p><strong>Production of Sound:</strong> Sound is produced by <strong>vibrations</strong>. When an object vibrates, it makes the surrounding air particles vibrate, creating sound waves. For example, when you pluck a guitar string, it vibrates and produces sound. Your vocal cords vibrate when you speak. A drum produces sound when its membrane vibrates.</p>
+      
+      <p><strong>Propagation of Sound:</strong> Sound needs a <strong>medium</strong> (solid, liquid, or gas) to travel. It cannot travel in a vacuum because there are no particles to vibrate. Sound travels fastest in solids (about 5000 m/s in steel), slower in liquids (about 1500 m/s in water), and slowest in gases (about 340 m/s in air). This is because particles in solids are closely packed, allowing vibrations to transfer quickly.</p>
+      
+      <p><strong>Characteristics of Sound:</strong>
+      <ul>
+        <li><strong>Amplitude:</strong> The maximum displacement of a vibrating particle from its mean position. Larger amplitude means louder sound. Amplitude is measured in decibels (dB).</li>
+        <li><strong>Frequency:</strong> The number of vibrations per second, measured in Hertz (Hz). Higher frequency means higher pitch (shrill sound). Humans can hear frequencies from 20 Hz to 20,000 Hz. Sounds below 20 Hz are <em>infrasound</em> (elephants use it), and above 20,000 Hz are <em>ultrasound</em> (used in medical imaging).</li>
+      </ul>
+      </p>
+      
+      <p><strong>Human Ear:</strong> The ear is a sensitive organ that detects sound. The outer ear (pinna) collects sound waves and directs them into the ear canal. The sound waves strike the eardrum, causing it to vibrate. These vibrations are amplified by three small bones (hammer, anvil, stirrup) in the middle ear. The inner ear (cochlea) converts these vibrations into electrical signals, which are sent to the brain via the auditory nerve. The brain interprets them as sound.</p>
+      
+      <p><strong>Noise vs. Music:</strong> Noise is an unpleasant, irregular, and jarring sound (e.g., horns, construction sounds). Music is a pleasant, regular, and harmonious sound (e.g., instruments, singing). Prolonged exposure to noise pollution can cause hearing loss, stress, and high blood pressure.</p>
+      
+      <p><strong>Applications:</strong> Ultrasound is used for cleaning, sonar (detecting objects underwater), and medical imaging (ultrasound scans).</p>
     </div>
+
     <h3>🛠️ Interactive Tools</h3>
     <div class="tool-grid">
       <div class="tool-card"><h4>1. Frequency ↔ Pitch Mapper</h4>
@@ -274,15 +311,30 @@
     <div class="quiz"><strong>📝 Quiz (Chapter 3)</strong><br>1. Can sound travel through vacuum?<br>2. What determines loudness?<br>3. Audible frequency range for humans?<br><em>Answers: No; amplitude; 20–20,000 Hz.</em></div>
   </div>
 
-  <!-- ==================== CHAPTER 4: CHEMICAL EFFECTS ==================== -->
+  <!-- ==================== CHAPTER 4: CHEMICAL EFFECTS (Detailed) ==================== -->
   <div id="ch4" class="chapter">
     <h2>Chapter 4: Chemical Effects of Electric Current</h2>
     <div class="theory-box">
-      <p><strong>Conductors:</strong> allow electricity to pass (metals, graphite, salt solutions). <strong>Insulators:</strong> do not allow (rubber, plastic, pure water).</p>
-      <p>When electric current passes through a conducting liquid, chemical reactions occur – <strong>electrolysis</strong>. Example: water splits into H₂ and O₂.</p>
-      <p><strong>Electroplating:</strong> coating one metal on another using electric current. Uses: rust prevention (zinc on iron), decoration (chromium, silver).</p>
-      <p><strong>Key fact:</strong> Pure water is a poor conductor; adding salt or acid makes it conduct due to ions.</p>
+      <p><strong>Conductors and Insulators:</strong> Materials that allow electric current to pass through them are called <strong>conductors</strong>. Examples: metals (copper, aluminum, iron), graphite, and salt solutions. Materials that do not allow electric current to pass through are called <strong>insulators</strong>. Examples: rubber, plastic, wood, glass, and pure water.</p>
+      
+      <p><strong>Testing Conductivity:</strong> A simple circuit with a bulb or LED can test whether a material conducts electricity. If the bulb glows, the material is a conductor; if not, it is an insulator. Pure water does not conduct because it lacks ions. However, when we add salt or acid to water, it dissociates into ions (Na⁺ and Cl⁻), which carry charge, making the solution conductive.</p>
+      
+      <p><strong>Electrolysis:</strong> When electric current passes through a conducting liquid, chemical reactions occur. This process is called <strong>electrolysis</strong>. For example, when we pass current through water containing a little sulfuric acid, water decomposes into hydrogen gas (at the negative electrode, cathode) and oxygen gas (at the positive electrode, anode). The reaction is: 2H₂O → 2H₂ + O₂.</p>
+      
+      <p><strong>Electroplating:</strong> Electroplating is the process of coating one metal onto another using electric current. The object to be plated is made the cathode (negative electrode), and the coating metal is made the anode (positive electrode). A salt solution of the coating metal is used as the electrolyte. When current flows, metal ions from the solution deposit onto the object.</p>
+      
+      <p><strong>Applications of Electroplating:</strong>
+      <ul>
+        <li><strong>Preventing rust:</strong> Iron objects are electroplated with zinc (galvanization) or chromium to prevent corrosion.</li>
+        <li><strong>Decoration:</strong> Cheap metals are plated with silver or gold to make artificial jewellery.</li>
+        <li><strong>Car parts:</strong> Bumpers and handles are plated with chromium for a shiny, rust-resistant finish.</li>
+        <li><strong>Tin coating on steel:</strong> Used for food cans to prevent reaction with food.</li>
+      </ul>
+      </p>
+      
+      <p><strong>Key Facts:</strong> Electroplating is based on the chemical effect of electric current. It is widely used in industry. The thickness of the coating can be controlled by the current and time.</p>
     </div>
+
     <h3>🛠️ Interactive Tools</h3>
     <div class="tool-grid">
       <div class="tool-card"><h4>1. Conductor/Insulator Tester</h4>
@@ -310,15 +362,37 @@
     <div class="quiz"><strong>📝 Quiz (Chapter 4)</strong><br>1. Why is salt water a conductor?<br>2. Define electroplating.<br>3. Name one use of electroplating.<br><em>Answers: Contains ions; coating a metal using electricity; rust prevention.</em></div>
   </div>
 
-  <!-- ==================== CHAPTER 5: NATURAL PHENOMENA ==================== -->
+  <!-- ==================== CHAPTER 5: NATURAL PHENOMENA (Detailed) ==================== -->
   <div id="ch5" class="chapter">
     <h2>Chapter 5: Some Natural Phenomena</h2>
     <div class="theory-box">
-      <p><strong>Lightning:</strong> electric discharge between clouds or cloud and earth. Caused by charge separation. Safety: stay indoors, avoid water/electrical appliances, don't stand under trees.</p>
-      <p><strong>Earthquake:</strong> sudden shaking due to movement of tectonic plates. <strong>Focus</strong> (origin inside earth), <strong>Epicentre</strong> (point on surface). Measured by <strong>seismograph</strong>; magnitude on <strong>Richter scale</strong>.</p>
-      <p><strong>Safety during earthquake:</strong> Drop, Cover, Hold. Stay away from windows, heavy objects.</p>
-      <p>Static electricity: charging by rubbing (comb + paper).</p>
+      <p><strong>Lightning:</strong> Lightning is an electric discharge that occurs between clouds or between a cloud and the earth. During a thunderstorm, air currents cause water droplets and ice particles to rub against each other, leading to charge separation. Positive charges accumulate at the top of the cloud, and negative charges at the bottom. When the charge difference becomes large enough, it overcomes the insulating property of air, and a massive spark (lightning) occurs. The temperature in a lightning bolt can reach 30,000°C.</p>
+      
+      <p><strong>Lightning Safety:</strong> 
+      <ul>
+        <li>Stay indoors, away from windows, doors, and electrical appliances.</li>
+        <li>Do not use a landline telephone; mobile phones are safer.</li>
+        <li>Avoid taking a bath or using tap water (water conducts electricity).</li>
+        <li>If outside, avoid open fields, tall trees, metal fences, and water bodies.</li>
+        <li>If you are in an open area and feel your hair standing up, crouch down with your feet together and head low.</li>
+      </ul>
+      </p>
+      
+      <p><strong>Earthquakes:</strong> An earthquake is a sudden shaking of the earth's surface caused by the movement of tectonic plates deep inside the earth. The point inside the earth where the earthquake originates is called the <strong>focus</strong>. The point on the earth's surface directly above the focus is the <strong>epicentre</strong>. The energy released travels as seismic waves. The intensity of an earthquake is measured using a <strong>seismograph</strong>, and the magnitude is expressed on the <strong>Richter scale</strong>. Each whole number increase represents a tenfold increase in amplitude.</p>
+      
+      <p><strong>Earthquake Safety:</strong>
+      <ul>
+        <li>Indoors: Drop to the ground, take cover under a sturdy table, and hold on until shaking stops. Stay away from windows, heavy furniture, and falling objects.</li>
+        <li>Outdoors: Move to an open area away from buildings, trees, and power lines.</li>
+        <li>In a vehicle: Pull over to a clear spot, stop, and stay inside until shaking stops.</li>
+      </ul>
+      </p>
+      
+      <p><strong>Static Electricity:</strong> When you rub a plastic comb against dry hair, the comb becomes electrically charged (electrostatic charge). It can then attract small pieces of paper. This is due to the transfer of electrons from one material to another. Lightning is a large-scale version of static discharge.</p>
+      
+      <p><strong>Key Facts:</strong> Some regions are more prone to earthquakes (seismic zones). India is divided into four seismic zones (Zone II to Zone V). Buildings in high-risk zones are constructed with earthquake-resistant designs.</p>
     </div>
+
     <h3>🛠️ Interactive Tools</h3>
     <div class="tool-grid">
       <div class="tool-card"><h4>1. Lightning Safety Checklist</h4>
@@ -347,11 +421,10 @@
     </div>
     <div class="quiz"><strong>📝 Quiz (Chapter 5)</strong><br>1. What causes lightning?<br>2. Which instrument records earthquakes?<br>3. What should you do during an earthquake indoors?<br><em>Answers: Electric discharge; seismograph; Drop, Cover, Hold.</em></div>
   </div>
-  <footer>© 2025 CBSE Class 8 Physics – Complete study material with 25 working tools. Free for students.</footer>
+  <footer>© 2025 CBSE Class 8 Physics – Detailed theory (300+ words per chapter) + 25 fully working interactive tools.</footer>
 </div>
 
 <script>
-  // Navigation with active highlight
   const chapters = ['ch1','ch2','ch3','ch4','ch5'];
   const links = document.querySelectorAll('.nav-chapters a');
   function showChapter(id) {
@@ -372,7 +445,6 @@
       if(chap) showChapter(chap);
     });
   });
-  // Set first active
   showChapter('ch1');
 </script>
 </body>
