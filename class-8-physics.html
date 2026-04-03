@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Class 8 Physics - CBSE Full Course with Interactive Tools</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background: #eef2f7;
+      color: #1a2a3a;
+      line-height: 1.6;
+      padding: 20px;
+    }
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 28px;
+      box-shadow: 0 25px 40px -12px rgba(0,0,0,0.2);
+      overflow: hidden;
+    }
+    header {
+      background: linear-gradient(145deg, #0a2f44, #0b4f6c);
+      color: white;
+      padding: 2rem 2.5rem;
+    }
+    header h1 { font-size: 2.2rem; letter-spacing: -0.5px; }
+    header p { opacity: 0.9; margin-top: 8px; }
+    .nav-chapters {
+      display: flex;
+      flex-wrap: wrap;
+      background: #f4f9fe;
+      border-bottom: 2px solid #cde3f0;
+      padding: 0.8rem 1.8rem;
+      gap: 12px;
+    }
+    .nav-chapters a {
+      background: white;
+      padding: 0.5rem 1.3rem;
+      border-radius: 40px;
+      text-decoration: none;
+      font-weight: 600;
+      color: #0a2f44;
+      transition: 0.2s;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+    .nav-chapters a:hover, .nav-chapters a.active-chapter {
+      background: #0b4f6c;
+      color: white;
+    }
+    .chapter {
+      display: none;
+      padding: 2rem 2.5rem;
+      animation: fadeIn 0.3s ease;
+    }
+    .chapter.active { display: block; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(10px);} to { opacity: 1; transform: translateY(0);} }
+    h2 { color: #0a2f44; font-size: 1.8rem; border-left: 6px solid #f4a261; padding-left: 1rem; margin: 1.2rem 0 1rem; }
+    h3 { color: #1e6f5c; margin: 1.2rem 0 0.5rem; font-size: 1.3rem; }
+    .theory-box {
+      background: #fefcf5;
+      padding: 1rem 1.5rem;
+      border-radius: 20px;
+      margin: 1rem 0;
+      border-left: 5px solid #f4a261;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #f8f9fc;
+      margin: 1rem 0;
+    }
+    th, td {
+      border: 1px solid #cbd5e6;
+      padding: 10px 12px;
+      text-align: left;
+    }
+    th { background: #e2edf7; }
+    .tool-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.5rem;
+      margin: 1.5rem 0;
+    }
+    .tool-card {
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 1rem 1.2rem;
+      box-shadow: 0 5px 12px rgba(0,0,0,0.05);
+      border: 1px solid #e2edf2;
+      transition: 0.1s;
+    }
+    .tool-card h4 {
+      font-size: 1.2rem;
+      color: #0b4f6c;
+      margin-bottom: 12px;
+      border-bottom: 2px solid #f4a261;
+      display: inline-block;
+    }
+    input, select, button {
+      margin: 6px 6px 6px 0;
+      padding: 8px 14px;
+      border-radius: 40px;
+      border: 1px solid #ccc;
+      font-size: 0.9rem;
+    }
+    button {
+      background: #0b4f6c;
+      color: white;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    button:hover { background: #f4a261; color: #1e2a3e; }
+    .quiz {
+      background: #e9f3e6;
+      padding: 1.2rem;
+      border-radius: 24px;
+      margin-top: 2rem;
+    }
+    footer {
+      background: #0a2f44;
+      color: #cddfe7;
+      text-align: center;
+      padding: 1.2rem;
+      font-size: 0.85rem;
+    }
+    @media (max-width: 700px) {
+      .chapter { padding: 1rem; }
+      .tool-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <h1>📖 Class 8 Physics (CBSE)</h1>
+    <p>Complete syllabus • Detailed theory • 25 interactive tools • Numerical solvers • Quiz</p>
+  </header>
+  <div class="nav-chapters">
+    <a href="#" data-chapter="ch1">1. Force & Pressure</a>
+    <a href="#" data-chapter="ch2">2. Friction</a>
+    <a href="#" data-chapter="ch3">3. Sound</a>
+    <a href="#" data-chapter="ch4">4. Chemical Effects</a>
+    <a href="#" data-chapter="ch5">5. Natural Phenomena</a>
+  </div>
+
+  <!-- ==================== CHAPTER 1: FORCE & PRESSURE ==================== -->
+  <div id="ch1" class="chapter active">
+    <h2>Chapter 1: Force and Pressure</h2>
+    <div class="theory-box">
+      <p><strong>Force</strong> is a push or pull that can change the state of rest or motion of an object. Its SI unit is <strong>Newton (N)</strong>.</p>
+      <p><strong>Effects of force:</strong> move a stationary object, stop a moving object, change speed/direction, change shape.</p>
+      <p><strong>Types of forces:</strong> Contact (muscular, friction, normal) and Non-contact (gravitational, magnetic, electrostatic).</p>
+      <p><strong>Pressure</strong> = Force / Area. Smaller area → more pressure (e.g., sharp knife). <strong>Atmospheric pressure</strong> is due to air weight; helps in drinking straw, rubber sucker.</p>
+      <p><strong>Numerical example:</strong> A force of 100 N acts on an area of 0.5 m². Pressure = 100/0.5 = 200 Pa.</p>
+    </div>
+
+    <h3>🛠️ Interactive Tools</h3>
+    <div class="tool-grid">
+      <div class="tool-card"><h4>1. Pressure Calculator</h4>
+        <input type="number" id="f1_ch1" placeholder="Force (N)"> 
+        <input type="number" id="a1_ch1" placeholder="Area (m²)">
+        <button onclick="calcPressureCh1()">Compute</button>
+        <p id="res1_ch1" style="margin-top:8px;"></p>
+        <script>function calcPressureCh1(){let f=parseFloat(document.getElementById('f1_ch1').value), a=parseFloat(document.getElementById('a1_ch1').value); if(a>0) document.getElementById('res1_ch1').innerHTML=`✅ Pressure = ${(f/a).toFixed(2)} Pa`; else document.getElementById('res1_ch1').innerHTML='⚠️ Area must be >0';}</script>
+      </div>
+      <div class="tool-card"><h4>2. Force Type Sorter</h4>
+        <button onclick="sortForceCh1('Muscular','contact')">Muscular</button>
+        <button onclick="sortForceCh1('Friction','contact')">Friction</button>
+        <button onclick="sortForceCh1('Gravity','non')">Gravity</button>
+        <button onclick="sortForceCh1('Magnetic','non')">Magnetic</button>
+        <p id="sortResCh1"></p>
+        <script>function sortForceCh1(name,type){ let msg = (type==='contact') ? `${name} → Contact force` : `${name} → Non-contact force`; document.getElementById('sortResCh1').innerHTML = `🔍 ${msg}`; }</script>
+      </div>
+      <div class="tool-card"><h4>3. Atmospheric Pressure Demo</h4>
+        <button onclick="demoStrawCh1()">🧃 Drink with straw</button>
+        <button onclick="demoSuckerCh1()">🪠 Stick sucker</button>
+        <p id="atmResCh1"></p>
+        <script>function demoStrawCh1(){document.getElementById('atmResCh1').innerHTML='🌬️ Atmospheric pressure pushes liquid upward!';} function demoSuckerCh1(){document.getElementById('atmResCh1').innerHTML='🪠 Air pressure holds sucker against wall.';}</script>
+      </div>
+      <div class="tool-card"><h4>4. Area vs Pressure</h4>
+        <button onclick="areaPressureCh1('knife')">Sharp knife</button>
+        <button onclick="areaPressureCh1('blunt')">Blunt knife</button>
+        <p id="areaResCh1"></p>
+        <script>function areaPressureCh1(type){ let msg = (type==='knife') ? '✅ Small area → high pressure → cuts easily.' : '⚠️ Large area → low pressure → hard to cut.'; document.getElementById('areaResCh1').innerHTML = msg; }</script>
+      </div>
+      <div class="tool-card"><h4>5. Force & Motion Simulator</h4>
+        <button onclick="motionSimCh1('push')">Push stationary ball</button>
+        <button onclick="motionSimCh1('stop')">Stop moving ball</button>
+        <p id="motionResCh1"></p>
+        <script>function motionSimCh1(action){ let msg = (action==='push') ? '⚽ Ball starts moving (force changes rest).' : '🛑 Ball stops (force changes motion).'; document.getElementById('motionResCh1').innerHTML = msg; }</script>
+      </div>
+    </div>
+    <div class="quiz"><strong>📝 Quick Quiz (Chapter 1)</strong><br>1. Why are school bags provided with wide straps?<br>2. Name one non-contact force.<br>3. If 200 N force acts on 2 m² area, pressure = ?<br><em>Answers: 1. To reduce pressure on shoulders. 2. Gravitational force. 3. 100 Pa.</em></div>
+  </div>
+
+  <!-- ==================== CHAPTER 2: FRICTION ==================== -->
+  <div id="ch2" class="chapter">
+    <h2>Chapter 2: Friction</h2>
+    <div class="theory-box">
+      <p><strong>Friction</strong> is the force that opposes relative motion between two surfaces. It is caused by surface irregularities.</p>
+      <p><strong>Types:</strong> Static (largest), Sliding (medium), Rolling (smallest). Ball bearings convert sliding into rolling friction.</p>
+      <p><strong>Ways to reduce friction:</strong> Lubricants (oil, grease), polishing, wheels, streamlining. <strong>Increase friction:</strong> Treads on shoes/tyres, sand on ice.</p>
+      <p><strong>Fluid friction (drag):</strong> streamlined shapes reduce drag (fish, aeroplanes).</p>
+      <p><strong>Example:</strong> A box of 50 kg requires 300 N to slide on rough floor, but only 100 N on ice – less friction.</p>
+    </div>
+    <h3>🛠️ Interactive Tools</h3>
+    <div class="tool-grid">
+      <div class="tool-card"><h4>1. Friction Type Explorer</h4>
+        <button onclick="fricTypeCh2('static')">Static</button><button onclick="fricTypeCh2('sliding')">Sliding</button><button onclick="fricTypeCh2('rolling')">Rolling</button>
+        <p id="fricTypeResCh2"></p><script>function fricTypeCh2(t){ let m={static:'Highest friction, prevents motion',sliding:'Medium, opposes sliding',rolling:'Lowest, opposes rolling'}; document.getElementById('fricTypeResCh2').innerHTML = m[t]; }</script>
+      </div>
+      <div class="tool-card"><h4>2. Surface Roughness Simulator</h4>
+        <select id="surfaceCh2"><option value="rough">Rough (concrete)</option><option value="smooth">Smooth (ice)</option></select>
+        <button onclick="surfSimCh2()">Simulate</button><p id="surfResCh2"></p>
+        <script>function surfSimCh2(){ let s=document.getElementById('surfaceCh2').value; document.getElementById('surfResCh2').innerHTML = (s==='rough') ? '🧱 High friction → stops quickly.' : '⛸️ Low friction → slides far.'; }</script>
+      </div>
+      <div class="tool-card"><h4>3. Lubricant Effect</h4>
+        <button onclick="lubeCh2(true)">With oil</button><button onclick="lubeCh2(false)">Without oil</button>
+        <p id="lubeResCh2"></p><script>function lubeCh2(hasOil){ let msg = hasOil ? '🛢️ Oil reduces friction → smooth running.' : '🔥 High friction → wear & tear.'; document.getElementById('lubeResCh2').innerHTML = msg; }</script>
+      </div>
+      <div class="tool-card"><h4>4. Ball Bearings Demo</h4>
+        <button onclick="bearingCh2(true)">With bearings</button><button onclick="bearingCh2(false)">Without bearings</button>
+        <p id="bearingResCh2"></p><script>function bearingCh2(has){ let msg = has ? '⚙️ Rolling friction → less effort.' : '🔻 Sliding friction → hard to move.'; document.getElementById('bearingResCh2').innerHTML = msg; }</script>
+      </div>
+      <div class="tool-card"><h4>5. Fluid Friction (Drag)</h4>
+        <button onclick="dragCh2('streamlined')">Streamlined (fish)</button><button onclick="dragCh2('boxy')">Boxy (truck)</button>
+        <p id="dragResCh2"></p><script>function dragCh2(shape){ let msg = (shape==='streamlined') ? '🐟 Low drag → moves fast in water/air.' : '🚛 High drag → needs more force.'; document.getElementById('dragResCh2').innerHTML = msg; }</script>
+      </div>
+    </div>
+    <div class="quiz"><strong>📝 Quiz (Chapter 2)</strong><br>1. Which friction is the largest?<br>2. How do lubricants help?<br>3. Give an example of increasing friction.<br><em>Answers: Static friction; reduce wear & tear; treads on tyres.</em></div>
+  </div>
+
+  <!-- ==================== CHAPTER 3: SOUND ==================== -->
+  <div id="ch3" class="chapter">
+    <h2>Chapter 3: Sound</h2>
+    <div class="theory-box">
+      <p>Sound is produced by <strong>vibrations</strong>. It needs a medium (solid, liquid, gas) – cannot travel in vacuum. Speed of sound is highest in solids.</p>
+      <p><strong>Characteristics:</strong> Amplitude (loudness), Frequency (pitch) – human audible range 20 Hz to 20,000 Hz. Ultrasound >20 kHz, Infrasound <20 Hz.</p>
+      <p><strong>Human ear:</strong> Pinna collects → ear canal → eardrum vibrates → middle ear bones amplify → inner ear converts to electrical signals → brain.</p>
+      <p>Noise pollution causes health issues. Music is pleasant, regular vibrations.</p>
+    </div>
+    <h3>🛠️ Interactive Tools</h3>
+    <div class="tool-grid">
+      <div class="tool-card"><h4>1. Frequency ↔ Pitch Mapper</h4>
+        <input type="range" id="freqCh3" min="20" max="20000" value="440"> <span id="freqValCh3">440</span> Hz → <span id="pitchValCh3"></span>
+        <script>let f3=document.getElementById('freqCh3'), fv3=document.getElementById('freqValCh3'), pv3=document.getElementById('pitchValCh3'); f3.oninput=()=>{ let f=f3.value; fv3.innerText=f; if(f<250) pv3.innerText='Low pitch (bass)'; else if(f<2000) pv3.innerText='Medium pitch'; else pv3.innerText='High pitch (treble)'; }; f3.oninput();</script>
+      </div>
+      <div class="tool-card"><h4>2. Amplitude & Loudness</h4>
+        <button onclick="ampCh3('low')">Soft sound</button><button onclick="ampCh3('high')">Loud sound</button>
+        <p id="ampResCh3"></p><script>function ampCh3(l){ document.getElementById('ampResCh3').innerHTML = (l==='low') ? '🔈 Low amplitude → soft sound.' : '🔊 High amplitude → loud sound.'; }</script>
+      </div>
+      <div class="tool-card"><h4>3. Sound Needs Medium</h4>
+        <button onclick="medCh3('air')">Air present</button><button onclick="medCh3('vacuum')">Vacuum</button>
+        <p id="medResCh3"></p><script>function medCh3(m){ document.getElementById('medResCh3').innerHTML = (m==='air') ? '🔊 Sound heard (particles vibrate)' : '🔇 No sound in vacuum'; }</script>
+      </div>
+      <div class="tool-card"><h4>4. Human Ear Explorer</h4>
+        <button onclick="earCh3('outer')">Outer ear</button><button onclick="earCh3('eardrum')">Eardrum</button><button onclick="earCh3('inner')">Inner ear</button>
+        <p id="earResCh3"></p><script>function earCh3(p){ let map={outer:'Collects sound waves',eardrum:'Vibrates',inner:'Converts to electrical signals'}; document.getElementById('earResCh3').innerHTML = map[p]; }</script>
+      </div>
+      <div class="tool-card"><h4>5. Noise vs Music Identifier</h4>
+        <button onclick="soundIdCh3('noise')">🚗 Horn</button><button onclick="soundIdCh3('music')">🎸 Guitar</button>
+        <p id="soundIdResCh3"></p><script>function soundIdCh3(t){ document.getElementById('soundIdResCh3').innerHTML = (t==='noise') ? '❌ Irregular vibrations → Noise' : '✅ Regular vibrations → Music'; }</script>
+      </div>
+    </div>
+    <div class="quiz"><strong>📝 Quiz (Chapter 3)</strong><br>1. Can sound travel through vacuum?<br>2. What determines loudness?<br>3. Audible frequency range for humans?<br><em>Answers: No; amplitude; 20–20,000 Hz.</em></div>
+  </div>
+
+  <!-- ==================== CHAPTER 4: CHEMICAL EFFECTS ==================== -->
+  <div id="ch4" class="chapter">
+    <h2>Chapter 4: Chemical Effects of Electric Current</h2>
+    <div class="theory-box">
+      <p><strong>Conductors:</strong> allow electricity to pass (metals, graphite, salt solutions). <strong>Insulators:</strong> do not allow (rubber, plastic, pure water).</p>
+      <p>When electric current passes through a conducting liquid, chemical reactions occur – <strong>electrolysis</strong>. Example: water splits into H₂ and O₂.</p>
+      <p><strong>Electroplating:</strong> coating one metal on another using electric current. Uses: rust prevention (zinc on iron), decoration (chromium, silver).</p>
+      <p><strong>Key fact:</strong> Pure water is a poor conductor; adding salt or acid makes it conduct due to ions.</p>
+    </div>
+    <h3>🛠️ Interactive Tools</h3>
+    <div class="tool-grid">
+      <div class="tool-card"><h4>1. Conductor/Insulator Tester</h4>
+        <button onclick="condCh4('metal')">Metal rod</button><button onclick="condCh4('rubber')">Rubber glove</button>
+        <p id="condResCh4"></p><script>function condCh4(m){ document.getElementById('condResCh4').innerHTML = (m==='metal') ? '💡 Bulb glows → Conductor' : '🚫 Bulb off → Insulator'; }</script>
+      </div>
+      <div class="tool-card"><h4>2. LED Conductivity Indicator</h4>
+        <select id="ledSelectCh4"><option value="saltwater">Salt water</option><option value="purewater">Pure water</option></select>
+        <button onclick="ledTestCh4()">Test LED</button><p id="ledResCh4"></p>
+        <script>function ledTestCh4(){ let s=document.getElementById('ledSelectCh4').value; document.getElementById('ledResCh4').innerHTML = (s==='saltwater') ? '💚 LED glows (ions present)' : '🔴 LED off (no ions)'; }</script>
+      </div>
+      <div class="tool-card"><h4>3. Electrolysis Simulator</h4>
+        <button onclick="elecCh4()">Start electrolysis of water</button><p id="elecResCh4"></p>
+        <script>function elecCh4(){ document.getElementById('elecResCh4').innerHTML = '💧 Water splits → H₂ at cathode (-), O₂ at anode (+)'; }</script>
+      </div>
+      <div class="tool-card"><h4>4. Electroplating Demo</h4>
+        <button onclick="plateCh4('copper')">Copper plate iron</button><button onclick="plateCh4('silver')">Silver plate spoon</button>
+        <p id="plateResCh4"></p><script>function plateCh4(m){ document.getElementById('plateResCh4').innerHTML = `⚡ ${m} coating deposited using electric current.`; }</script>
+      </div>
+      <div class="tool-card"><h4>5. Applications of Electroplating</h4>
+        <button onclick="appCh4('rust')">Prevent rust</button><button onclick="appCh4('shine')">Make shiny</button><button onclick="appCh4('jewel')">Artificial jewellery</button>
+        <p id="appResCh4"></p><script>function appCh4(a){ let map={rust:'Zinc plating on iron',shine:'Chromium on car bumpers',jewel:'Gold/silver coating'}; document.getElementById('appResCh4').innerHTML = map[a]; }</script>
+      </div>
+    </div>
+    <div class="quiz"><strong>📝 Quiz (Chapter 4)</strong><br>1. Why is salt water a conductor?<br>2. Define electroplating.<br>3. Name one use of electroplating.<br><em>Answers: Contains ions; coating a metal using electricity; rust prevention.</em></div>
+  </div>
+
+  <!-- ==================== CHAPTER 5: NATURAL PHENOMENA ==================== -->
+  <div id="ch5" class="chapter">
+    <h2>Chapter 5: Some Natural Phenomena</h2>
+    <div class="theory-box">
+      <p><strong>Lightning:</strong> electric discharge between clouds or cloud and earth. Caused by charge separation. Safety: stay indoors, avoid water/electrical appliances, don't stand under trees.</p>
+      <p><strong>Earthquake:</strong> sudden shaking due to movement of tectonic plates. <strong>Focus</strong> (origin inside earth), <strong>Epicentre</strong> (point on surface). Measured by <strong>seismograph</strong>; magnitude on <strong>Richter scale</strong>.</p>
+      <p><strong>Safety during earthquake:</strong> Drop, Cover, Hold. Stay away from windows, heavy objects.</p>
+      <p>Static electricity: charging by rubbing (comb + paper).</p>
+    </div>
+    <h3>🛠️ Interactive Tools</h3>
+    <div class="tool-grid">
+      <div class="tool-card"><h4>1. Lightning Safety Checklist</h4>
+        <input type="checkbox" id="lightIndoor"> Stay indoors<br>
+        <input type="checkbox" id="lightWater"> Avoid water & wires<br>
+        <input type="checkbox" id="lightField"> No open field<br>
+        <button onclick="lightSafetyCh5()">Check safety</button><p id="lightResCh5"></p>
+        <script>function lightSafetyCh5(){ let a=document.getElementById('lightIndoor').checked,b=document.getElementById('lightWater').checked,c=document.getElementById('lightField').checked; document.getElementById('lightResCh5').innerHTML = (a&&b&&c) ? '✅ You are safe from lightning!' : '⚠️ Follow all safety rules.'; }</script>
+      </div>
+      <div class="tool-card"><h4>2. Earthquake: Drop, Cover, Hold</h4>
+        <button onclick="quakeActCh5('drop')">Drop</button><button onclick="quakeActCh5('cover')">Cover</button><button onclick="quakeActCh5('hold')">Hold</button>
+        <p id="quakeResCh5"></p><script>function quakeActCh5(act){ let m={drop:'Drop to the ground',cover:'Take cover under a table',hold:'Hold on until shaking stops'}; document.getElementById('quakeResCh5').innerHTML = m[act]; }</script>
+      </div>
+      <div class="tool-card"><h4>3. Seismograph Simulator</h4>
+        <button onclick="seismoCh5('small')">Small tremor</button><button onclick="seismoCh5('large')">Large earthquake</button>
+        <p id="seismoResCh5"></p><script>function seismoCh5(s){ let wave=(s==='small')?'~~~~~~~~~':'███████████████'; document.getElementById('seismoResCh5').innerHTML = `📉 Seismograph: ${wave}`; }</script>
+      </div>
+      <div class="tool-card"><h4>4. Richter Scale Comparator</h4>
+        <button onclick="richterCh5(3)">Magnitude 3</button><button onclick="richterCh5(6)">Magnitude 6</button><button onclick="richterCh5(8)">Magnitude 8</button>
+        <p id="richterResCh5"></p><script>function richterCh5(m){ let d={3:'Minor, often felt',6:'Strong, damage possible',8:'Great, severe destruction'}; document.getElementById('richterResCh5').innerHTML = d[m]; }</script>
+      </div>
+      <div class="tool-card"><h4>5. Static Electricity (Rubbing)</h4>
+        <button onclick="rubCh5()">Rub comb on hair</button><button onclick="attractCh5()">Bring near paper</button>
+        <p id="staticResCh5"></p><script>function rubCh5(){ document.getElementById('staticResCh5').innerHTML = '⚡ Comb becomes charged (electrons transfer).'; } function attractCh5(){ document.getElementById('staticResCh5').innerHTML = '📄 Paper pieces attracted → static electricity.'; }</script>
+      </div>
+    </div>
+    <div class="quiz"><strong>📝 Quiz (Chapter 5)</strong><br>1. What causes lightning?<br>2. Which instrument records earthquakes?<br>3. What should you do during an earthquake indoors?<br><em>Answers: Electric discharge; seismograph; Drop, Cover, Hold.</em></div>
+  </div>
+  <footer>© 2025 CBSE Class 8 Physics – Complete study material with 25 working tools. Free for students.</footer>
+</div>
+
+<script>
+  // Navigation with active highlight
+  const chapters = ['ch1','ch2','ch3','ch4','ch5'];
+  const links = document.querySelectorAll('.nav-chapters a');
+  function showChapter(id) {
+    chapters.forEach(c => {
+      const el = document.getElementById(c);
+      if(el) el.classList.remove('active');
+    });
+    document.getElementById(id).classList.add('active');
+    links.forEach(link => {
+      if(link.getAttribute('data-chapter') === id) link.classList.add('active-chapter');
+      else link.classList.remove('active-chapter');
+    });
+  }
+  links.forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      const chap = link.getAttribute('data-chapter');
+      if(chap) showChapter(chap);
+    });
+  });
+  // Set first active
+  showChapter('ch1');
+</script>
+</body>
+</html>
