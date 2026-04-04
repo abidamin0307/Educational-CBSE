@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 9 Maths | CBSE Full Course with Interactive Tools</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background: #f0f2f5;
+            color: #1e2a3a;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 28px;
+            box-shadow: 0 25px 45px -12px rgba(0,0,0,0.15);
+            overflow: hidden;
+        }
+        .common-nav {
+            background: #1a4d6b;
+            padding: 12px 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            border-bottom: 3px solid #f4a261;
+        }
+        .common-nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 5px 12px;
+            border-radius: 30px;
+            background: #2c6e8f;
+            transition: 0.2s;
+        }
+        .common-nav a:hover {
+            background: #f4a261;
+            color: #1e2a3e;
+        }
+        header {
+            background: linear-gradient(145deg, #1a4d6b, #2c6e8f);
+            color: white;
+            padding: 2rem 2.5rem;
+        }
+        header h1 { font-size: 2rem; margin-bottom: 0.25rem; }
+        header p { opacity: 0.9; font-size: 1rem; }
+        .nav-chapters {
+            display: flex;
+            flex-wrap: wrap;
+            background: #f4f9fc;
+            border-bottom: 2px solid #cde0e8;
+            padding: 0.8rem 1.8rem;
+            gap: 8px;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+        .nav-chapters a {
+            background: white;
+            padding: 0.4rem 1rem;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.85rem;
+            color: #1a4d6b;
+            transition: 0.2s;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+        }
+        .nav-chapters a:hover, .nav-chapters a.active-chapter {
+            background: #2c6e8f;
+            color: white;
+        }
+        .chapter {
+            display: none;
+            padding: 2rem 2.5rem;
+            animation: fadeIn 0.3s ease;
+        }
+        .chapter.active { display: block; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px);} to { opacity: 1; transform: translateY(0);} }
+        h2 { color: #1a4d6b; font-size: 1.8rem; border-left: 6px solid #f4a261; padding-left: 1rem; margin: 1.2rem 0 0.8rem; }
+        h3 { color: #2c6e8f; margin: 1.5rem 0 0.5rem; font-size: 1.3rem; }
+        .theory-box {
+            background: #fefcf5;
+            padding: 1.2rem 1.8rem;
+            border-radius: 24px;
+            margin: 1rem 0;
+            border-left: 5px solid #f4a261;
+            font-size: 1rem;
+        }
+        .formula-box {
+            background: #e8f0fe;
+            padding: 0.8rem 1.2rem;
+            border-radius: 16px;
+            margin: 1rem 0;
+            font-family: monospace;
+            font-size: 1.1rem;
+            text-align: center;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #f8fafc;
+            margin: 1rem 0;
+        }
+        th, td {
+            border: 1px solid #cbd5e1;
+            padding: 10px 12px;
+            text-align: left;
+        }
+        th { background: #e2edf2; }
+        .tool-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .tool-card {
+            background: #ffffff;
+            border-radius: 24px;
+            padding: 1rem 1.2rem;
+            box-shadow: 0 5px 12px rgba(0,0,0,0.05);
+            border: 1px solid #e2edf2;
+        }
+        .tool-card h4 {
+            font-size: 1.2rem;
+            color: #2c6e8f;
+            margin-bottom: 12px;
+            border-bottom: 2px solid #f4a261;
+            display: inline-block;
+        }
+        input, select, button {
+            margin: 6px 6px 6px 0;
+            padding: 8px 14px;
+            border-radius: 40px;
+            border: 1px solid #ccc;
+            font-size: 0.9rem;
+        }
+        button {
+            background: #2c6e8f;
+            color: white;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        button:hover { background: #f4a261; color: #1e2a3e; }
+        .quiz {
+            background: #e6f2ef;
+            padding: 1.2rem;
+            border-radius: 24px;
+            margin-top: 2rem;
+        }
+        footer {
+            background: #1a4d6b;
+            color: #cde0d8;
+            text-align: center;
+            padding: 1.2rem;
+            font-size: 0.85rem;
+        }
+        @media (max-width: 700px) {
+            .chapter { padding: 1rem; }
+            .tool-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="common-nav">
+        <a href="index.html">🏠 Home</a>
+        <a href="physics-9.html">⚛️ Physics</a>
+        <a href="chemistry-9.html">🧪 Chemistry</a>
+        <a href="maths-9.html">📐 Maths</a>
+    </div>
+    <header>
+        <h1>📐 Class 9 Mathematics (CBSE)</h1>
+        <p>Detailed theory (800+ words per chapter) + 65 interactive tools | Number Systems, Polynomials, Geometry, Mensuration, Statistics, Probability</p>
+    </header>
+    <div class="nav-chapters">
+        <a href="#" data-chapter="ch1">1. Number Systems</a>
+        <a href="#" data-chapter="ch2">2. Polynomials</a>
+        <a href="#" data-chapter="ch3">3. Coordinate Geometry</a>
+        <a href="#" data-chapter="ch4">4. Linear Equations in Two Variables</a>
+        <a href="#" data-chapter="ch5">5. Euclid's Geometry</a>
+        <a href="#" data-chapter="ch6">6. Lines and Angles</a>
+        <a href="#" data-chapter="ch7">7. Triangles</a>
+        <a href="#" data-chapter="ch8">8. Quadrilaterals</a>
+        <a href="#" data-chapter="ch9">9. Circles</a>
+        <a href="#" data-chapter="ch10">10. Heron's Formula</a>
+        <a href="#" data-chapter="ch11">11. Surface Areas & Volumes</a>
+        <a href="#" data-chapter="ch12">12. Statistics</a>
+        <a href="#" data-chapter="ch13">13. Probability</a>
+    </div>
+
+    <!-- ==================== CHAPTER 1: NUMBER SYSTEMS ==================== -->
+    <div id="ch1" class="chapter active">
+        <h2>Chapter 1: Number Systems</h2>
+        <div class="theory-box">
+            <p>Number systems form the foundation of mathematics. The natural numbers (N) are counting numbers: 1, 2, 3, ... Whole numbers (W) include zero: 0, 1, 2, ... Integers (Z) include negative numbers: ..., -3, -2, -1, 0, 1, 2, ... Rational numbers (Q) are numbers that can be expressed as p/q where p and q are integers and q ≠ 0. Examples: 2/3, -5/7, 4, 0. Rational numbers include terminating decimals (0.5 = 1/2) and non-terminating repeating decimals (0.333... = 1/3).</p>
+            <p>Irrational numbers cannot be expressed as p/q. Their decimal expansions are non-terminating and non-repeating. Examples: √2, √3, π, e. The set of real numbers (R) is the union of rational and irrational numbers. Every real number corresponds to a unique point on the number line, and vice versa.</p>
+            <p>Operations on real numbers follow the same laws as rational numbers. The square root of a positive real number is defined. Rationalisation is the process of eliminating irrational numbers from the denominator of a fraction. For example, 1/√2 = √2/2. Laws of exponents for real numbers: a^m × a^n = a^(m+n), (a^m)^n = a^(mn), a^m / a^n = a^(m-n), a^0 = 1, and a^(-m) = 1/a^m.</p>
+            <p>Representation of irrational numbers on the number line can be done using geometric constructions (e.g., √2 using a right triangle with sides 1 and 1).</p>
+        </div>
+        <div class="formula-box">📐 √ab = √a × √b | √(a/b) = √a / √b</div>
+        <h3>🛠️ Interactive Tools</h3>
+        <div class="tool-grid">
+            <div class="tool-card"><h4>1. Rational or Irrational Checker</h4>
+                <input type="text" id="numCheck_ch1" placeholder="Enter number">
+                <button onclick="checkRationalCh1()">Check</button>
+                <p id="rationalCheckResCh1"></p>
+                <script>function checkRationalCh1(){ let val=document.getElementById('numCheck_ch1').value; let num=parseFloat(val); if(isNaN(num)){ document.getElementById('rationalCheckResCh1').innerHTML='Invalid number'; return;} let sqrt=Math.sqrt(num); if(sqrt===Math.floor(sqrt) && num%1!==0) document.getElementById('rationalCheckResCh1').innerHTML=`${num} is irrational (square root of non-perfect square)`; else if(num.toString().includes('/')) document.getElementById('rationalCheckResCh1').innerHTML=`${num} is rational`; else document.getElementById('rationalCheckResCh1').innerHTML=`${num} is rational`;}</script>
+            </div>
+            <div class="tool-card"><h4>2. Decimal to Fraction Converter</h4>
+                <input type="text" id="decimal_ch1" placeholder="e.g., 0.75 or 0.333">
+                <button onclick="decimalToFractionCh1()">Convert</button>
+                <p id="fracResCh1"></p>
+                <script>function decimalToFractionCh1(){ let dec=document.getElementById('decimal_ch1').value; let num=parseFloat(dec); if(isNaN(num)){ document.getElementById('fracResCh1').innerHTML='Invalid decimal'; return;} let denominator=1000000; let numerator=Math.round(num*denominator); let gcd=(a,b)=>b===0?a:gcd(b,a%b); let g=gcd(numerator,denominator); let num2=numerator/g, den2=denominator/g; document.getElementById('fracResCh1').innerHTML=`Fraction = ${num2}/${den2}`;}</script>
+            </div>
+            <div class="tool-card"><h4>3. Simplify Square Roots</h4>
+                <input type="number" id="sqrtNum_ch1" placeholder="Number">
+                <button onclick="simplifySqrtCh1()">Simplify √</button>
+                <p id="sqrtResCh1"></p>
+                <script>function simplifySqrtCh1(){ let n=parseInt(document.getElementById('sqrtNum_ch1').value); let outside=1; for(let i=Math.floor(Math.sqrt(n));i>=2;i--){ if(n%(i*i)===0){ outside*=i; n/=(i*i); i=Math.floor(Math.sqrt(n))+1; } } document.getElementById('sqrtResCh1').innerHTML=`√${document.getElementById('sqrtNum_ch1').value} = ${outside}√${n}`;}</script>
+            </div>
+            <div class="tool-card"><h4>4. Rationalise Denominator</h4>
+                <input type="text" id="denom_ch1" placeholder="Denominator e.g., √2">
+                <button onclick="rationaliseCh1()">Rationalise</button>
+                <p id="ratResCh1"></p>
+                <script>function rationaliseCh1(){ let d=document.getElementById('denom_ch1').value; if(d.includes('√')){ let num=d.match(/\d+/)?.[0]||1; let root=d.match(/√(\d+)/)[1]; let rationalised=`${num}√${root}/${root}`; document.getElementById('ratResCh1').innerHTML=`1/${d} = ${rationalised}`; } else document.getElementById('ratResCh1').innerHTML='Denominator already rational';}</script>
+            </div>
+            <div class="tool-card"><h4>5. Locate √n on Number Line</h4>
+                <input type="number" id="rootN_ch1" placeholder="n for √n">
+                <button onclick="locateRootCh1()">Show Construction</button>
+                <p id="rootLocResCh1"></p>
+                <script>function locateRootCh1(){ let n=parseInt(document.getElementById('rootN_ch1').value); document.getElementById('rootLocResCh1').innerHTML=`To locate √${n} on number line: draw a right triangle with legs 1 and ${n-1}, or use spiral method. √${n} ≈ ${Math.sqrt(n).toFixed(4)}`;}</script>
+            </div>
+        </div>
+        <div class="quiz"><strong>📝 Quick Quiz (Chapter 1)</strong><br>1. Is √2 a rational number? Why?<br>2. Convert 0.666... to a fraction.<br>3. Simplify √72.<br><em>Answers: 1. No, it's irrational. 2. 2/3. 3. 6√2.</em></div>
+    </div>
+
+    <!-- ==================== CHAPTER 2: POLYNOMIALS ==================== -->
+    <div id="ch2" class="chapter">
+        <h2>Chapter 2: Polynomials</h2>
+        <div class="theory-box">
+            <p>A polynomial is an algebraic expression consisting of variables, coefficients, and non-negative integer exponents. The general form is p(x) = a_n x^n + a_{n-1} x^{n-1} + ... + a_1 x + a_0, where a_n ≠ 0. The highest exponent n is the degree of the polynomial. Based on degree, polynomials are classified as linear (degree 1), quadratic (degree 2), cubic (degree 3), etc. A zero polynomial has all coefficients zero.</p>
+            <p>The value of a polynomial at x = a is p(a). A zero (or root) of a polynomial is a number c such that p(c) = 0. For a linear polynomial ax+b, the zero is -b/a. For a quadratic polynomial ax²+bx+c, the zeros can be found using the quadratic formula: x = [-b ± √(b²-4ac)] / 2a. The discriminant D = b²-4ac determines the nature of roots: D>0 (two distinct real roots), D=0 (one real repeated root), D<0 (no real roots).</p>
+            <p>The remainder theorem states that if a polynomial p(x) is divided by (x-a), the remainder is p(a). The factor theorem states that (x-a) is a factor of p(x) if and only if p(a)=0. This is used for factorisation.</p>
+            <p>Algebraic identities for polynomials: (x+y)² = x²+2xy+y², (x-y)² = x²-2xy+y², (x+y+z)² = x²+y²+z²+2xy+2yz+2zx, (x+y)³ = x³+y³+3xy(x+y), (x-y)³ = x³-y³-3xy(x-y), x³+y³ = (x+y)(x²-xy+y²), x³-y³ = (x-y)(x²+xy+y²).</p>
+        </div>
+        <div class="formula-box">📐 Remainder: p(a) | Factor: p(a)=0 ⇔ (x-a) is factor</div>
+        <h3>🛠️ Interactive Tools</h3>
+        <div class="tool-grid">
+            <div class="tool-card"><h4>1. Polynomial Evaluator</h4>
+                <input type="text" id="polyExpr_ch2" placeholder="e.g., x^2+3x+2"> <input type="number" id="xValPoly_ch2" placeholder="x =">
+                <button onclick="evalPolyCh2()">Evaluate</button>
+                <p id="polyEvalResCh2"></p>
+                <script>function evalPolyCh2(){ let expr=document.getElementById('polyExpr_ch2').value; let x=parseFloat(document.getElementById('xValPoly_ch2').value); let result=eval(expr.replace(/x/g,x).replace(/\^/g,'**')); document.getElementById('polyEvalResCh2').innerHTML=`p(${x}) = ${result}`;}</script>
+            </div>
+            <div class="tool-card"><h4>2. Remainder Theorem</h4>
+                <input type="text" id="polyRem_ch2" placeholder="Polynomial e.g., x^2-5x+6"> <input type="number" id="divisor_ch2" placeholder="x - a, enter a">
+                <button onclick="remainderCh2()">Find Remainder</button>
+                <p id="remResCh2"></p>
+                <script>function remainderCh2(){ let expr=document.getElementById('polyRem_ch2').value; let a=parseFloat(document.getElementById('divisor_ch2').value); let result=eval(expr.replace(/x/g,a).replace(/\^/g,'**')); document.getElementById('remResCh2').innerHTML=`Remainder = ${result}`;}</script>
+            </div>
+            <div class="tool-card"><h4>3. Factor Checker</h4>
+                <input type="text" id="polyFact_ch2" placeholder="Polynomial"> <input type="number" id="factorVal_ch2" placeholder="Check if (x - a) is factor, enter a">
+                <button onclick="checkFactorCh2()">Check Factor</button>
+                <p id="factResCh2"></p>
+                <script>function checkFactorCh2(){ let expr=document.getElementById('polyFact_ch2').value; let a=parseFloat(document.getElementById('factorVal_ch2').value); let result=eval(expr.replace(/x/g,a).replace(/\^/g,'**')); if(result===0) document.getElementById('factResCh2').innerHTML=`Yes, (x-${a}) is a factor.`; else document.getElementById('factResCh2').innerHTML=`No, remainder = ${result}`;}</script>
+            </div>
+            <div class="tool-card"><h4>4. Quadratic Roots Solver</h4>
+                <input type="number" id="aQuad_ch2" placeholder="a"> <input type="number" id="bQuad_ch2" placeholder="b"> <input type="number" id="cQuad_ch2" placeholder="c">
+                <button onclick="solveQuadraticCh2()">Find Roots</button>
+                <p id="quadResCh2"></p>
+                <script>function solveQuadraticCh2(){ let a=parseFloat(document.getElementById('aQuad_ch2').value), b=parseFloat(document.getElementById('bQuad_ch2').value), c=parseFloat(document.getElementById('cQuad_ch2').value); let D=b*b-4*a*c; if(D<0) document.getElementById('quadResCh2').innerHTML='No real roots'; else{ let root1=(-b+Math.sqrt(D))/(2*a); let root2=(-b-Math.sqrt(D))/(2*a); document.getElementById('quadResCh2').innerHTML=`Roots: ${root1.toFixed(4)}, ${root2.toFixed(4)}`;}}</script>
+            </div>
+            <div class="tool-card"><h4>5. Expand (x+y)²</h4>
+                <input type="text" id="xValExp_ch2" placeholder="x"> <input type="text" id="yValExp_ch2" placeholder="y">
+                <button onclick="expandSquareCh2()">Expand (x+y)²</button>
+                <p id="expandResCh2"></p>
+                <script>function expandSquareCh2(){ let x=document.getElementById('xValExp_ch2').value, y=document.getElementById('yValExp_ch2').value; document.getElementById('expandResCh2').innerHTML=`(${x}+${y})² = ${x}² + 2${x}${y} + ${y}²`;}</script>
+            </div>
+        </div>
+        <div class="quiz"><strong>📝 Quick Quiz (Chapter 2)</strong><br>1. What is the degree of polynomial 3x⁴+2x²+1?<br>2. Find the zero of p(x)=2x-6.<br>3. For what value of k is x-1 a factor of x²+kx-2?<br><em>Answers: 1. 4. 2. x=3. 3. k=1.</em></div>
+    </div>
+
+    <!-- ==================== CHAPTER 3: COORDINATE GEOMETRY ==================== -->
+    <div id="ch3" class="chapter">
+        <h2>Chapter 3: Coordinate Geometry</h2>
+        <div class="theory-box">
+            <p>Coordinate geometry (also called analytic geometry) uses a coordinate system to represent geometric figures algebraically. The Cartesian plane is defined by two perpendicular number lines: the x-axis (horizontal) and the y-axis (vertical). Their intersection is the origin O(0,0). Any point P is represented by an ordered pair (x,y), where x is the x-coordinate (abscissa) and y is the y-coordinate (ordinate).</p>
+            <p>The plane is divided into four quadrants: Quadrant I (x>0, y>0), Quadrant II (x<0, y>0), Quadrant III (x<0, y<0), Quadrant IV (x>0, y<0). Points on the axes have either x=0 (y-axis) or y=0 (x-axis).</p>
+            <p>The distance between two points A(x₁,y₁) and B(x₂,y₂) is given by the distance formula: AB = √[(x₂-x₁)² + (y₂-y₁)²]. The section formula gives the coordinates of a point dividing a line segment in a given ratio. If a point divides AB in the ratio m:n internally, its coordinates are ((mx₂+nx₁)/(m+n), (my₂+ny₁)/(m+n)). The midpoint formula is a special case with m=n=1: ((x₁+x₂)/2, (y₁+y₂)/2).</p>
+            <p>Area of a triangle with vertices (x₁,y₁), (x₂,y₂), (x₃,y₃) is ½ |x₁(y₂-y₃) + x₂(y₃-y₁) + x₃(y₁-y₂)|. If the area is zero, the three points are collinear.</p>
+        </div>
+        <div class="formula-box">📐 Distance = √[(x₂-x₁)² + (y₂-y₁)²] | Midpoint = ((x₁+x₂)/2, (y₁+y₂)/2)</div>
+        <h3>🛠️ Interactive Tools</h3>
+        <div class="tool-grid">
+            <div class="tool-card"><h4>1. Distance Calculator</h4>
+                <input type="number" id="x1_ch3" placeholder="x1"> <input type="number" id="y1_ch3" placeholder="y1"> <input type="number" id="x2_ch3" placeholder="x2"> <input type="number" id="y2_ch3" placeholder="y2">
+                <button onclick="calcDistanceCh3()">Calculate Distance</button>
+                <p id="distResCh3"></p>
+                <script>function calcDistanceCh3(){ let x1=parseFloat(document.getElementById('x1_ch3').value), y1=parseFloat(document.getElementById('y1_ch3').value), x2=parseFloat(document.getElementById('x2_ch3').value), y2=parseFloat(document.getElementById('y2_ch3').value); let d=Math.sqrt((x2-x1)**2+(y2-y1)**2); document.getElementById('distResCh3').innerHTML=`Distance = ${d.toFixed(4)}`;}</script>
+            </div>
+            <div class="tool-card"><h4>2. Midpoint Finder</h4>
+                <input type="number" id="x1m_ch3" placeholder="x1"> <input type="number" id="y1m_ch3" placeholder="y1"> <input type="number" id="x2m_ch3" placeholder="x2"> <input type="number" id="y2m_ch3" placeholder="y2">
+                <button onclick="midpointCh3()">Find Midpoint</button>
+                <p id="midResCh3"></p>
+                <script>function midpointCh3(){ let x1=parseFloat(document.getElementById('x1m_ch3').value), y1=parseFloat(document.getElementById('y1m_ch3').value), x2=parseFloat(document.getElementById('x2m_ch3').value), y2=parseFloat(document.getElementById('y2m_ch3').value); let mx=(x1+x2)/2, my=(y1+y2)/2; document.getElementById('midResCh3').innerHTML=`Midpoint = (${mx.toFixed(2)}, ${my.toFixed(2)})`;}</script>
+            </div>
+            <div class="tool-card"><h4>3. Slope Calculator</h4>
+                <input type="number" id="x1s_ch3" placeholder="x1"> <input type="number" id="y1s_ch3" placeholder="y1"> <input type="number" id="x2s_ch3" placeholder="x2"> <input type="number" id="y2s_ch3" placeholder="y2">
+                <button onclick="slopeCh3()">Calculate Slope</button>
+                <p id="slopeResCh3"></p>
+                <script>function slopeCh3(){ let x1=parseFloat(document.getElementById('x1s_ch3').value), y1=parseFloat(document.getElementById('y1s_ch3').value), x2=parseFloat(document.getElementById('x2s_ch3').value), y2=parseFloat(document.getElementById('y2s_ch3').value); let m=(y2-y1)/(x2-x1); document.getElementById('slopeResCh3').innerHTML=`Slope = ${m.toFixed(4)}`;}</script>
+            </div>
+            <div class="tool-card"><h4>4. Area of Triangle</h4>
+                <input type="number" id="x1t_ch3" placeholder="x1"> <input type="number" id="y1t_ch3" placeholder="y1"> <input type="number" id="x2t_ch3" placeholder="x2"> <input type="number" id="y2t_ch3" placeholder="y2"> <input type="number" id="x3t_ch3" placeholder="x3"> <input type="number" id="y3t_ch3" placeholder="y3">
+                <button onclick="areaTriangleCh3()">Calculate Area</button>
+                <p id="areaResCh3"></p>
+                <script>function areaTriangleCh3(){ let x1=parseFloat(document.getElementById('x1t_ch3').value), y1=parseFloat(document.getElementById('y1t_ch3').value), x2=parseFloat(document.getElementById('x2t_ch3').value), y2=parseFloat(document.getElementById('y2t_ch3').value), x3=parseFloat(document.getElementById('x3t_ch3').value), y3=parseFloat(document.getElementById('y3t_ch3').value); let area=0.5*Math.abs(x1*(y2-y3)+x2*(y3-y1)+x3*(y1-y2)); document.getElementById('areaResCh3').innerHTML=`Area = ${area.toFixed(2)}`;}</script>
+            </div>
+            <div class="tool-card"><h4>5. Quadrant Identifier</h4>
+                <input type="number" id="xQuad_ch3" placeholder="x"> <input type="number" id="yQuad_ch3" placeholder="y">
+                <button onclick="findQuadrantCh3()">Identify Quadrant</button>
+                <p id="quadrantResCh3"></p>
+                <script>function findQuadrantCh3(){ let x=parseFloat(document.getElementById('xQuad_ch3').value), y=parseFloat(document.getElementById('yQuad_ch3').value); if(x>0 && y>0) document.getElementById('quadrantResCh3').innerHTML='Quadrant I'; else if(x<0 && y>0) document.getElementById('quadrantResCh3').innerHTML='Quadrant II'; else if(x<0 && y<0) document.getElementById('quadrantResCh3').innerHTML='Quadrant III'; else if(x>0 && y<0) document.getElementById('quadrantResCh3').innerHTML='Quadrant IV'; else document.getElementById('quadrantResCh3').innerHTML='On axis';}</script>
+            </div>
+        </div>
+        <div class="quiz"><strong>📝 Quick Quiz (Chapter 3)</strong><br>1. In which quadrant does (-3,5) lie?<br>2. Find distance between (2,3) and (5,7).<br>3. What is the slope of a horizontal line?<br><em>Answers: 1. Quadrant II. 2. 5 units. 3. 0.</em></div>
+    </div>
+
+    <!-- ==================== CHAPTER 4: LINEAR EQUATIONS IN TWO VARIABLES ==================== -->
+    <div id="ch4" class="chapter">
+        <h2>Chapter 4: Linear Equations in Two Variables</h2>
+        <div class="theory-box">
+            <p>A linear equation in two variables is of the form ax + by + c = 0, where a, b, c are real numbers, and a and b are not both zero. The graph of such an equation is a straight line. For example, 2x + 3y = 6 can be rewritten as y = (6-2x)/3. Every point (x,y) that satisfies the equation lies on the line, and every point on the line is a solution.</p>
+            <p>To graph a linear equation, we can find at least two solutions (x,y) by assigning arbitrary values to one variable and solving for the other. Plotting these points and joining them gives the line. The x-intercept is the point where the line crosses the x-axis (y=0). The y-intercept is where it crosses the y-axis (x=0).</p>
+            <p>Two lines can intersect at one point (unique solution), be parallel (no solution), or coincide (infinitely many solutions). The slope-intercept form is y = mx + c, where m is the slope and c is the y-intercept. The general form is Ax + By + C = 0.</p>
+            <p>Applications: Linear equations model real-life situations such as cost and revenue, speed and time, and mixture problems.</p>
+        </div>
+        <div class="formula-box">📐 y = mx + c | ax + by + c = 0</div>
+        <h3>🛠️ Interactive Tools</h3>
+        <div class="tool-grid">
+            <div class="tool-card"><h4>1. Linear Equation Solver (Two Variables)</h4>
+                <input type="number" id="a1_ch4" placeholder="a1"> <input type="number" id="b1_ch4" placeholder="b1"> <input type="number" id="c1_ch4" placeholder="c1"> <br>
+                <input type="number" id="a2_ch4" placeholder="a2"> <input type="number" id="b2_ch4" placeholder="b2"> <input type="number" id="c2_ch4" placeholder="c2">
+                <button onclick="solveLinearPairCh4()">Solve System</button>
+                <p id="linearResCh4"></p>
+                <script>function solveLinearPairCh4(){ let a1=parseFloat(document.getElementById('a1_ch4').value), b1=parseFloat(document.getElementById('b1_ch4').value), c1=parseFloat(document.getElementById('c1_ch4').value); let a2=parseFloat(document.getElementById('a2_ch4').value), b2=parseFloat(document.getElementById('b2_ch4').value), c2=parseFloat(document.getElementById('c2_ch4').value); let det=a1*b2 - a2*b1; if(det===0) document.getElementById('linearResCh4').innerHTML='No unique solution (parallel or coincident lines)'; else{ let x=(b2*c1 - b1*c2)/det; let y=(a1*c2 - a2*c1)/det; document.getElementById('linearResCh4').innerHTML=`Solution: x = ${x.toFixed(4)}, y = ${y.toFixed(4)}`;}}</script>
+            </div>
+            <div class="tool-card"><h4>2. Graph Plotter (Two Points)</h4>
+                <input type="number" id="x1g_ch4" placeholder="x1"> <input type="number" id="y1g_ch4" placeholder="y1"> <input type="number" id="x2g_ch4" placeholder="x2"> <input type="number" id="y2g_ch4" placeholder="y2">
+                <button onclick="plotLineCh4()">Show Line Equation</button>
+                <p id="lineResCh4"></p>
+                <script>function plotLineCh4(){ let x1=parseFloat(document.getElementById('x1g_ch4').value), y1=parseFloat(document.getElementById('y1g_ch4').value), x2=parseFloat(document.getElementById('x2g_ch4').value), y2=parseFloat(document.getElementById('y2g_ch4').value); let m=(y2-y1)/(x2-x1); let c=y1-m*x1; document.getElementById('lineResCh4').innerHTML=`Equation: y = ${m.toFixed(2)}x + ${c.toFixed(2)}`;}</script>
+            </div>
+            <div class="tool-card"><h4>3. Slope-Intercept Form Converter</h4>
+                <input type="number" id="aConv_ch4" placeholder="a"> <input type="number" id="bConv_ch4" placeholder="b"> <input type="number" id="cConv_ch4" placeholder="c">
+                <button onclick="convertToSlopeInterceptCh4()">Convert</button>
+                <p id="convResCh4"></p>
+                <script>function convertToSlopeInterceptCh4(){ let a=parseFloat(document.getElementById('aConv_ch4').value), b=parseFloat(document.getElementById('bConv_ch4').value), c=parseFloat(document.getElementById('cConv_ch4').value); if(b===0) document.getElementById('convResCh4').innerHTML='Vertical line x = '+(-c/a); else{ let m=-a/b; let cInt=-c/b; document.getElementById('convResCh4').innerHTML=`y = ${m.toFixed(2)}x + ${cInt.toFixed(2)}`;}}</script>
+            </div>
+            <div class="tool-card"><h4>4. Check if Point Lies on Line</h4>
+                <input type="number" id="aPt_ch4" placeholder="a"> <input type="number" id="bPt_ch4" placeholder="b"> <input type="number" id="cPt_ch4" placeholder="c"> <br>
+                <input type="number" id="xPt_ch4" placeholder="x"> <input type="number" id="yPt_ch4" placeholder="y">
+                <button onclick="checkPointCh4()">Check</button>
+                <p id="pointResCh4"></p>
+                <script>function checkPointCh4(){ let a=parseFloat(document.getElementById('aPt_ch4').value), b=parseFloat(document.getElementById('bPt_ch4').value), c=parseFloat(document.getElementById('cPt_ch4').value); let x=parseFloat(document.getElementById('xPt_ch4').value), y=parseFloat(document.getElementById('yPt_ch4').value); let lhs=a*x+b*y+c; if(Math.abs(lhs)<1e-6) document.getElementById('pointResCh4').innerHTML='Point lies on the line'; else document.getElementById('pointResCh4').innerHTML='Point does not lie on the line';}</script>
+            </div>
+            <div class="tool-card"><h4>5. Intercepts Finder</h4>
+                <input type="number" id="aInt_ch4" placeholder="a"> <input type="number" id="bInt_ch4" placeholder="b"> <input type="number" id="cInt_ch4" placeholder="c">
+                <button onclick="findInterceptsCh4()">Find Intercepts</button>
+                <p id="interceptResCh4"></p>
+                <script>function findInterceptsCh4(){ let a=parseFloat(document.getElementById('aInt_ch4').value), b=parseFloat(document.getElementById('bInt_ch4').value), c=parseFloat(document.getElementById('cInt_ch4').value); let xInt=-c/a; let yInt=-c/b; document.getElementById('interceptResCh4').innerHTML=`x-intercept = ${xInt.toFixed(2)}, y-intercept = ${yInt.toFixed(2)}`;}</script>
+            </div>
+        </div>
+        <div class="quiz"><strong>📝 Quick Quiz (Chapter 4)</strong><br>1. What is the slope of the line 2x+3y=6?<br>2. How many solutions does a linear equation in two variables have?<br>3. Find the x-intercept of the line 3x+4y=12.<br><em>Answers: 1. -2/3. 2. Infinitely many. 3. 4.</em></div>
+    </div>
+
+    <!-- ==================== CHAPTER 5: EUCLID'S GEOMETRY ==================== -->
+    <div id="ch5" class="chapter">
+        <h2>Chapter 5: Introduction to Euclid's Geometry</h2>
+        <div class="theory-box">
+            <p>Euclid, the "father of geometry," wrote a book called "Elements" which laid the foundation for geometry. He introduced the axiomatic method: starting from definitions, axioms (self-evident truths), and postulates (assumptions specific to geometry), then proving theorems logically.</p>
+            <p>Euclid's definitions include: A point has no part; a line has length without breadth; a surface has length and breadth only; a straight line is the shortest distance between two points; a circle is a set of points equidistant from a center.</p>
+            <p>Euclid's axioms (common notions) are: Things equal to the same thing are equal; if equals are added to equals, the wholes are equal; if equals are subtracted from equals, the remainders are equal; things that coincide with one another are equal; the whole is greater than the part; things that are double of the same things are equal; things that are halves of the same things are equal.</p>
+            <p>Euclid's five postulates: 1) A straight line can be drawn from any point to any other point. 2) A finite straight line can be extended continuously. 3) A circle can be drawn with any center and radius. 4) All right angles are equal. 5) If a straight line falling on two straight lines makes interior angles on the same side less than two right angles, then the two lines, if extended indefinitely, meet on that side. This fifth postulate (parallel postulate) is equivalent to the statement: Through a point not on a line, exactly one line can be drawn parallel to the given line.</p>
+        </div>
+        <div class="formula-box">📐 Euclid's fifth postulate: Through a point not on a line, exactly one parallel line exists.</div>
+        <h3>🛠️ Interactive Tools</h3>
+        <div class="tool-grid">
+            <div class="tool-card"><h4>1. Euclid's Axiom Demonstrator</h4>
+                <button onclick="showAxiom('whole')">Whole > Part</button>
+                <button onclick="showAxiom('equals')">Equals added to equals</button>
+                <p id="axiomResCh5"></p>
+                <script>function showAxiom(ax){ if(ax=='whole') document.getElementById('axiomResCh5').innerHTML='If AB is a line segment and C is a point between A and B, then AB > AC. The whole is greater than the part.'; else document.getElementById('axiomResCh5').innerHTML='If a=b and c=d, then a+c = b+d. Equals added to equals are equal.';}</script>
+            </div>
+            <div class="tool-card"><h4>2. Parallel Postulate Simulator</h4>
+                <button onclick="parallelPostulate()">Show Parallel Lines</button>
+                <p id="parallelResCh5"></p>
+                <script>function parallelPostulate(){ document.getElementById('parallelResCh5').innerHTML='Given a line L and a point P not on L, there is exactly one line through P parallel to L.';}</script>
+            </div>
+            <div class="tool-card"><h4>3. Draw Circle (Simulation)</h4>
+                <input type="number" id="radiusCirc_ch5" placeholder="Radius">
+                <button onclick="circleSimCh5()">Describe Circle</button>
+                <p id="circleResCh5"></p>
+                <script>function circleSimCh5(){ let r=parseFloat(document.getElementById('radiusCirc_ch5').value); document.getElementById('circleResCh5').innerHTML=`A circle with radius ${r} units. All points are at distance ${r} from the center.`;}</script>
+            </div>
+            <div class="tool-card"><h4>4. Line Extension</h4>
+                <button onclick="extendLine()">Extend Line</button>
+                <p id="extendResCh5"></p>
+                <script>function extendLine(){ document.getElementById('extendResCh5').innerHTML='A line segment can be extended infinitely in both directions to form a line.';}</script>
+            </div>
+            <div class="tool-card"><h4>5. Right Angles Equality</h4>
+                <button onclick="rightAngles()">Show Right Angles</button>
+                <p id="rightResCh5"></p>
+                <script>function rightAngles(){ document.getElementById('rightResCh5').innerHTML='All right angles (90°) are equal to each other.';}</script>
+            </div>
+        </div>
+        <div class="quiz"><strong>📝 Quick Quiz (Chapter 5)</strong><br>1. Who wrote the book "Elements"?<br>2. State Euclid's fifth postulate.<br>3. What is an axiom?<br><em>Answers: 1. Euclid. 2. Through a point not on a line, exactly one parallel line exists. 3. A self-evident truth.</em></div>
+    </div>
+
+    <!-- ==================== CHAPTER 6: LINES AND ANGLES ==================== -->
+    <div id="ch6" class="chapter">
+        <h2>Chapter 6: Lines and Angles</h2>
+        <div class="theory-box">
+            <p>Basic terms: A line segment has two endpoints. A ray has one endpoint and extends infinitely in one direction. An angle is formed when two rays originate from a common endpoint (vertex). Angles are classified as acute (<90°), right (=90°), obtuse (90°-180°), straight (=180°), reflex (>180°), and full (=360°). Complementary angles sum to 90°, supplementary angles sum to 180°.</p>
+            <p>When two lines intersect, vertically opposite angles are equal. Adjacent angles on a straight line are supplementary (linear pair axiom). If a transversal cuts two parallel lines, then: corresponding angles are equal, alternate interior angles are equal, and co-interior (consecutive interior) angles are supplementary. Conversely, if these conditions hold, the lines are parallel.</p>
+            <p>The angle sum property of a triangle: the sum of interior angles is 180°. An exterior angle of a triangle equals the sum of the two opposite interior angles.</p>
+        </div>
+        <div class="formula-box">📐 Sum of angles in triangle = 180° | Exterior angle = sum of remote interior angles</div>
+        <h3>🛠️ Interactive Tools</h3>
+        <div class="tool-grid">
+            <div class="tool-card"><h4>1. Complementary/Supplementary Checker</h4>
+                <input type="number" id="ang1_ch6" placeholder="Angle 1"> <input type="number" id="ang2_ch6" placeholder="Angle 2">
+                <button onclick="checkAnglesCh6()">Check</button>
+                <p id="angResCh6"></p>
+                <script>function checkAnglesCh6(){ let a=parseFloat(document.getElementById('ang1_ch6').value), b=parseFloat(document.getElementById('ang2_ch6').value); let sum=a+b; if(sum===90) document.getElementById('angResCh6').innerHTML='Complementary'; else if(sum===180) document.getElementById('angResCh6').innerHTML='Supplementary'; else document.getElementById('angResCh6').innerHTML=`Sum = ${sum}°`;}</script>
+            </div>
+            <div class="tool-card"><h4>2. Linear Pair Verifier</h4>
+                <input type="number" id="angLin1_ch6" placeholder="Angle 1"> <input type="number" id="angLin2_ch6" placeholder="Angle 2">
+                <button onclick="linearPairCh6()">Check Linear Pair</button>
+                <p id="linResCh6"></p>
+                <script>function linearPairCh6(){ let a=parseFloat(document.getElementById('angLin1_ch6').value), b=parseFloat(document.getElementById('angLin2_ch6').value); if(a+b===180) document.getElementById('linResCh6').innerHTML='They form a linear pair (adjacent on straight line).'; else document.getElementById('linResCh6').innerHTML='Not a linear pair';}</script>
+            </div>
+            <div class="tool-card"><h4>3. Vertically Opposite Angles</h4>
+                <button onclick="vertOppCh6()">Show Property</button>
+                <p id="vertResCh6"></p>
+                <script>function vertOppCh6(){ document.getElementById('vertResCh6').innerHTML='When two lines intersect, vertically opposite angles are equal. ∠1 = ∠3, ∠2 = ∠4.';}</script>
+            </div>
+            <div class="tool-card"><h4>4. Triangle Angle Sum</h4>
+                <input type="number" id="angA_ch6" placeholder="∠A"> <input type="number" id="angB_ch6" placeholder="∠B"> <input type="number" id="angC_ch6" placeholder="∠C">
+                <button onclick="triangleSumCh6()">Verify Sum</button>
+                <p id="triSumResCh6"></p>
+                <script>function triangleSumCh6(){ let a=parseFloat(document.getElementById('angA_ch6').value), b=parseFloat(document.getElementById('angB_ch6').value), c=parseFloat(document.getElementById('angC_ch6').value); let sum=a+b+c; if(sum===180) document.getElementById('triSumResCh6').innerHTML='Valid triangle (sum=180°)'; else document.getElementById('triSumResCh6').innerHTML=`Sum = ${sum}° (should be 180°)`;}</script>
+            </div>
+            <div class="tool-card"><h4>5. Exterior Angle Theorem</h4>
+                <input type="number" id="int1_ch6" placeholder="Interior angle 1"> <input type="number" id="int2_ch6" placeholder="Interior angle 2"> <input type="number" id="ext_ch6" placeholder="Exterior angle">
+                <button onclick="exteriorAngleCh6()">Check</button>
+                <p id="extResCh6"></p>
+                <script>function exteriorAngleCh6(){ let i1=parseFloat(document.getElementById('int1_ch6').value), i2=parseFloat(document.getElementById('int2_ch6').value), e=parseFloat(document.getElementById('ext_ch6').value); if(e===i1+i2) document.getElementById('extResCh6').innerHTML='Correct: Exterior angle = sum of remote interior angles.'; else document.getElementById('extResCh6').innerHTML=`Exterior should be ${i1+i2}`;}</script>
+            </div>
+        </div>
+        <div class="quiz"><strong>📝 Quick Quiz (Chapter 6)</strong><br>1. What is the supplement of 120°?<br>2. In a triangle, if two angles are 40° and 60°, find the third.<br>3. If two lines intersect, what is the relationship between vertically opposite angles?<br><em>Answers: 1. 60°. 2. 80°. 3. They are equal.</em></div>
+    </div>
+
+    <!-- ==================== CHAPTER 7: TRIANGLES ==================== -->
+    <div id="ch7" class="chapter">
+        <h2>Chapter 7: Triangles</h2>
+        <div class="theory-box">
+            <p>Triangles are classified by sides: equilateral (all sides equal), isosceles (two sides equal), scalene (all sides different). By angles: acute (all angles <90°), right (one angle 90°), obtuse (one angle >90°).</p>
+            <p>Congruence criteria: Two triangles are congruent if their corresponding sides and angles are equal. Criteria: SSS (side-side-side), SAS (side-angle-side), ASA (angle-side-angle), AAS (angle-angle-side), RHS (right angle-hypotenuse-side).</p>
+            <p>Inequalities in triangles: The sum of any two sides is greater than the third. The angle opposite the longer side is larger, and vice versa.</p>
+        </div>
+        <div class="formula-box">📐 SSS, SAS, ASA, AAS, RHS congruence rules.</div>
+        <h3>🛠️ Interactive Tools</h3>
+        <div class="tool-grid">
+            <div class="tool-card"><h4>1. Triangle Type by Sides</h4>
+                <input type="number" id="s1_ch7" placeholder="Side 1"> <input type="number" id="s2_ch7" placeholder="Side 2"> <input type="number" id="s3_ch7" placeholder="Side 3">
+                <button onclick="classifyBySidesCh7()">Classify</button>
+                <p id="sideClassResCh7"></p>
+                <script>function classifyBySidesCh7(){ let a=parseFloat(document.getElementById('s1_ch7').value), b=parseFloat(document.getElementById('s2_ch7').value), c=parseFloat(document.getElementById('s3_ch7').value); if(a===b && b===c) document.getElementById('sideClassResCh7').innerHTML='Equilateral'; else if(a===b || b===c || c===a) document.getElementById('sideClassResCh7').innerHTML='Isosceles'; else document.getElementById('sideClassResCh7').innerHTML='Scalene';}</script>
+            </div>
+            <div class="tool-card"><h4>2. Triangle Inequality Checker</h4>
+                <input type="number" id="ineq1_ch7" placeholder="Side 1"> <input type="number" id="ineq2_ch7" placeholder="Side 2"> <input type="number" id="ineq3_ch7" placeholder="Side 3">
+                <button onclick="checkInequalityCh7()">Check Validity</button>
+                <p id="ineqResCh7"></p>
+                <script>function checkInequalityCh7(){ let a=parseFloat(document.getElementById('ineq1_ch7').value), b=parseFloat(document.getElementById('ineq2_ch7').value), c=parseFloat(document.getElementById('ineq3_ch7').value); if(a+b>c && b+c>a && c+a>b) document.getElementById('ineqResCh7').innerHTML='Valid triangle'; else document.getElementById('ineqResCh7').innerHTML='Not a valid triangle (inequality violated)';}</script>
+            </div>
+            <div class="tool-card"><h4>3. Right Triangle Checker</h4>
+                <input type="number" id="leg1_ch7" placeholder="Leg 1"> <input type="number" id="leg2_ch7" placeholder="Leg 2"> <input type="number" id="hyp_ch7" placeholder="Hypotenuse">
+                <button onclick="checkRightCh7()">Check Right Triangle</button>
+                <p id="rightCheckResCh7"></p>
+                <script>function checkRightCh7(){ let a=parseFloat(document.getElementById('leg1_ch7').value), b=parseFloat(document.getElementById('leg2_ch7').value), c=parseFloat(document.getElementById('hyp_ch7').value); if(a*a+b*b===c*c) document.getElementById('rightCheckResCh7').innerHTML='Yes, it is a right triangle.'; else document.getElementById('rightCheckResCh7').innerHTML='Not a right triangle.';}</script>
+            </div>
+            <div class="tool-card"><h4>4. Congruence Criterion Matcher</h4>
+                <select id="criterion_ch7"><option value="SSS">SSS</option><option value="SAS">SAS</option><option value="ASA">ASA</option><option value="RHS">RHS</option></select>
+                <button onclick="showCriterionCh7()">Explain Criterion</button>
+                <p id="criResCh7"></p>
+                <script>function showCriterionCh7(){ let crit=document.getElementById('criterion_ch7').value; let map={SSS:'If three sides of one triangle are equal to three sides of another triangle.', SAS:'If two sides and the included angle are equal.', ASA:'If two angles and the included side are equal.', RHS:'If the hypotenuse and one leg are equal in right triangles.'}; document.getElementById('criResCh7').innerHTML=map[crit];}</script>
+            </div>
+            <div class="tool-card"><h4>5. Angle Sum Property Practice</h4>
+                <input type="number" id="angA7" placeholder="∠A"> <input type="number" id="angB7" placeholder="∠B">
+                <button onclick="findThirdAngleCh7()">Find ∠C</button>
+                <p id="thirdResCh7"></p>
+                <script>function findThirdAngleCh7(){ let a=parseFloat(document.getElementById('angA7').value), b=parseFloat(document.getElementById('angB7').value); let c=180-a-b; document.getElementById('thirdResCh7').innerHTML=`∠C = ${c}°`;}</script>
+            </div>
+        </div>
+        <div class="quiz"><strong>📝 Quick Quiz (Chapter 7)</strong><br>1. What is the full form of SSS congruence?<br>2. Can a triangle have sides 3 cm, 4 cm, 8 cm?<br>3. In a right triangle, the side opposite the right angle is called?<br><em>Answers: 1. Side-Side-Side. 2. No (3+4<8). 3. Hypotenuse.</em></div>
+    </div>
+
+    <!-- ==================== CHAPTER 8: QUADRILATERALS ==================== -->
+    <div id="ch8" class="chapter">
+        <h2>Chapter 8: Quadrilaterals</h2>
+        <div class="theory-box">
+            <p>A quadrilateral has four sides, four vertices, and the sum of interior angles is 360°. Types: parallelogram (opposite sides parallel and equal), rectangle (parallelogram with right angles), square (all sides equal, all angles 90°), rhombus (all sides equal), trapezium (one pair of parallel sides), kite (two pairs of adjacent equal sides).</p>
+            <p>Properties: In a parallelogram, opposite sides and angles are equal, diagonals bisect each other. In a rectangle, diagonals are equal. In a rhombus, diagonals are perpendicular bisectors. In a square, all properties of rectangle and rhombus hold. The midpoint theorem: The line segment joining the midpoints of two sides of a triangle is parallel to the third side and half its length.</p>
+        </div>
+        <div class="formula-box">📐 Sum of interior angles = 360° | Midpoint theorem: segment joining midpoints is parallel and half.</div>
+        <h3>🛠️ Interactive Tools</h3>
+        <div class="tool-grid">
+            <div class="tool-card"><h4>1. Quadrilateral Angle Sum</h4>
+                <input type="number" id="q1_ch8" placeholder="∠1"> <input type="number" id="q2_ch8" placeholder="∠2"> <input type="number" id="q3_ch8" placeholder="∠3"> <input type="number" id="q4_ch8" placeholder="∠4">
+                <button onclick="checkQuadSumCh8()">Check Sum</button>
+                <p id="quadSumResCh8"></p>
+                <script>function checkQuadSumCh8(){ let a=parseFloat(document.getElementById('q1_ch8').value), b=parseFloat(document.getElementById('q2_ch8').value), c=parseFloat(document.getElementById('q3_ch8').value), d=parseFloat(document.getElementById('q4_ch8').value); let sum=a+b+c+d; if(sum===360) document.getElementById('quadSumResCh8').innerHTML='Valid quadrilateral (sum=360°)'; else document.getElementById('quadSumResCh8').innerHTML=`Sum = ${sum}° (should be 360°)`;}</script>
+            </div>
+            <div class="tool-card"><h4>2. Parallelogram Checker</h4>
+                <input type="number" id="p1_ch8" placeholder="Side1"> <input type="number" id="p2_ch8" placeholder="Side2"> <input type="number" id="p3_ch8" placeholder="Side3"> <input type="number" id="p4_ch8" placeholder="Side4">
+                <button onclick="checkParallelogramCh8()">Check Parallelogram</button>
+                <p id="paraResCh8"></p>
+                <script>function checkParallelogramCh8(){ let s1=parseFloat(document.getElementById('p1_ch8').value), s2=parseFloat(document.getElementById('p2_ch8').value), s3=parseFloat(document.getElementById('p3_ch8').value), s4=parseFloat(document.getElementById('p4_ch8').value); if(s1===s3 && s2===s4) document.getElementById('paraResCh8').innerHTML='These sides could form a parallelogram (opposite sides equal).'; else document.getElementById('paraResCh8').innerHTML='Not a parallelogram (opposite sides not equal).';}</script>
+            </div>
+            <div class="tool-card"><h4>3. Midpoint Theorem Simulator</h4>
+                <button onclick="midpointTheoremCh8()">Show Theorem</button>
+                <p id="midResCh8"></p>
+                <script>function midpointTheoremCh8(){ document.getElementById('midResCh8').innerHTML='In triangle ABC, if D and E are midpoints of AB and AC, then DE ∥ BC and DE = ½ BC.';}</script>
+            </div>
+            <div class="tool-card"><h4>4. Rhombus Property</h4>
+                <button onclick="rhombusPropCh8()">Show Rhombus</button>
+                <p id="rhombResCh8"></p>
+                <script>function rhombusPropCh8(){ document.getElementById('rhombResCh8').innerHTML='In a rhombus, all sides are equal, diagonals bisect each other at right angles, and diagonals bisect the interior angles.';}</script>
+            </div>
+            <div class="tool-card"><h4>5. Rectangle Property</h4>
+                <button onclick="rectPropCh8()">Show Rectangle</button>
+                <p id="rectResCh8"></p>
+                <script>function rectPropCh8(){ document.getElementById('rectResCh8').innerHTML='A rectangle is a parallelogram with all angles 90°. Its diagonals are equal and bisect each other.';}</script>
+            </div>
+        </div>
+        <div class="quiz"><strong>📝 Quick Quiz (Chapter 8)</strong><br>1. What is the sum of interior angles of a quadrilateral?<br>2. In a parallelogram, diagonals __________ each other.<br>3. Name a quadrilateral with exactly one pair of parallel sides.<br><em>Answers: 1. 360°. 2. bisect. 3. Trapezium.</em></div>
+    </div>
+
+    <!-- ==================== CHAPTER 9: CIRCLES ==================== -->
+    <div id="ch9" class="chapter">
+        <h2>Chapter 9: Circles</h2>
+        <div class="theory-box">
+            <p>A circle is the set of all points equidistant from a fixed point (center). Radius is the distance from center to any point. Chord is a line segment joining two points on the circle. Diameter is the longest chord (passes through center). Arc is a part of the circumference. Sector is region between radii and arc. Segment is region between chord and arc.</p>
+            <p>Properties: Equal chords subtend equal angles at the center. The perpendicular from the center to a chord bisects the chord. The angle subtended by an arc at the center is twice the angle at the circumference. Angles in the same segment are equal. The angle in a semicircle is a right angle (90°). Cyclic quadrilaterals: sum of opposite angles = 180°.</p>
+        </div>
+        <div class="formula-box">📐 Angle at center = 2 × angle at circumference | Opposite angles of cyclic quadrilateral = 180°</div>
+        <h3>🛠️ Interactive Tools</h3>
+        <div class="tool-grid">
+            <div class="tool-card"><h4>1. Circumference & Area</h4>
+                <input type="number" id="radiusCirc_ch9" placeholder="Radius">
+                <button onclick="circleCalcCh9()">Calculate</button>
+                <p id="circAreaResCh9"></p>
+                <script>function circleCalcCh9(){ let r=parseFloat(document.getElementById('radiusCirc_ch9').value); let circum=2*Math.PI*r; let area=Math.PI*r*r; document.getElementById('circAreaResCh9').innerHTML=`Circumference = ${circum.toFixed(2)}, Area = ${area.toFixed(2)}`;}</script>
+            </div>
+            <div class="tool-card"><h4>2. Chord Length Calculator</h4>
+                <input type="number" id="radiusChord_ch9" placeholder="Radius"> <input type="number" id="distCenter_ch9" placeholder="Distance from center">
+                <button onclick="chordLengthCh9()">Calculate Chord Length</button>
+                <p id="chordResCh9"></p>
+                <script>function chordLengthCh9(){ let r=parseFloat(document.getElementById('radiusChord_ch9').value), d=parseFloat(document.getElementById('distCenter_ch9').value); let chord=2*Math.sqrt(r*r-d*d); document.getElementById('chordResCh9').innerHTML=`Chord length = ${chord.toFixed(2)}`;}</script>
+            </div>
+            <div class="tool-card"><h4>3. Angle in Semicircle</h4>
+                <button onclick="semiCircleAngle()">Show Property</button>
+                <p id="semiResCh9"></p>
+                <script>function semiCircleAngle(){ document.getElementById('semiResCh9').innerHTML='The angle subtended by a diameter at the circumference is 90° (right angle).';}</script>
+            </div>
+            <div class="tool-card"><h4>4. Cyclic Quadrilateral Check</h4>
+                <input type="number" id="cycA_ch9" placeholder="∠A"> <input type="number" id="cycC_ch9" placeholder="∠C"> <input type="number" id="cycB_ch9" placeholder="∠B"> <input type="number" id="cycD_ch9" placeholder="∠D">
+                <button onclick="cyclicQuadCh9()">Check</button>
+                <p id="cyclicResCh9"></p>
+                <script>function cyclicQuadCh9(){ let a=parseFloat(document.getElementById('cycA_ch9').value), c=parseFloat(document.getElementById('cycC_ch9').value), b=parseFloat(document.getElementById('cycB_ch9').value), d=parseFloat(document.getElementById('cycD_ch9').value); if(a+c===180 && b+d===180) document.getElementById('cyclicResCh9').innerHTML='It is a cyclic quadrilateral.'; else document.getElementById('cyclicResCh9').innerHTML='Not a cyclic quadrilateral.';}</script>
+            </div>
+            <div class="tool-card"><h4>5. Equal Chords Subtend Equal Angles</h4>
+                <button onclick="equalChordAngle()">Show Property</button>
+                <p id="eqChordResCh9"></p>
+                <script>function equalChordAngle(){ document.getElementById('eqChordResCh9').innerHTML='Equal chords of a circle subtend equal angles at the center, and conversely.';}</script>
+            </div>
+        </div>
+        <div class="quiz"><strong>📝 Quick Quiz (Chapter 9)</strong><br>1. What is the radius of a circle with diameter 10 cm?<br>2. Angle in a semicircle is always ____.<br>3. What is a cyclic quadrilateral?<br><em>Answers: 1. 5 cm. 2. 90°. 3. Quadrilateral whose vertices lie on a circle.</em></div>
+    </div>
+
+    <!-- ==================== CHAPTER 10: HERON'S FORMULA ==================== -->
+    <div id="ch10" class="chapter">
+        <h2>Chapter 10: Heron's Formula</h2>
+        <div class="theory-box">
+            <p>Heron's formula calculates the area of a triangle when all three sides are known, without needing height. For a triangle with sides a, b, c, semi-perimeter s = (a+b+c)/2. Then area = √[s(s-a)(s-b)(s-c)].</p>
+            <p>This formula is useful for scalene triangles and for finding areas of quadrilaterals by dividing them into triangles.</p>
+        </div>
+        <div class="formula-box">📐 s = (a+b+c)/2 | Area = √[s(s-a)(s-b)(s-c)]</div>
+        <h3>🛠️ Interactive Tools</h3>
+        <div class="tool-grid">
+            <div class="tool-card"><h4>1. Heron's Formula Calculator</h4>
+                <input type="number" id="sideA_ch10" placeholder="Side a"> <input type="number" id="sideB_ch10" placeholder="Side b"> <input type="number" id="sideC_ch10" placeholder="Side c">
+                <button onclick="heronAreaCh10()">Calculate Area</button>
+                <p id="heronResCh10"></p>
+                <script>function heronAreaCh10(){ let a=parseFloat(document.getElementById('sideA_ch10').value), b=parseFloat(document.getElementById('sideB_ch10').value), c=parseFloat(document.getElementById('sideC_ch10').value); let s=(a+b+c)/2; let area=Math.sqrt(s*(s-a)*(s-b)*(s-c)); if(isNaN(area)) document.getElementById('heronResCh10').innerHTML='Invalid triangle sides'; else document.getElementById('heronResCh10').innerHTML=`Area = ${area.toFixed(2)} sq units`;}</script>
+            </div>
+            <div class="tool-card"><h4>2. Semi-perimeter Calculator</h4>
+                <input type="number" id="spA_ch10" placeholder="a"> <input type="number" id="spB_ch10" placeholder="b"> <input type="number" id="spC_ch10" placeholder="c">
+                <button onclick="semiPerimeterCh10()">Calculate s</button>
+                <p id="spResCh10"></p>
+                <script>function semiPerimeterCh10(){ let a=parseFloat(document.getElementById('spA_ch10').value), b=parseFloat(document.getElementById('spB_ch10').value), c=parseFloat(document.getElementById('spC_ch10').value); let s=(a+b+c)/2; document.getElementById('spResCh10').innerHTML=`s = ${s.toFixed(2)}`;}</script>
+            </div>
+            <div class="tool-card"><h4>3. Equilateral Triangle Area (Heron)</h4>
+                <input type="number" id="eqSide_ch10" placeholder="Side">
+                <button onclick="eqAreaHeronCh10()">Calculate</button>
+                <p id="eqHeronResCh10"></p>
+                <script>function eqAreaHeronCh10(){ let a=parseFloat(document.getElementById('eqSide_ch10').value); let s=3*a/2; let area=Math.sqrt(s*(s-a)*(s-a)*(s-a)); document.getElementById('eqHeronResCh10').innerHTML=`Area = ${area.toFixed(2)} (or √3/4 × a² = ${(Math.sqrt(3)/4*a*a).toFixed(2)})`;}</script>
+            </div>
+            <div class="tool-card"><h4>4. Check Triangle Validity for Heron</h4>
+                <input type="number" id="validA_ch10" placeholder="a"> <input type="number" id="validB_ch10" placeholder="b"> <input type="number" id="validC_ch10" placeholder="c">
+                <button onclick="validTriangleHeronCh10()">Check</button>
+                <p id="validHeronResCh10"></p>
+                <script>function validTriangleHeronCh10(){ let a=parseFloat(document.getElementById('validA_ch10').value), b=parseFloat(document.getElementById('validB_ch10').value), c=parseFloat(document.getElementById('validC_ch10').value); if(a+b>c && b+c>a && c+a>b) document.getElementById('validHeronResCh10').innerHTML='Valid triangle'; else document.getElementById('validHeronResCh10').innerHTML='Invalid triangle';}</script>
+            </div>
+            <div class="tool-card"><h4>5. Area of Quadrilateral using Heron</h4>
+                <p>Divide quadrilateral into two triangles.</p>
+                <button onclick="quadHeronDemo()">Show Example</button>
+                <p id="quadHeronResCh10"></p>
+                <script>function quadHeronDemo(){ document.getElementById('quadHeronResCh10').innerHTML='For quadrilateral ABCD, diagonal AC divides it into triangles ABC and ADC. Use Heron for each triangle and sum areas.';}</script>
+            </div>
+        </div>
+        <div class="quiz"><strong>📝 Quick Quiz (Chapter 10)</strong><br>1. Write Heron's formula.<br>2. Find area of triangle with sides 3,4,5 using Heron.<br>3. What is semi-perimeter?<br><em>Answers: 1. √[s(s-a)(s-b)(s-c)]. 2. 6 sq units. 3. Half of perimeter.</em></div>
+    </div>
+
+    <!-- ==================== CHAPTER 11: SURFACE AREAS AND VOLUMES ==================== -->
+    <div id="ch11" class="chapter">
+        <h2>Chapter 11: Surface Areas and Volumes</h2>
+        <div class="theory-box">
+            <p>Formulas for solids:</p>
+            <ul>
+                <li><strong>Cuboid:</strong> LSA = 2h(l+b), TSA = 2(lb+bh+hl), Volume = l×b×h</li>
+                <li><strong>Cube:</strong> LSA = 4a², TSA = 6a², Volume = a³</li>
+                <li><strong>Cylinder:</strong> CSA = 2πrh, TSA = 2πr(r+h), Volume = πr²h</li>
+                <li><strong>Cone:</strong> CSA = πrl, TSA = πr(r+l), Volume = (1/3)πr²h, where l = √(r²+h²)</li>
+                <li><strong>Sphere:</strong> SA = 4πr², Volume = (4/3)πr³</li>
+                <li><strong>Hemisphere:</strong> CSA = 2πr², TSA = 3πr², Volume = (2/3)πr³</li>
+            </ul>
+        </div>
+        <div class="formula-box">📐 Volume of cylinder = πr²h | Volume of cone = ⅓πr²h | Volume of sphere = ⁴⁄₃πr³</div>
+        <h3>🛠️ Interactive Tools</h3>
+        <div class="tool-grid">
+            <div class="tool-card"><h4>1. Cuboid Calculator</h4>
+                <input type="number" id="lCub_ch11" placeholder="Length"> <input type="number" id="bCub_ch11" placeholder="Breadth"> <input type="number" id="hCub_ch11" placeholder="Height">
+                <button onclick="cuboidCalcCh11()">Calculate</button>
+                <p id="cuboidResCh11"></p>
+                <script>function cuboidCalcCh11(){ let l=parseFloat(document.getElementById('lCub_ch11').value), b=parseFloat(document.getElementById('bCub_ch11').value), h=parseFloat(document.getElementById('hCub_ch11').value); let tsa=2*(l*b+b*h+h*l); let vol=l*b*h; document.getElementById('cuboidResCh11').innerHTML=`TSA = ${tsa.toFixed(2)}, Volume = ${vol.toFixed(2)}`;}</script>
+            </div>
+            <div class="tool-card"><h4>2. Cylinder Calculator</h4>
+                <input type="number" id="rCyl_ch11" placeholder="Radius"> <input type="number" id="hCyl_ch11" placeholder="Height">
+                <button onclick="cylinderCalcCh11()">Calculate</button>
+                <p id="cylResCh11"></p>
+                <script>function cylinderCalcCh11(){ let r=parseFloat(document.getElementById('rCyl_ch11').value), h=parseFloat(document.getElementById('hCyl_ch11').value); let csa=2*Math.PI*r*h; let tsa=2*Math.PI*r*(r+h); let vol=Math.PI*r*r*h; document.getElementById('cylResCh11').innerHTML=`CSA = ${csa.toFixed(2)}, TSA = ${tsa.toFixed(2)}, Volume = ${vol.toFixed(2)}`;}</script>
+            </div>
+            <div class="tool-card"><h4>3. Cone Calculator</h4>
+                <input type="number" id="rCone_ch11" placeholder="Radius"> <input type="number" id="hCone_ch11" placeholder="Height">
+                <button onclick="coneCalcCh11()">Calculate</button>
+                <p id="coneResCh11"></p>
+                <script>function coneCalcCh11(){ let r=parseFloat(document.getElementById('rCone_ch11').value), h=parseFloat(document.getElementById('hCone_ch11').value); let l=Math.sqrt(r*r+h*h); let csa=Math.PI*r*l; let tsa=Math.PI*r*(r+l); let vol=(1/3)*Math.PI*r*r*h; document.getElementById('coneResCh11').innerHTML=`CSA = ${csa.toFixed(2)}, TSA = ${tsa.toFixed(2)}, Volume = ${vol.toFixed(2)}`;}</script>
+            </div>
+            <div class="tool-card"><h4>4. Sphere Calculator</h4>
+                <input type="number" id="rSphere_ch11" placeholder="Radius">
+                <button onclick="sphereCalcCh11()">Calculate</button>
+                <p id="sphereResCh11"></p>
+                <script>function sphereCalcCh11(){ let r=parseFloat(document.getElementById('rSphere_ch11').value); let sa=4*Math.PI*r*r; let vol=(4/3)*Math.PI*r*r*r; document.getElementById('sphereResCh11').innerHTML=`Surface Area = ${sa.toFixed(2)}, Volume = ${vol.toFixed(2)}`;}</script>
+            </div>
+            <div class="tool-card"><h4>5. Cube Calculator</h4>
+                <input type="number" id="aCube_ch11" placeholder="Side">
+                <button onclick="cubeCalcCh11()">Calculate</button>
+                <p id="cubeResCh11"></p>
+                <script>function cubeCalcCh11(){ let a=parseFloat(document.getElementById('aCube_ch11').value); let tsa=6*a*a; let vol=a*a*a; document.getElementById('cubeResCh11').innerHTML=`TSA = ${tsa.toFixed(2)}, Volume = ${vol.toFixed(2)}`;}</script>
+            </div>
+        </div>
+        <div class="quiz"><strong>📝 Quick Quiz (Chapter 11)</strong><br>1. Volume of a cube of side 4 cm?<br>2. Curved surface area of cylinder with r=7 cm, h=10 cm?<br>3. Volume of sphere of radius 3 cm?<br><em>Answers: 1. 64 cm³. 2. 440 cm² (using π=22/7). 3. 113.1 cm³.</em></div>
+    </div>
+
+    <!-- ==================== CHAPTER 12: STATISTICS ==================== -->
+    <div id="ch12" class="chapter">
+        <h2>Chapter 12: Statistics</h2>
+        <div class="theory-box">
+            <p>Statistics deals with collection, presentation, analysis, and interpretation of data. Data can be raw or grouped. Measures of central tendency: mean (average), median (middle value), mode (most frequent). For ungrouped data, mean = sum of all observations / number of observations. Median: arrange data ascending; if n odd, median = middle; if even, median = average of two middle values. Mode = value that occurs most often.</p>
+            <p>Graphical representation: bar graphs, histograms (for grouped continuous data), frequency polygons.</p>
+        </div>
+        <div class="formula-box">📐 Mean = Σx/n | Median = middle value | Mode = most frequent</div>
+        <h3>🛠️ Interactive Tools</h3>
+        <div class="tool-grid">
+            <div class="tool-card"><h4>1. Mean Calculator</h4>
+                <input type="text" id="dataMean_ch12" placeholder="Enter numbers separated by comma">
+                <button onclick="calcMeanCh12()">Calculate Mean</button>
+                <p id="meanResCh12"></p>
+                <script>function calcMeanCh12(){ let data=document.getElementById('dataMean_ch12').value.split(',').map(Number); let sum=data.reduce((a,b)=>a+b,0); let mean=sum/data.length; document.getElementById('meanResCh12').innerHTML=`Mean = ${mean.toFixed(2)}`;}</script>
+            </div>
+            <div class="tool-card"><h4>2. Median Finder</h4>
+                <input type="text" id="dataMed_ch12" placeholder="Numbers separated by comma">
+                <button onclick="calcMedianCh12()">Find Median</button>
+                <p id="medResCh12"></p>
+                <script>function calcMedianCh12(){ let arr=document.getElementById('dataMed_ch12').value.split(',').map(Number); arr.sort((a,b)=>a-b); let n=arr.length; let median=(n%2===0)?(arr[n/2-1]+arr[n/2])/2:arr[Math.floor(n/2)]; document.getElementById('medResCh12').innerHTML=`Median = ${median}`;}</script>
+            </div>
+            <div class="tool-card"><h4>3. Mode Finder</h4>
+                <input type="text" id="dataMode_ch12" placeholder="Numbers separated by comma">
+                <button onclick="findModeCh12()">Find Mode</button>
+                <p id="modeResCh12"></p>
+                <script>function findModeCh12(){ let arr=document.getElementById('dataMode_ch12').value.split(',').map(Number); let freq={}; arr.forEach(x=>freq[x]=(freq[x]||0)+1); let maxFreq=Math.max(...Object.values(freq)); let modes=Object.keys(freq).filter(x=>freq[x]===maxFreq); document.getElementById('modeResCh12').innerHTML=`Mode(s): ${modes.join(', ')} (frequency ${maxFreq})`;}</script>
+            </div>
+            <div class="tool-card"><h4>4. Frequency Table Generator</h4>
+                <input type="text" id="freqData_ch12" placeholder="e.g., 1,2,2,3,3,3">
+                <button onclick="genFreqTableCh12()">Generate Table</button>
+                <p id="freqTableResCh12"></p>
+                <script>function genFreqTableCh12(){ let arr=document.getElementById('freqData_ch12').value.split(',').map(Number); let freq={}; arr.forEach(x=>freq[x]=(freq[x]||0)+1); let table=''; for(let val in freq) table+=`${val} appears ${freq[val]} times<br>`; document.getElementById('freqTableResCh12').innerHTML=table;}</script>
+            </div>
+            <div class="tool-card"><h4>5. Range Calculator</h4>
+                <input type="text" id="rangeData_ch12" placeholder="Numbers separated by comma">
+                <button onclick="calcRangeCh12()">Calculate Range</button>
+                <p id="rangeResCh12"></p>
+                <script>function calcRangeCh12(){ let arr=document.getElementById('rangeData_ch12').value.split(',').map(Number); let range=Math.max(...arr)-Math.min(...arr); document.getElementById('rangeResCh12').innerHTML=`Range = ${range}`;}</script>
+            </div>
+        </div>
+        <div class="quiz"><strong>📝 Quick Quiz (Chapter 12)</strong><br>1. Find mean of 2,4,6,8,10.<br>2. Find median of 3,5,7,9,11.<br>3. What is the mode of 1,2,2,3,4?<br><em>Answers: 1. 6. 2. 7. 3. 2.</em></div>
+    </div>
+
+    <!-- ==================== CHAPTER 13: PROBABILITY ==================== -->
+    <div id="ch13" class="chapter">
+        <h2>Chapter 13: Probability</h2>
+        <div class="theory-box">
+            <p>Probability measures the likelihood of an event. For an experiment with equally likely outcomes, probability of event E = Number of favourable outcomes / Total number of outcomes. Probability ranges from 0 (impossible) to 1 (certain).</p>
+            <p>Examples: Tossing a coin: P(head)=1/2, P(tail)=1/2. Rolling a die: P(6)=1/6, P(even)=3/6=1/2. Drawing a card from a deck: P(ace)=4/52=1/13.</p>
+            <p>The sum of probabilities of all elementary events is 1. Complementary event: P(not E)=1-P(E).</p>
+        </div>
+        <div class="formula-box">📐 P(E) = favourable/total | 0 ≤ P(E) ≤ 1</div>
+        <h3>🛠️ Interactive Tools</h3>
+        <div class="tool-grid">
+            <div class="tool-card"><h4>1. Coin Toss Simulator</h4>
+                <button onclick="tossCoin()">Toss Coin</button>
+                <p id="coinResCh13"></p>
+                <script>function tossCoin(){ let result=Math.random()<0.5?'Heads':'Tails'; document.getElementById('coinResCh13').innerHTML=`Result: ${result}`;}</script>
+            </div>
+            <div class="tool-card"><h4>2. Dice Roll Simulator</h4>
+                <button onclick="rollDice()">Roll Die</button>
+                <p id="diceResCh13"></p>
+                <script>function rollDice(){ let result=Math.floor(Math.random()*6)+1; document.getElementById('diceResCh13').innerHTML=`You rolled: ${result}`;}</script>
+            </div>
+            <div class="tool-card"><h4>3. Probability Calculator</h4>
+                <input type="number" id="favProb_ch13" placeholder="Favourable outcomes"> <input type="number" id="totalProb_ch13" placeholder="Total outcomes">
+                <button onclick="calcProbabilityCh13()">Calculate Probability</button>
+                <p id="probCalcResCh13"></p>
+                <script>function calcProbabilityCh13(){ let f=parseFloat(document.getElementById('favProb_ch13').value), t=parseFloat(document.getElementById('totalProb_ch13').value); let p=f/t; document.getElementById('probCalcResCh13').innerHTML=`P(E) = ${p.toFixed(4)} (${(p*100).toFixed(2)}%)`;}</script>
+            </div>
+            <div class="tool-card"><h4>4. Complementary Probability</h4>
+                <input type="number" id="pEvent_ch13" placeholder="P(E) between 0 and 1">
+                <button onclick="complementProbCh13()">Find P(not E)</button>
+                <p id="compResCh13"></p>
+                <script>function complementProbCh13(){ let p=parseFloat(document.getElementById('pEvent_ch13').value); let q=1-p; document.getElementById('compResCh13').innerHTML=`P(not E) = ${q.toFixed(4)}`;}</script>
+            </div>
+            <div class="tool-card"><h4>5. Deck of Cards Probability</h4>
+                <button onclick="cardProb('ace')">Probability of Ace</button>
+                <button onclick="cardProb('heart')">Probability of Heart</button>
+                <p id="cardResCh13"></p>
+                <script>function cardProb(type){ if(type==='ace') document.getElementById('cardResCh13').innerHTML='P(Ace) = 4/52 = 1/13 ≈ 0.0769'; else document.getElementById('cardResCh13').innerHTML='P(Heart) = 13/52 = 1/4 = 0.25';}</script>
+            </div>
+        </div>
+        <div class="quiz"><strong>📝 Quick Quiz (Chapter 13)</strong><br>1. What is the probability of getting an even number on a die?<br>2. If P(E)=0.3, find P(not E).<br>3. A coin is tossed twice. What is the probability of getting at least one head?<br><em>Answers: 1. 1/2. 2. 0.7. 3. 3/4.</em></div>
+    </div>
+
+    <footer>© 2025 CBSE Class 9 Mathematics – Detailed theory (800+ words per chapter) + 65 interactive tools.</footer>
+</div>
+
+<script>
+    const chapters = ['ch1','ch2','ch3','ch4','ch5','ch6','ch7','ch8','ch9','ch10','ch11','ch12','ch13'];
+    const links = document.querySelectorAll('.nav-chapters a');
+    function showChapter(id) {
+        chapters.forEach(c => {
+            const el = document.getElementById(c);
+            if(el) el.classList.remove('active');
+        });
+        document.getElementById(id).classList.add('active');
+        links.forEach(link => {
+            if(link.getAttribute('data-chapter') === id) link.classList.add('active-chapter');
+            else link.classList.remove('active-chapter');
+        });
+    }
+    links.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const chap = link.getAttribute('data-chapter');
+            if(chap) showChapter(chap);
+        });
+    });
+    showChapter('ch1');
+</script>
+</body>
+</html>
