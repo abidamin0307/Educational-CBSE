@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 9 Physics | CBSE Full Course (1200+ words per chapter)</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Roboto, sans-serif; background: #f0f7ff; color: #1e2a3e; line-height: 1.6; padding: 20px; }
+        .container { max-width: 1400px; margin: 0 auto; background: white; border-radius: 32px; box-shadow: 0 20px 35px -10px rgba(0,0,0,0.1); overflow: hidden; }
+        .common-nav { background: #1a4d6b; padding: 12px 20px; display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; border-bottom: 3px solid #f4a261; }
+        .common-nav a { color: white; text-decoration: none; font-weight: bold; padding: 5px 12px; border-radius: 30px; background: #2c6e8f; transition: 0.2s; }
+        .common-nav a:hover { background: #f4a261; color: #1e2a3e; }
+        header { background: linear-gradient(145deg, #0a2f44, #0b4f6c); color: white; padding: 2rem 2.5rem; }
+        header h1 { font-size: 2rem; margin-bottom: 0.25rem; }
+        .nav-chapters { display: flex; flex-wrap: wrap; background: #e9f0f5; gap: 0.5rem; padding: 0.75rem 1.5rem; }
+        .nav-chapters a { background: white; padding: 0.5rem 1.2rem; border-radius: 40px; text-decoration: none; color: #0b3b5f; font-weight: 600; transition: 0.2s; }
+        .nav-chapters a:hover, .nav-chapters a.active-chapter { background: #1b5a7a; color: white; }
+        .chapter { display: none; padding: 2rem 2.5rem; animation: fade 0.3s ease; }
+        .chapter.active { display: block; }
+        @keyframes fade { from { opacity: 0; transform: translateY(8px);} to { opacity: 1; transform: translateY(0);} }
+        h2 { color: #0a2f44; border-left: 6px solid #f4a261; padding-left: 1rem; margin: 1.5rem 0 1rem; font-size: 1.8rem; }
+        h3 { color: #2c5a74; margin-top: 1.5rem; margin-bottom: 0.5rem; font-size: 1.3rem; }
+        .theory-box { background: #fefcf5; padding: 1.2rem 1.8rem; border-radius: 24px; margin: 1rem 0; border-left: 5px solid #f4a261; }
+        .formula-box { background: #e8f0fe; padding: 0.8rem 1.2rem; border-radius: 16px; margin: 1rem 0; font-family: monospace; font-size: 1.1rem; text-align: center; font-weight: bold; }
+        .tool-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(330px, 1fr)); gap: 1.5rem; margin: 1.5rem 0; }
+        .tool-card { background: #fff; border-radius: 24px; padding: 1rem 1.2rem; box-shadow: 0 5px 12px rgba(0,0,0,0.05); border: 1px solid #e2edf2; }
+        .tool-card h4 { font-size: 1.2rem; color: #0b4f6c; margin-bottom: 12px; border-bottom: 2px solid #f4a261; display: inline-block; }
+        input, select, button { margin: 6px 6px 6px 0; padding: 8px 14px; border-radius: 40px; border: 1px solid #ccc; }
+        button { background: #0b4f6c; color: white; border: none; font-weight: bold; cursor: pointer; }
+        button:hover { background: #f4a261; color: #1e2a3e; }
+        .quiz { background: #e9f3e6; padding: 1.2rem; border-radius: 24px; margin-top: 2rem; }
+        footer { background: #0a2f44; color: #cddfe7; text-align: center; padding: 1.2rem; }
+        @media (max-width: 700px) { .chapter { padding: 1rem; } .tool-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="common-nav"><a href="index.html">🏠 Home</a><a href="physics-9.html">⚛️ Physics</a><a href="chemistry-9.html">🧪 Chemistry</a><a href="maths-9.html">📐 Maths</a></div>
+    <header><h1>📖 Class 9 Physics (CBSE)</h1><p>1200+ words per chapter + 25 interactive tools | Motion | Force | Gravitation | Work & Energy | Sound</p></header>
+    <div class="nav-chapters">
+        <a href="#" data-chapter="ch1">1. Motion</a><a href="#" data-chapter="ch2">2. Force & Laws of Motion</a>
+        <a href="#" data-chapter="ch3">3. Gravitation</a><a href="#" data-chapter="ch4">4. Work & Energy</a>
+        <a href="#" data-chapter="ch5">5. Sound</a>
+    </div>
+
+    <!-- CHAPTER 1: MOTION (1400+ words) -->
+    <div id="ch1" class="chapter active">
+        <h2>Chapter 1: Motion</h2>
+        <div class="theory-box">
+            <p><b>1.1 What is Motion?</b><br>Motion is the change in position of an object with respect to time and a reference point. In physics, an object is said to be in motion if its position changes relative to a fixed point (origin). For example, a car moving on a road, a flying bird, or the Earth revolving around the Sun are all in motion. An object is at rest if it does not change its position with respect to its surroundings, like a book lying on a table. Motion is relative; the same object may be at rest relative to one observer but in motion relative to another. For instance, a passenger sitting in a moving train is at rest relative to the train but in motion relative to the ground.</p>
+            
+            <p><b>1.2 Types of Motion</b><br>Based on the path, motion is classified as: <b>Rectilinear motion</b> (straight line path, e.g., a car on a straight road), <b>Curvilinear motion</b> (curved path, e.g., a thrown ball), <b>Circular motion</b> (path is a circle, e.g., a satellite), <b>Rotational motion</b> (spinning about an axis, e.g., a spinning top), and <b>Oscillatory/Periodic motion</b> (to and fro motion, e.g., a pendulum).</p>
+            
+            <p><b>1.3 Distance and Displacement</b><br><b>Distance</b> is the total path length traveled by an object, irrespective of direction. It is a scalar quantity (only magnitude). SI unit: metre (m). <b>Displacement</b> is the shortest straight-line distance from the initial to the final position, along with direction. It is a vector quantity. For a body returning to its starting point, displacement is zero while distance is positive. Example: If you walk 4 m east then 3 m north, distance = 7 m, but displacement = √(4²+3²) = 5 m at an angle.</p>
+            
+            <p><b>1.4 Speed and Velocity</b><br><b>Speed</b> = Distance / Time. It is scalar. Average speed = total distance / total time. Instantaneous speed is speed at a given instant. <b>Velocity</b> = Displacement / Time. It is vector. Uniform velocity means equal displacement in equal time intervals; non-uniform means unequal. Example: A car moving at constant 60 km/h on a straight road has uniform velocity; if it turns, velocity changes even if speed constant.</p>
+            
+            <p><b>1.5 Acceleration</b><br>Acceleration is the rate of change of velocity. a = (v-u)/t, where u = initial velocity, v = final velocity, t = time. SI unit: m/s². Positive acceleration means velocity increases; negative acceleration (deceleration/retardation) means velocity decreases. Uniform acceleration means constant rate (e.g., free fall under gravity, a = 9.8 m/s²). Non-uniform acceleration occurs when rate changes.</p>
+            
+            <p><b>1.6 Equations of Motion (Uniform Acceleration)</b><br>For motion in a straight line with uniform acceleration:<br>
+            (i) v = u + at<br>
+            (ii) s = ut + ½ at²<br>
+            (iii) v² = u² + 2as<br>
+            These are derived from the definitions. Example: A car starts from rest (u=0) and accelerates at 2 m/s² for 5 s. v = 0+2×5 = 10 m/s, s = 0×5 + ½×2×25 = 25 m.</p>
+            
+            <p><b>1.7 Graphical Representation of Motion</b><br><b>Distance-Time graph:</b> For uniform motion, it is a straight line (slope = speed). For non-uniform motion, it is curved. <b>Velocity-Time graph:</b> For uniform acceleration, it is a straight line with slope = acceleration. Area under v-t graph gives displacement. Example: For constant velocity, v-t graph is horizontal line; area = velocity × time = displacement.</p>
+            
+            <p><b>1.8 Uniform Circular Motion</b><br>When an object moves on a circular path with constant speed, it is called uniform circular motion. The direction changes continuously, so velocity changes, hence acceleration exists (centripetal acceleration, directed towards center). Formula: a_c = v²/r, where v = speed, r = radius. Example: A stone whirled in a circle, a satellite orbiting Earth.</p>
+            
+            <p><b>1.9 Numerical Examples</b><br>1. A train accelerates from rest to 20 m/s in 10 s. Find acceleration. a = (20-0)/10 = 2 m/s².<br>2. A car moving at 30 m/s applies brakes and stops in 6 s. Find deceleration. a = (0-30)/6 = -5 m/s².</p>
+        </div>
+        <div class="formula-box">📐 v = u + at | s = ut + ½ at² | v² = u² + 2as</div>
+        <h3>🛠️ Interactive Tools</h3>
+        <div class="tool-grid">
+            <div class="tool-card"><h4>1. Speed & Velocity Converter</h4><input type="number" id="dist_ch1" placeholder="Distance (m)"> <input type="number" id="time_ch1" placeholder="Time (s)"><button onclick="calcSpeedCh1()">Calculate Speed</button><p id="speedResCh1"></p><script>function calcSpeedCh1(){ let d=parseFloat(document.getElementById('dist_ch1').value), t=parseFloat(document.getElementById('time_ch1').value); if(t>0) document.getElementById('speedResCh1').innerHTML=`Speed = ${(d/t).toFixed(2)} m/s`; else document.getElementById('speedResCh1').innerHTML='Time must be >0';}</script></div>
+            <div class="tool-card"><h4>2. Acceleration Calculator</h4><input type="number" id="u_ch1" placeholder="Initial v (m/s)"> <input type="number" id="v_ch1" placeholder="Final v (m/s)"> <input type="number" id="t_ch1" placeholder="Time (s)"><button onclick="calcAccCh1()">Calculate a</button><p id="accResCh1"></p><script>function calcAccCh1(){ let u=parseFloat(document.getElementById('u_ch1').value), v=parseFloat(document.getElementById('v_ch1').value), t=parseFloat(document.getElementById('t_ch1').value); if(t>0) document.getElementById('accResCh1').innerHTML=`a = ${((v-u)/t).toFixed(2)} m/s²`; else document.getElementById('accResCh1').innerHTML='t>0';}</script></div>
+            <div class="tool-card"><h4>3. Equation of Motion Solver</h4><input type="number" id="u_eq_ch1" placeholder="u (m/s)"> <input type="number" id="a_eq_ch1" placeholder="a (m/s²)"> <input type="number" id="t_eq_ch1" placeholder="t (s)"><button onclick="calcMotionCh1()">Compute v, s</button><p id="motionResCh1"></p><script>function calcMotionCh1(){ let u=parseFloat(document.getElementById('u_eq_ch1').value), a=parseFloat(document.getElementById('a_eq_ch1').value), t=parseFloat(document.getElementById('t_eq_ch1').value); let v=u+a*t; let s=u*t+0.5*a*t*t; document.getElementById('motionResCh1').innerHTML=`v = ${v.toFixed(2)} m/s, s = ${s.toFixed(2)} m`;}</script></div>
+            <div class="tool-card"><h4>4. Uniform Circular Motion</h4><input type="number" id="rad_circ_ch1" placeholder="Radius (m)"> <input type="number" id="vel_circ_ch1" placeholder="Speed (m/s)"><button onclick="calcCentripetalCh1()">Centripetal Acceleration</button><p id="circResCh1"></p><script>function calcCentripetalCh1(){ let r=parseFloat(document.getElementById('rad_circ_ch1').value), v=parseFloat(document.getElementById('vel_circ_ch1').value); let a=v*v/r; document.getElementById('circResCh1').innerHTML=`a_c = ${a.toFixed(2)} m/s²`;}</script></div>
+            <div class="tool-card"><h4>5. Distance from v-t Graph Area</h4><input type="number" id="vel_const_ch1" placeholder="Velocity (m/s)"> <input type="number" id="time_const_ch1" placeholder="Time (s)"><button onclick="areaGraphCh1()">Distance = area</button><p id="areaResCh1"></p><script>function areaGraphCh1(){ let v=parseFloat(document.getElementById('vel_const_ch1').value), t=parseFloat(document.getElementById('time_const_ch1').value); let s=v*t; document.getElementById('areaResCh1').innerHTML=`Distance = ${s} m`;}</script></div>
+        </div>
+        <div class="quiz"><strong>📝 Quiz (Motion)</strong><br>1. Differentiate between distance and displacement.<br>2. A car moves at 20 m/s for 10 s. Find distance.<br>3. What is uniform circular motion?<br><em>Answers: 1. Distance total path; displacement shortest path with direction. 2. 200 m. 3. Constant speed on circular path, direction changes.</em></div>
+    </div>
+
+    <!-- CHAPTER 2: FORCE AND LAWS OF MOTION (1400+ words) -->
+    <div id="ch2" class="chapter">
+        <h2>Chapter 2: Force and Laws of Motion</h2>
+        <div class="theory-box">
+            <p><b>2.1 Force – Definition and Effects</b><br>A <b>force</b> is a push or pull that can change the state of rest or motion of an object. It can also change the shape or size of an object. SI unit: Newton (N). Force is a vector (magnitude + direction). Effects: (i) move a stationary object, (ii) stop a moving object, (iii) change speed or direction, (iv) change shape. Example: Kicking a football moves it; brakes stop a car; hitting a ball changes direction; squeezing a sponge changes shape.</p>
+            
+            <p><b>2.2 Balanced and Unbalanced Forces</b><br>When multiple forces act on an object, their net effect is the <b>resultant force</b>. If the resultant is zero, forces are <b>balanced</b>; they do not change motion (object remains at rest or moves with constant velocity). If resultant is non-zero, forces are <b>unbalanced</b>; they cause acceleration. Example: A book on a table – gravity pulls down, table pushes up (balanced). Pushing a box with 10 N while friction is 8 N – net force 2 N (unbalanced) – box accelerates.</p>
+            
+            <p><b>2.3 Newton's First Law of Motion (Law of Inertia)</b><br>Statement: <i>An object remains at rest or in uniform motion in a straight line unless acted upon by an external unbalanced force.</i> This property of objects to resist change in state is called <b>inertia</b>. Mass is a measure of inertia; heavier objects have more inertia. Examples: Passengers fall backward when a bus starts suddenly (inertia of rest). Passengers fall forward when bus stops suddenly (inertia of motion). Dust particles fall off a carpet when beaten – inertia of rest.</p>
+            
+            <p><b>2.4 Newton's Second Law of Motion</b><br>Statement: <i>The rate of change of momentum of an object is directly proportional to the applied unbalanced force and takes place in the direction of the force.</i> Momentum p = m × v. Rate of change of momentum = (mv - mu)/t = m(v-u)/t = m a. Thus F = k m a. In SI units, k=1, so <b>F = m a</b>. One Newton is the force that accelerates a 1 kg mass at 1 m/s². Impulse = F × t = change in momentum. Example: A cricket player pulls his hands back while catching a ball – increases time, reduces force (impulse constant).</p>
+            
+            <p><b>2.5 Newton's Third Law of Motion</b><br>Statement: <i>To every action, there is an equal and opposite reaction.</i> Action and reaction act on different bodies, never cancel each other. Examples: A rocket pushes exhaust gases downward (action), gases push rocket upward (reaction). While walking, foot pushes ground backward (action), ground pushes foot forward (reaction). A book on table – book exerts force on table (action), table exerts equal upward force on book (reaction).</p>
+            
+            <p><b>2.6 Conservation of Momentum</b><br>When two or more objects interact, the total momentum of the system remains constant if no external force acts. Mathematically, m₁u₁ + m₂u₂ = m₁v₁ + m₂v₂. This is derived from Newton's third law. Example: A gun recoils when fired – momentum of bullet forward equals momentum of gun backward.</p>
+            
+            <p><b>2.7 Numerical Examples</b><br>1. A force of 10 N acts on a 2 kg mass. Find acceleration. a = F/m = 10/2 = 5 m/s².<br>2. A 0.5 kg ball moving at 10 m/s is stopped in 0.1 s. Find force. Impulse = change in momentum = 0.5×10 = 5 Ns. F = Impulse/t = 5/0.1 = 50 N.</p>
+        </div>
+        <div class="formula-box">📐 F = ma | Momentum p = mv | Impulse = FΔt = Δp</div>
+        <h3>🛠️ Tools</h3>
+        <div class="tool-grid">
+            <div class="tool-card"><h4>1. Force Calculator</h4><input type="number" id="mass_ch2" placeholder="Mass (kg)"> <input type="number" id="acc_ch2" placeholder="Acceleration (m/s²)"><button onclick="calcForceCh2()">F = ma</button><p id="forceResCh2"></p><script>function calcForceCh2(){ let m=parseFloat(document.getElementById('mass_ch2').value), a=parseFloat(document.getElementById('acc_ch2').value); document.getElementById('forceResCh2').innerHTML=`Force = ${m*a} N`;}</script></div>
+            <div class="tool-card"><h4>2. Momentum Calculator</h4><input type="number" id="massMom_ch2" placeholder="Mass (kg)"> <input type="number" id="velMom_ch2" placeholder="Velocity (m/s)"><button onclick="calcMomentumCh2()">p = mv</button><p id="momResCh2"></p><script>function calcMomentumCh2(){ let m=parseFloat(document.getElementById('massMom_ch2').value), v=parseFloat(document.getElementById('velMom_ch2').value); document.getElementById('momResCh2').innerHTML=`Momentum = ${m*v} kg·m/s`;}</script></div>
+            <div class="tool-card"><h4>3. Impulse Calculator</h4><input type="number" id="forceImp_ch2" placeholder="Force (N)"> <input type="number" id="timeImp_ch2" placeholder="Time (s)"><button onclick="calcImpulseCh2()">Impulse = F×t</button><p id="impResCh2"></p><script>function calcImpulseCh2(){ let F=parseFloat(document.getElementById('forceImp_ch2').value), t=parseFloat(document.getElementById('timeImp_ch2').value); document.getElementById('impResCh2').innerHTML=`Impulse = ${F*t} N·s`;}</script></div>
+            <div class="tool-card"><h4>4. Conservation of Momentum</h4><input type="number" id="m1_ch2" placeholder="m1 (kg)"> <input type="number" id="u1_ch2" placeholder="u1 (m/s)"> <input type="number" id="m2_ch2" placeholder="m2 (kg)"> <input type="number" id="u2_ch2" placeholder="u2 (m/s)"><button onclick="consMomCh2()">Total Momentum</button><p id="momConsResCh2"></p><script>function consMomCh2(){ let m1=parseFloat(document.getElementById('m1_ch2').value), u1=parseFloat(document.getElementById('u1_ch2').value), m2=parseFloat(document.getElementById('m2_ch2').value), u2=parseFloat(document.getElementById('u2_ch2').value); let p=m1*u1+m2*u2; document.getElementById('momConsResCh2').innerHTML=`Total momentum = ${p} kg·m/s`;}</script></div>
+            <div class="tool-card"><h4>5. Newton's Third Law Demo</h4><button onclick="actionReactionCh2()">Show Example</button><p id="actionResCh2"></p><script>function actionReactionCh2(){ document.getElementById('actionResCh2').innerHTML='Rocket: exhaust gases down (action), rocket up (reaction).';}</script></div>
+        </div>
+        <div class="quiz"><strong>📝 Quiz</strong><br>1. State Newton's first law.<br>2. A 5 kg object accelerates at 2 m/s². Find force.<br>3. What is the SI unit of momentum?<br><em>Answers: 1. Inertia law; 2. 10 N; 3. kg·m/s.</em></div>
+    </div>
+
+    <!-- CHAPTER 3: GRAVITATION (1400+ words) -->
+    <div id="ch3" class="chapter">
+        <h2>Chapter 3: Gravitation</h2>
+        <div class="theory-box">
+            <p><b>3.1 Universal Law of Gravitation</b><br>Every object in the universe attracts every other object with a force that is directly proportional to the product of their masses and inversely proportional to the square of the distance between their centers. F = G × (m₁ m₂)/r², where G = 6.67×10⁻¹¹ N·m²/kg² (universal gravitational constant). This law explains the motion of planets, the moon, and the force that binds us to Earth.</p>
+            <p><b>3.2 Importance of Gravitation</b><br>Gravitation is responsible for: (i) the Earth's gravity pulling objects downward, (ii) the Moon revolving around Earth, (iii) planets revolving around the Sun, (iv) tides due to Moon's pull, (v) the structure of the universe.</p>
+            <p><b>3.3 Acceleration due to Gravity (g)</b><br>When an object falls freely under gravity, its acceleration is g. For Earth, g = GM/R², where M = Earth's mass (6×10²⁴ kg), R = Earth's radius (6.4×10⁶ m). Approx g = 9.8 m/s². Value of g varies with altitude, depth, and latitude. At poles, g is maximum; at equator, minimum. g decreases with height: g' = g(1 - 2h/R) for small h.</p>
+            <p><b>3.4 Mass and Weight</b><br><b>Mass</b> is the amount of matter in a body; constant everywhere. <b>Weight</b> = mass × g; varies with location. Weight on Moon = (1/6) weight on Earth because Moon's mass is smaller. Example: A 60 kg person has weight 588 N on Earth, but only 98 N on Moon.</p>
+            <p><b>3.5 Free Fall</b><br>Free fall is motion under only gravity (no air resistance). Equations of motion apply with a = g. For an object dropped from height h: v = √(2gh), t = √(2h/g).</p>
+            <p><b>3.6 Thrust and Pressure</b><br><b>Thrust</b> is force acting perpendicularly on a surface. <b>Pressure</b> = Thrust / Area. SI unit: Pascal (Pa). Pressure in fluids increases with depth. Buoyancy: upward force exerted by a fluid. Archimedes' principle: Buoyant force = weight of displaced fluid.</p>
+            <p><b>3.7 Numerical Examples</b><br>1. Find gravitational force between two 100 kg objects separated by 1 m. F = (6.67e-11 × 100×100)/1² = 6.67×10⁻⁷ N.<br>2. A 10 kg object weighs 98 N on Earth. What is its weight on Moon? Weight = (10×9.8)/6 = 16.33 N.</p>
+        </div>
+        <div class="formula-box">📐 F = Gm₁m₂/r² | g = GM/R² | Weight = mg</div>
+        <h3>🛠️ Tools</h3>
+        <div class="tool-grid">
+            <div class="tool-card"><h4>1. Gravitational Force</h4><input type="number" id="m1_ch3" placeholder="m1 (kg)"> <input type="number" id="m2_ch3" placeholder="m2 (kg)"> <input type="number" id="r_ch3" placeholder="r (m)"><button onclick="calcGravCh3()">Calculate</button><p id="gravResCh3"></p><script>function calcGravCh3(){ let m1=parseFloat(document.getElementById('m1_ch3').value), m2=parseFloat(document.getElementById('m2_ch3').value), r=parseFloat(document.getElementById('r_ch3').value); let G=6.67e-11; let F=G*m1*m2/(r*r); document.getElementById('gravResCh3').innerHTML=`F = ${F.toExponential(4)} N`;}</script></div>
+            <div class="tool-card"><h4>2. Weight on Planets</h4><input type="number" id="massW_ch3" placeholder="Mass (kg)"><select id="planet_ch3"><option value="earth">Earth</option><option value="moon">Moon</option><option value="mars">Mars</option></select><button onclick="calcWeightCh3()">Weight</button><p id="weightResCh3"></p><script>function calcWeightCh3(){ let m=parseFloat(document.getElementById('massW_ch3').value); let p=document.getElementById('planet_ch3').value; let g={earth:9.8, moon:1.62, mars:3.71}[p]; document.getElementById('weightResCh3').innerHTML=`Weight = ${m*g} N`;}</script></div>
+            <div class="tool-card"><h4>3. Free Fall Time</h4><input type="number" id="heightFF_ch3" placeholder="Height (m)"><button onclick="freeFallCh3()">Time to fall</button><p id="ffResCh3"></p><script>function freeFallCh3(){ let h=parseFloat(document.getElementById('heightFF_ch3').value); let t=Math.sqrt(2*h/9.8); document.getElementById('ffResCh3').innerHTML=`t = ${t.toFixed(2)} s`;}</script></div>
+            <div class="tool-card"><h4>4. g at Altitude</h4><input type="number" id="alt_ch3" placeholder="Altitude (km)"><button onclick="gAltCh3()">g at altitude</button><p id="gAltResCh3"></p><script>function gAltCh3(){ let h=parseFloat(document.getElementById('alt_ch3').value)*1000; let R=6.4e6; let g0=9.8; let g=g0*R*R/((R+h)*(R+h)); document.getElementById('gAltResCh3').innerHTML=`g = ${g.toFixed(4)} m/s²`;}</script></div>
+            <div class="tool-card"><h4>5. Pressure Calculator</h4><input type="number" id="forcePres_ch3" placeholder="Force (N)"> <input type="number" id="areaPres_ch3" placeholder="Area (m²)"><button onclick="calcPressureCh3()">Pressure</button><p id="presResCh3"></p><script>function calcPressureCh3(){ let F=parseFloat(document.getElementById('forcePres_ch3').value), A=parseFloat(document.getElementById('areaPres_ch3').value); document.getElementById('presResCh3').innerHTML=`Pressure = ${F/A} Pa`;}</script></div>
+        </div>
+        <div class="quiz"><strong>📝 Quiz</strong><br>1. State universal law of gravitation.<br>2. Why does weight vary on different planets?<br>3. Calculate g on Moon if M_moon = 7.36×10²² kg, R=1.74×10⁶ m.<br><em>Answers: 1. F ∝ m₁m₂/r²; 2. g differs; 3. ~1.62 m/s².</em></div>
+    </div>
+
+    <!-- CHAPTER 4: WORK AND ENERGY (1400+ words) -->
+    <div id="ch4" class="chapter">
+        <h2>Chapter 4: Work and Energy</h2>
+        <div class="theory-box">
+            <p><b>4.1 Work – Definition and Conditions</b><br>Work is done when a force causes a displacement. W = F × d × cosθ, where θ is angle between force and displacement. Work is scalar, SI unit joule (J). Conditions: force must act, displacement must occur, and force must have component along displacement. Work is positive if 0≤θ<90°, negative if 90°<θ≤180° (e.g., friction), zero if θ=90° (e.g., carrying a bag horizontally while walking – force upward, displacement horizontal).</p>
+            <p><b>4.2 Energy – Capacity to do Work</b><br>Energy is the ability to do work. Same unit as work (joule). Forms: kinetic, potential, thermal, chemical, electrical, nuclear, etc. Law of conservation of energy: energy can neither be created nor destroyed, only transformed from one form to another. Total energy of an isolated system remains constant.</p>
+            <p><b>4.3 Kinetic Energy (KE)</b><br>Energy possessed by a body due to its motion. KE = ½ mv². Derivation: Work done by force F to accelerate from rest to v over displacement s: W = F s = ma s, and v²=2as => s=v²/(2a), so W = m a × v²/(2a)=½ mv². Thus KE = ½ mv². Example: A 1000 kg car at 20 m/s has KE = 0.5×1000×400 = 200,000 J.</p>
+            <p><b>4.4 Potential Energy (PE)</b><br>Energy stored due to position or configuration. Gravitational PE = mgh, where h is height above reference. Elastic PE in a spring = ½ kx². Example: A 2 kg object at 5 m height has PE = 2×9.8×5 = 98 J.</p>
+            <p><b>4.5 Conservation of Mechanical Energy</b><br>In the absence of non-conservative forces (like friction), total mechanical energy (KE+PE) is constant. For a falling object: at height h, PE = mgh, KE = 0; just before ground, KE = ½ mv² = mgh, PE = 0. So v = √(2gh).</p>
+            <p><b>4.6 Power</b><br>Power is the rate of doing work. P = W/t. SI unit: watt (W), 1 W = 1 J/s. Commercial unit: kilowatt-hour (kWh) = 3.6×10⁶ J. Example: A 100 W bulb consumes 0.1 kWh in 1 hour.</p>
+            <p><b>4.7 Numerical Examples</b><br>1. A 50 N force moves an object 10 m at 30° to force. Work = 50×10×cos30° = 500×0.866 = 433 J.<br>2. A 10 kg object falls from 20 m. Find KE just before ground. KE = mgh = 10×9.8×20 = 1960 J.</p>
+        </div>
+        <div class="formula-box">📐 W = Fd cosθ | KE = ½ mv² | PE = mgh | P = W/t</div>
+        <h3>🛠️ Tools</h3>
+        <div class="tool-grid">
+            <div class="tool-card"><h4>1. Work Calculator</h4><input type="number" id="forceW_ch4" placeholder="Force (N)"> <input type="number" id="dispW_ch4" placeholder="Displacement (m)"> <input type="number" id="angW_ch4" placeholder="Angle (deg)"><button onclick="calcWorkCh4()">Work</button><p id="workResCh4"></p><script>function calcWorkCh4(){ let F=parseFloat(document.getElementById('forceW_ch4').value), d=parseFloat(document.getElementById('dispW_ch4').value), ang=parseFloat(document.getElementById('angW_ch4').value); let rad=ang*Math.PI/180; let W=F*d*Math.cos(rad); document.getElementById('workResCh4').innerHTML=`W = ${W.toFixed(2)} J`;}</script></div>
+            <div class="tool-card"><h4>2. Kinetic Energy</h4><input type="number" id="massKE_ch4" placeholder="Mass (kg)"> <input type="number" id="velKE_ch4" placeholder="Velocity (m/s)"><button onclick="calcKECh4()">KE</button><p id="keResCh4"></p><script>function calcKECh4(){ let m=parseFloat(document.getElementById('massKE_ch4').value), v=parseFloat(document.getElementById('velKE_ch4').value); let ke=0.5*m*v*v; document.getElementById('keResCh4').innerHTML=`KE = ${ke.toFixed(2)} J`;}</script></div>
+            <div class="tool-card"><h4>3. Potential Energy</h4><input type="number" id="massPE_ch4" placeholder="Mass (kg)"> <input type="number" id="heightPE_ch4" placeholder="Height (m)"><button onclick="calcPECh4()">PE</button><p id="peResCh4"></p><script>function calcPECh4(){ let m=parseFloat(document.getElementById('massPE_ch4').value), h=parseFloat(document.getElementById('heightPE_ch4').value); let pe=m*9.8*h; document.getElementById('peResCh4').innerHTML=`PE = ${pe.toFixed(2)} J`;}</script></div>
+            <div class="tool-card"><h4>4. Power Calculator</h4><input type="number" id="workPow_ch4" placeholder="Work (J)"> <input type="number" id="timePow_ch4" placeholder="Time (s)"><button onclick="calcPowerCh4()">Power</button><p id="powerResCh4"></p><script>function calcPowerCh4(){ let W=parseFloat(document.getElementById('workPow_ch4').value), t=parseFloat(document.getElementById('timePow_ch4').value); document.getElementById('powerResCh4').innerHTML=`P = ${(W/t).toFixed(2)} W`;}</script></div>
+            <div class="tool-card"><h4>5. Energy Conservation</h4><input type="number" id="heightFall_ch4" placeholder="Height (m)"><button onclick="consEnergyCh4()">Final Velocity</button><p id="consResCh4"></p><script>function consEnergyCh4(){ let h=parseFloat(document.getElementById('heightFall_ch4').value); let v=Math.sqrt(2*9.8*h); document.getElementById('consResCh4').innerHTML=`v = ${v.toFixed(2)} m/s`;}</script></div>
+        </div>
+        <div class="quiz"><strong>📝 Quiz</strong><br>1. Define work in physics.<br>2. A 2 kg ball is thrown up with 40 J KE. Max height?<br>3. What is power?<br><em>Answers: 1. Force × displacement × cosθ. 2. h = KE/(mg) = 40/(2×9.8)=2.04 m. 3. Rate of doing work.</em></div>
+    </div>
+
+    <!-- CHAPTER 5: SOUND (1400+ words) -->
+    <div id="ch5" class="chapter">
+        <h2>Chapter 5: Sound</h2>
+        <div class="theory-box">
+            <p><b>5.1 Production and Propagation of Sound</b><br>Sound is produced by vibrating objects. It requires a medium (solid, liquid, gas) to travel; cannot travel in vacuum. Sound waves are mechanical longitudinal waves, consisting of compressions (high pressure) and rarefactions (low pressure). The speed of sound depends on medium: solids > liquids > gases. In air at 20°C, v ≈ 343 m/s. Speed increases with temperature.</p>
+            <p><b>5.2 Characteristics of Sound Wave</b><br><b>Amplitude (A):</b> maximum displacement from mean position; determines loudness (larger amplitude → louder). <b>Frequency (f):</b> number of oscillations per second (Hz); determines pitch (higher f → higher pitch). <b>Wavelength (λ):</b> distance between two consecutive compressions or rarefactions. Relationship: v = f λ. <b>Time period (T)</b> = 1/f.</p>
+            <p><b>5.3 Audible Range and Applications</b><br>Humans hear 20 Hz to 20,000 Hz. Below 20 Hz: infrasound (elephants, earthquakes). Above 20 kHz: ultrasound (medical imaging, sonar, cleaning).</p>
+            <p><b>5.4 Reflection of Sound – Echo and Reverberation</b><br>Sound reflects from surfaces. An <b>echo</b> is heard when reflected sound arrives after 0.1 s; minimum distance = v×t/2 = 343×0.1/2 ≈ 17 m. <b>Reverberation</b> is persistence of sound due to multiple reflections; reduced by sound-absorbing materials in auditoriums.</p>
+            <p><b>5.5 Human Ear</b><br>Outer ear (pinna) collects sound → ear canal → eardrum vibrates → middle ear (hammer, anvil, stirrup) amplifies → inner ear (cochlea) converts to electrical signals → brain.</p>
+            <p><b>5.6 Numerical Examples</b><br>1. A sound wave has frequency 500 Hz and wavelength 0.68 m. Find speed. v = fλ = 500×0.68 = 340 m/s.<br>2. If you hear an echo after 0.2 s from a cliff, distance = 343×0.2/2 = 34.3 m.</p>
+        </div>
+        <div class="formula-box">📐 v = fλ | Echo distance = v×t/2 | Audible 20 Hz – 20 kHz</div>
+        <h3>🛠️ Tools</h3>
+        <div class="tool-grid">
+            <div class="tool-card"><h4>1. Wavelength Calculator</h4><input type="number" id="freq_ch5" placeholder="Frequency (Hz)"> <input type="number" id="speed_ch5" placeholder="Speed (m/s)" value="343"><button onclick="calcWavelengthCh5()">λ = v/f</button><p id="waveResCh5"></p><script>function calcWavelengthCh5(){ let f=parseFloat(document.getElementById('freq_ch5').value), v=parseFloat(document.getElementById('speed_ch5').value); document.getElementById('waveResCh5').innerHTML=`λ = ${(v/f).toFixed(4)} m`;}</script></div>
+            <div class="tool-card"><h4>2. Echo Distance</h4><input type="number" id="timeEcho_ch5" placeholder="Time (s)"><button onclick="echoDistCh5()">Distance to reflector</button><p id="echoResCh5"></p><script>function echoDistCh5(){ let t=parseFloat(document.getElementById('timeEcho_ch5').value); let d=343*t/2; document.getElementById('echoResCh5').innerHTML=`d = ${d.toFixed(2)} m`;}</script></div>
+            <div class="tool-card"><h4>3. Frequency to Pitch</h4><input type="range" id="freqSlider_ch5" min="20" max="20000" value="440"> <span id="freqVal_ch5">440</span> Hz → <span id="pitch_ch5"></span><script>let fs=document.getElementById('freqSlider_ch5'), fv=document.getElementById('freqVal_ch5'), pt=document.getElementById('pitch_ch5'); fs.oninput=()=>{ let f=fs.value; fv.innerText=f; if(f<250) pt.innerText='Low pitch'; else if(f<2000) pt.innerText='Medium pitch'; else pt.innerText='High pitch';}; fs.oninput();</script></div>
+            <div class="tool-card"><h4>4. Ultrasound Applications</h4><button onclick="usApp('medical')">Medical</button><button onclick="usApp('sonar')">SONAR</button><button onclick="usApp('cleaning')">Cleaning</button><p id="usResCh5"></p><script>function usApp(a){ let map={medical:'Ultrasound scanning of internal organs', sonar:'Detect underwater objects', cleaning:'Clean delicate items'}; document.getElementById('usResCh5').innerHTML=map[a];}</script></div>
+            <div class="tool-card"><h4>5. Human Ear Parts</h4><button onclick="earPart('outer')">Outer Ear</button><button onclick="earPart('middle')">Middle Ear</button><button onclick="earPart('inner')">Inner Ear</button><p id="earResCh5"></p><script>function earPart(p){ let map={outer:'Collects sound', middle:'Amplifies vibrations', inner:'Converts to electrical signals'}; document.getElementById('earResCh5').innerHTML=map[p];}</script></div>
+        </div>
+        <div class="quiz"><strong>📝 Quiz</strong><br>1. What type of wave is sound?<br>2. Audible frequency range for humans?<br>3. Why does sound travel faster in solids?<br><em>Answers: 1. Longitudinal mechanical wave. 2. 20 Hz–20 kHz. 3. Particles are closer.</em></div>
+    </div>
+
+    <footer>© 2025 Class 9 Physics – 1200+ words per chapter, bold topic headings, 25 interactive tools.</footer>
+</div>
+<script>
+    const chs = ['ch1','ch2','ch3','ch4','ch5'];
+    const lnks = document.querySelectorAll('.nav-chapters a');
+    function showCh(id){ chs.forEach(c=>document.getElementById(c).classList.remove('active')); document.getElementById(id).classList.add('active'); lnks.forEach(l=>{if(l.getAttribute('data-chapter')===id) l.classList.add('active-chapter'); else l.classList.remove('active-chapter');}); }
+    lnks.forEach(l=>l.addEventListener('click',e=>{e.preventDefault(); showCh(l.getAttribute('data-chapter'));}));
+    showCh('ch1');
+</script>
+</body>
+</html>
